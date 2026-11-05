@@ -62,12 +62,17 @@ export const startOpacity = (a) => (a <= 0 ? 1 : 0)
 
 /** A clipped band of `#src` that tears sideways at the given moments. steps: [[t, dx], ...] */
 export const tear = (id, src, w, y, h, steps, dur, tint) => {
-  const times = [0, ...steps.map(([t]) => t / dur)]
+  const times = [0, ...steps.map(([t]) => t / dur)].map((t) => t.toFixed(4)).join(';')
   const values = ['0 0', ...steps.map(([, dx]) => `${dx} 0`)]
+  // The tint shows only while the band is torn.
+  const tintValues = ['0', ...steps.map(([, dx]) => (dx === 0 ? '0' : '0.35'))].join(';')
+  const tintRect = tint
+    ? `<rect x="0" y="${y}" width="${w}" height="${h}" fill="${tint}" opacity="0"><animate attributeName="opacity" values="${tintValues}" keyTimes="${times}" calcMode="discrete" dur="${dur}s" repeatCount="indefinite"/></rect>`
+    : ''
   return `<clipPath id="${id}"><rect x="0" y="${y}" width="${w}" height="${h}"/></clipPath>
   <g clip-path="url(#${id})">
-    <g><animateTransform attributeName="transform" type="translate" values="${values.join(';')}" keyTimes="${times.map((t) => t.toFixed(4)).join(';')}" calcMode="discrete" dur="${dur}s" repeatCount="indefinite"/>
-      <use href="#${src}"/>${tint ? `<rect x="0" y="${y}" width="${w}" height="${h}" fill="${tint}" opacity="0.35"/>` : ''}
+    <g><animateTransform attributeName="transform" type="translate" values="${values.join(';')}" keyTimes="${times}" calcMode="discrete" dur="${dur}s" repeatCount="indefinite"/>
+      <use href="#${src}"/>${tintRect}
     </g>
   </g>`
 }

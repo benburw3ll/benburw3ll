@@ -98,7 +98,7 @@
   <clipPath id="i1"><rect x="0" y="108" width="400" height="12"/></clipPath>
   <g clip-path="url(#i1)">
     <g><animateTransform attributeName="transform" type="translate" values="0 0;22 0;0 0;-26 0;0 0" keyTimes="0.0000;0.8000;0.8333;0.9000;0.9250" calcMode="discrete" dur="12s" repeatCount="indefinite"/>
-      <use href="#im"/><rect x="0" y="108" width="400" height="12" fill="#ff0040" opacity="0.35"/>
+      <use href="#im"/><rect x="0" y="108" width="400" height="12" fill="#ff0040" opacity="0"><animate attributeName="opacity" values="0;0.35;0;0.35;0" keyTimes="0.0000;0.8000;0.8333;0.9000;0.9250" calcMode="discrete" dur="12s" repeatCount="indefinite"/></rect>
     </g>
   </g>
   <clipPath id="i2"><rect x="0" y="150" width="400" height="8"/></clipPath>
