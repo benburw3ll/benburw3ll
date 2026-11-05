@@ -40,28 +40,27 @@ const rows = milestones.map((m, i) => {
     <text x="919" y="${y + 27}" text-anchor="end" fill="${parked ? C.faint : C.bone}" font-size="14">${closed}/${count}</text>
   </g>`
 }).join('')
-const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${w} ${h}" width="${w}" height="${h}" role="img" aria-label="Silas Portals roadmap, ${done} of ${total} active milestone issues closed" font-family="${mono}">
-<title>Silas Portals roadmap: ${done} of ${total} active milestone issues closed</title>
+const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${w} ${h}" width="${w}" height="${h}" role="img" aria-label="Silas Portals road to v1, ${done} of ${total} issues closed" font-family="${mono}">
+<title>Silas Portals road to v1: ${done} of ${total} issues closed</title>
 <defs><pattern id="scan" width="4" height="4" patternUnits="userSpaceOnUse"><path d="M0 3.5H4" stroke="#fff" stroke-opacity=".035"/></pattern></defs>
 <rect width="960" height="${h}" fill="${C.bg}"/><rect width="960" height="${h}" fill="url(#scan)"/>
 <rect x="1" y="1" width="958" height="${h - 2}" fill="none" stroke="${C.line}" stroke-width="2"/>
 <rect x="24" y="25" width="8" height="8" fill="${C.red}"/>
-<text x="45" y="36" fill="${C.bone}" font-size="19" font-weight="700" letter-spacing="1">ROADMAP // OPEN TRANSMISSIONS</text>
+<text x="45" y="36" fill="${C.bone}" font-size="19" font-weight="700" letter-spacing="1">ROAD TO V1 // OPEN TRANSMISSIONS</text>
 <text x="936" y="36" text-anchor="end" fill="${C.red}" font-size="12">LIVE GITHUB MILESTONES</text>
 <path d="M24 51H936" stroke="${C.line}"/>
 <text x="24" y="88" fill="${C.red}" font-size="30" font-weight="700">${done}<tspan fill="${C.faint}"> / ${total}</tspan></text>
 <text x="204" y="87" fill="${C.soft}" font-size="14">ISSUES CLOSED ACROSS ACTIVE OUTCOMES</text>
-<text x="936" y="87" text-anchor="end" fill="${C.faint}" font-size="11">PARKED EXCLUDED FROM TOTAL</text>
 ${rows}
 <path d="M24 ${h - 45}H936" stroke="${C.line}"/>
-<text x="24" y="${h - 19}" fill="${C.faint}" font-size="11" letter-spacing="1">EACH ROW MAPS TO A REAL GITHUB MILESTONE</text>
+<text x="24" y="${h - 19}" fill="${C.faint}" font-size="11" letter-spacing="1">NEXT STOP: SILAS PORTALS V1</text>
 <text x="936" y="${h - 19}" text-anchor="end" fill="${C.red}" font-size="11" letter-spacing="1">TRANSMISSION CONTINUES_</text>
 </svg>\n`
 mkdirSync(new URL('outcomes/', root), { recursive: true })
 writeFileSync(new URL('outcomes/operations.svg', root), svg)
 
 const links = milestones.map((m) => `<a href="${esc(m.html_url)}">O${order(m)}</a>`).join(' &nbsp;·&nbsp; ')
-const block = `<p align="center"><a href="https://github.com/${REPO}/milestones"><img src="outcomes/operations.svg" width="960" alt="Silas Portals roadmap: ${done} of ${total} active milestone issues closed; parked outcome excluded"></a></p>\n\n<p align="center">${links}</p>\n\n<p align="center"><sub>${done} of ${total} active-outcome issues closed. Generated from live Silas Portals milestones; parked work excluded.</sub></p>`
+const block = `<p align="center"><a href="https://github.com/${REPO}/milestones"><img src="outcomes/operations.svg" width="960" alt="Silas Portals road to v1: ${done} of ${total} issues closed"></a></p>\n\n<p align="center">${links}</p>\n\n<p align="center"><sub>${done} of ${total} issues closed across the active outcomes.</sub></p>`
 const file = new URL('README.md', root)
 const readme = readFileSync(file, 'utf8')
 const start = readme.indexOf(START), end = readme.indexOf(END)

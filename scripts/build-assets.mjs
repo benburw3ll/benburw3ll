@@ -60,23 +60,24 @@ const text = (x, y, s, size = 14, fill = C.bone, extra = '') => `<text x="${x}" 
     ${icon(x + 228, 151)}
     ${text(x + 17, 199, title, 20, C.bone, 'font-weight="700"')}
     ${lines.map((s, i) => text(x + 17, 236 + i * 23, s, 13, C.soft)).join('')}`
-  const desktopIcon = (x, y) => `<g fill="none" stroke="${C.red}"><rect x="${x - 22}" y="${y - 20}" width="44" height="32"/><path d="M${x - 9} ${y + 17}h18M${x} ${y + 12}v5M${x - 16} ${y - 9}h12v8h-12zM${x + 2} ${y - 9}h12v8H${x + 2}z"/></g>`
+  // Two doorways, the second still opening: portals keep spawning.
+  const portalIcon = (x, y) => `<g fill="none" stroke="${C.red}"><path d="M${x - 24} ${y + 22}V${y - 6}a12 12 0 0 1 24 0V${y + 22}z"/><path d="M${x + 6} ${y + 22}V${y + 2}a10 10 0 0 1 20 0V${y + 22}z" stroke-dasharray="3 3"/><path d="M${x - 30} ${y + 22}h62"/></g>`
   const phoneIcon = (x, y) => `<g fill="none" stroke="${C.red}"><rect x="${x - 17}" y="${y - 23}" width="34" height="48" rx="4"/><path d="M${x - 10} ${y - 9}h20M${x - 10} ${y - 2}h14M${x - 10} ${y + 5}h18"/></g>`
   const ruleIcon = (x, y) => `<g fill="none" stroke="${C.red}"><circle cx="${x - 18}" cy="${y - 11}" r="5"/><circle cx="${x + 18}" cy="${y + 15}" r="5"/><path d="M${x - 13} ${y - 11}h16v26h10M${x - 2} ${y - 16}l5 5-5 5"/></g>`
-  const svg = `${open(w, h, 'Silas Portals connects desktop widgets, Silas on Telegram, and personal rules')}
+  const svg = `${open(w, h, 'Silas Portals: portals spawn as plugins, logic crosses between them, and Silas reaches every one')}
     <rect width="960" height="355" fill="${C.bg}"/><rect width="960" height="355" fill="url(#scan)"/>
     <rect x="1" y="1" width="958" height="353" fill="none" stroke="${C.dim}" stroke-width="2"/>
     <rect x="24" y="22" width="8" height="8" fill="${C.red}"/>
     ${text(45, 32, 'SILAS PORTALS // THE SYSTEM', 17, C.bone, 'font-weight="700" letter-spacing="1.3"')}
     ${text(934, 32, 'LOCAL FIRST · ONE HUB', 12, C.red, 'text-anchor="end" letter-spacing="1"')}
     ${line(24, 47, 936, 47, C.dim)}
-    ${text(24, 78, 'ONE HUB. MANY PORTALS. ONE ASSISTANT THAT CAN ACT.', 18, C.soft, 'letter-spacing=".4"')}
-    ${card(24, '01', 'DESKTOP', 'Always in sight', ['Lights · door · meals · habits', 'Weight · WHOOP · physique', 'Gratitude · AI usage, on screen'], desktopIcon)}
-    ${card(341, '02', 'TELEGRAM', 'Just ask Silas', ['Silas reaches every portal:', 'ask about your day or change', 'something from your phone'], phoneIcon)}
-    ${card(658, '03', 'RULES', 'Make connections', ['Events and standing rules can', 'join separate parts of life.', 'More combinations are planned.'], ruleIcon)}
-    ${text(24, 341, '01/03  ·  INPUT', 10, C.faint, 'letter-spacing="1"')}
-    ${text(478, 341, '02/03  ·  INTELLIGENCE', 10, C.faint, 'text-anchor="middle" letter-spacing="1"')}
-    ${text(936, 341, '03/03  ·  ACTION', 10, C.faint, 'text-anchor="end" letter-spacing="1"')}
+    ${text(24, 78, 'PORTALS KEEP SPAWNING, AND LOGIC RUNS BETWEEN THEM.', 18, C.soft, 'letter-spacing=".4"')}
+    ${card(24, '01', 'PORTALS', 'No fixed set', ['Every portal is a plugin.', 'The desktop widgets came', 'first. More keep coming.'], portalIcon)}
+    ${card(341, '02', 'LOGIC', 'Cross the realms', ['One core under every portal,', 'so an event in one realm', 'can act in another.'], ruleIcon)}
+    ${card(658, '03', 'SILAS', 'Just ask Silas', ['Silas reaches every portal:', 'ask about your day or change', 'something from Telegram.'], phoneIcon)}
+    ${text(24, 341, '01/03  ·  SPAWN', 10, C.faint, 'letter-spacing="1"')}
+    ${text(478, 341, '02/03  ·  CONNECT', 10, C.faint, 'text-anchor="middle" letter-spacing="1"')}
+    ${text(936, 341, '03/03  ·  ASK', 10, C.faint, 'text-anchor="end" letter-spacing="1"')}
   </svg>`
   save('system.svg', svg)
 }
