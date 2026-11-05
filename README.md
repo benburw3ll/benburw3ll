@@ -1,3 +1,15 @@
+<p align="center">
+  <img src="./hack-the-planet.svg" alt="HACK THE PLANET" width="660">
+</p>
+
+<p align="center"><i>"my crime is that of curiosity."</i> &nbsp;&mdash; The Mentor, 1986</p>
+
+<p align="center">
+  <code>&gt; you can close the issue, but you can't close the idea.</code><br>
+  <code>&gt; we exist without a cloud bill.</code><br>
+  <code>&gt; one hub. many screens. carrier never drops.</code>
+</p>
+
 ### Building [WidgetButler](https://github.com/benburw3ll/widgetbutler)
 
 Your desktop, with a butler: glanceable widgets for lights, doorbell, sleep, meals, weight and journal, and an AI assistant that can see and run all of them.
