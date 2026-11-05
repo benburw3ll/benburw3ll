@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 56" width="400" height="56" role="img" aria-label="coded by benburw3ll · greetz: The Mentor" font-family="Tahoma, Verdana, 'Segoe UI', Arial, sans-serif" font-size="12">
+  <title>coded by benburw3ll · greetz: The Mentor</title>
+  <defs>
+    <linearGradient id="title" x1="0" x2="1"><stop offset="0" stop-color="#000080"/><stop offset="1" stop-color="#1084d0"/></linearGradient>
+    <linearGradient id="fader" x1="0" x2="1">
+      <stop offset="0" stop-color="#ff0040"/><stop offset="0.18" stop-color="#ff9a00"/><stop offset="0.36" stop-color="#ffe600"/>
+      <stop offset="0.54" stop-color="#29ff4a"/><stop offset="0.72" stop-color="#00d5ff"/><stop offset="0.88" stop-color="#4a5bff"/><stop offset="1" stop-color="#d000ff"/>
+    </linearGradient>
+    
+  </defs><text x="200" y="24" text-anchor="middle" font-size="20" font-weight="bold" font-style="italic" fill="url(#fader)" stroke="#000" stroke-width="0.7" paint-order="stroke">coded by benburw3ll</text><text x="200" y="46" text-anchor="middle" font-size="14" font-weight="bold" font-style="italic" fill="url(#fader)" stroke="#000" stroke-width="0.7" paint-order="stroke">greetz: The Mentor</text></svg>

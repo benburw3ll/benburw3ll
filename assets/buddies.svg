@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 248" width="180" height="248" role="img" aria-label="Buddy List: Online 8 of 8, Humans 0 of 1" font-family="Tahoma, Verdana, 'Segoe UI', Arial, sans-serif" font-size="12">
+  <title>Buddy List: Online 8 of 8, Humans 0 of 1</title>
+  <defs>
+    <linearGradient id="title" x1="0" x2="1"><stop offset="0" stop-color="#000080"/><stop offset="1" stop-color="#1084d0"/></linearGradient>
+    <linearGradient id="fader" x1="0" x2="1">
+      <stop offset="0" stop-color="#ff0040"/><stop offset="0.18" stop-color="#ff9a00"/><stop offset="0.36" stop-color="#ffe600"/>
+      <stop offset="0.54" stop-color="#29ff4a"/><stop offset="0.72" stop-color="#00d5ff"/><stop offset="0.88" stop-color="#4a5bff"/><stop offset="1" stop-color="#d000ff"/>
+    </linearGradient>
+    
+  </defs>
+  
+  
+  <rect x="0" y="0" width="180" height="248" fill="#c0c0c0"/>
+  <path d="M0.5 247V0.5H179" stroke="#fff" fill="none"/>
+  <path d="M1.5 246V1.5H178" stroke="#dfdfdf" fill="none"/>
+  <path d="M0 247.5H179.5V0" stroke="#000" fill="none"/>
+  <path d="M1 246.5H178.5V1" stroke="#808080" fill="none"/>
+  <rect x="3" y="3" width="174" height="18" fill="url(#title)"/>
+  <text x="8" y="16" fill="#fff" font-weight="bold" font-size="12">Buddy List</text>
+  
+  <rect x="123" y="5" width="16" height="14" fill="#c0c0c0"/>
+  <path d="M123.5 18V5.5H138" stroke="#fff" fill="none"/>
+  <path d="M124.5 17V6.5H137" stroke="#dfdfdf" fill="none"/>
+  <path d="M123 18.5H138.5V5" stroke="#000" fill="none"/>
+  <path d="M124 17.5H137.5V6" stroke="#808080" fill="none"/><path d="M127 15h7" stroke="#000" stroke-width="2"/>
+  
+  <rect x="139" y="5" width="16" height="14" fill="#c0c0c0"/>
+  <path d="M139.5 18V5.5H154" stroke="#fff" fill="none"/>
+  <path d="M140.5 17V6.5H153" stroke="#dfdfdf" fill="none"/>
+  <path d="M139 18.5H154.5V5" stroke="#000" fill="none"/>
+  <path d="M140 17.5H153.5V6" stroke="#808080" fill="none"/><rect x="142.5" y="8.5" width="8" height="7" fill="none" stroke="#000"/><path d="M142.5 9.5h8" stroke="#000"/>
+  
+  <rect x="159" y="5" width="16" height="14" fill="#c0c0c0"/>
+  <path d="M159.5 18V5.5H174" stroke="#fff" fill="none"/>
+  <path d="M160.5 17V6.5H173" stroke="#dfdfdf" fill="none"/>
+  <path d="M159 18.5H174.5V5" stroke="#000" fill="none"/>
+  <path d="M160 17.5H173.5V6" stroke="#808080" fill="none"/><path d="M163 8.5l7 7M170 8.5l-7 7" stroke="#000" stroke-width="1.6"/>
+  
+  <rect x="6" y="25" width="70" height="18" fill="#c0c0c0"/>
+  <path d="M6.5 42V25.5H75" stroke="#fff" fill="none"/>
+  <path d="M7.5 41V26.5H74" stroke="#dfdfdf" fill="none"/>
+  <path d="M6 42.5H75.5V25" stroke="#000" fill="none"/>
+  <path d="M7 41.5H74.5V26" stroke="#808080" fill="none"/><text x="41" y="38" text-anchor="middle" font-weight="bold">Online</text>
+  
+  <rect x="78" y="27" width="80" height="16" fill="#c0c0c0"/>
+  <path d="M78.5 42V27.5H157" stroke="#fff" fill="none"/>
+  <path d="M79.5 41V28.5H156" stroke="#dfdfdf" fill="none"/>
+  <path d="M78 42.5H157.5V27" stroke="#000" fill="none"/>
+  <path d="M79 41.5H156.5V28" stroke="#808080" fill="none"/><text x="118" y="39" text-anchor="middle" fill="#404040">List Setup</text>
+  
+  <rect x="6" y="44" width="168" height="170" fill="#fff"/>
+  <path d="M6.5 213V44.5H173" stroke="#808080" fill="none"/>
+  <path d="M7.5 212V45.5H172" stroke="#000" fill="none"/>
+  <path d="M6 213.5H173.5V44" stroke="#fff" fill="none"/>
+  <path d="M7 212.5H172.5V45" stroke="#dfdfdf" fill="none"/>
+  <text x="12" y="60" font-weight="bold">▾ Online (8/8)</text><text x="28" y="75" font-weight="bold">WidgetButler</text><text x="28" y="90">HubBrain</text><text x="28" y="105">RelayWorker</text><text x="28" y="120">ThemeDaemon</text><text x="28" y="135">MacPort</text><text x="28" y="150">PhoneScreen</text><text x="28" y="165">MoneyBot</text><text x="28" y="180">MCPServer</text><text x="12" y="195" font-weight="bold">▾ Humans (0/1)</text><text x="28" y="210" fill="#808080" font-style="italic">benburw3ll</text>
+  <rect x="24" y="64" width="2" height="13" fill="#ff0000"><animate attributeName="opacity" values="1;0" keyTimes="0;0.5" calcMode="discrete" dur="1.4s" repeatCount="indefinite"/></rect>
+  
+  <rect x="6" y="220" width="50" height="20" fill="#c0c0c0"/>
+  <path d="M6.5 239V220.5H55" stroke="#fff" fill="none"/>
+  <path d="M7.5 238V221.5H54" stroke="#dfdfdf" fill="none"/>
+  <path d="M6 239.5H55.5V220" stroke="#000" fill="none"/>
+  <path d="M7 238.5H54.5V221" stroke="#808080" fill="none"/><text x="31" y="234" fill="#000" text-anchor="middle">IM</text>
+  <rect x="62" y="220" width="54" height="20" fill="#c0c0c0"/>
+  <path d="M62.5 239V220.5H115" stroke="#fff" fill="none"/>
+  <path d="M63.5 238V221.5H114" stroke="#dfdfdf" fill="none"/>
+  <path d="M62 239.5H115.5V220" stroke="#000" fill="none"/>
+  <path d="M63 238.5H114.5V221" stroke="#808080" fill="none"/><text x="89" y="234" fill="#000" text-anchor="middle">Info</text>
+  <rect x="122" y="220" width="52" height="20" fill="#c0c0c0"/>
+  <path d="M122.5 239V220.5H173" stroke="#fff" fill="none"/>
+  <path d="M123.5 238V221.5H172" stroke="#dfdfdf" fill="none"/>
+  <path d="M122 239.5H173.5V220" stroke="#000" fill="none"/>
+  <path d="M123 238.5H172.5V221" stroke="#808080" fill="none"/><text x="148" y="234" fill="#000" text-anchor="middle">Away</text>
+</svg>

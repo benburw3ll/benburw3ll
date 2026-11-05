@@ -1,6 +1,7 @@
 name: Outcomes progress
 
-# Refreshes the outcomes table in README.md from the WidgetButler milestones.
+# Redraws the File Transfer windows (outcomes/*.svg) and the README block from the WidgetButler
+# milestones.
 on:
   schedule:
     - cron: '17 */3 * * *'
@@ -20,8 +21,9 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Commit if changed
         run: |
-          if git diff --quiet; then echo "No change"; exit 0; fi
+          if [ -z "$(git status --porcelain)" ]; then echo "No change"; exit 0; fi
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git commit -am 'chore: update outcome progress'
+          git add -A
+          git commit -m 'chore: update outcome progress'
           git push
