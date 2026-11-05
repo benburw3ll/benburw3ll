@@ -19,11 +19,11 @@ The idea is to connect things that separate apps can't: a doorbell event could t
 The build is public. These are the actual [Silas Portals outcomes](https://github.com/benburw3ll/silas-portals/milestones), updated from GitHub milestones rather than a hand-written progress claim.
 
 <!-- outcomes:start -->
-<p align="center"><a href="https://github.com/benburw3ll/silas-portals/milestones"><img src="outcomes/operations.svg" width="960" alt="Silas Portals roadmap: 3 of 85 active milestone issues closed; parked outcome excluded"></a></p>
+<p align="center"><a href="https://github.com/benburw3ll/silas-portals/milestones"><img src="outcomes/operations.svg" width="960" alt="Silas Portals roadmap: 3 of 87 active milestone issues closed; parked outcome excluded"></a></p>
 
 <p align="center"><a href="https://github.com/benburw3ll/silas-portals/milestone/1">O1</a> &nbsp;·&nbsp; <a href="https://github.com/benburw3ll/silas-portals/milestone/5">O2</a> &nbsp;·&nbsp; <a href="https://github.com/benburw3ll/silas-portals/milestone/9">O3</a> &nbsp;·&nbsp; <a href="https://github.com/benburw3ll/silas-portals/milestone/10">O4</a> &nbsp;·&nbsp; <a href="https://github.com/benburw3ll/silas-portals/milestone/11">O5</a> &nbsp;·&nbsp; <a href="https://github.com/benburw3ll/silas-portals/milestone/6">O6</a> &nbsp;·&nbsp; <a href="https://github.com/benburw3ll/silas-portals/milestone/2">O7</a> &nbsp;·&nbsp; <a href="https://github.com/benburw3ll/silas-portals/milestone/4">O8</a> &nbsp;·&nbsp; <a href="https://github.com/benburw3ll/silas-portals/milestone/3">O9</a> &nbsp;·&nbsp; <a href="https://github.com/benburw3ll/silas-portals/milestone/7">O10</a> &nbsp;·&nbsp; <a href="https://github.com/benburw3ll/silas-portals/milestone/8">O11</a></p>
 
-<p align="center"><sub>3 of 85 active-outcome issues closed. Generated from live Silas Portals milestones; parked work excluded.</sub></p>
+<p align="center"><sub>3 of 87 active-outcome issues closed. Generated from live Silas Portals milestones; parked work excluded.</sub></p>
 <!-- outcomes:end -->
 
 <p align="center"><i>"My crime is that of outsmarting you, something that you will never forgive me for."</i><br>&mdash; The Mentor, <a href="https://phrack.org/issues/7/hackers-manifesto"><i>The Hacker Manifesto</i></a>, 1986</p>
