@@ -12,7 +12,7 @@
 
 ### Building [WidgetButler](https://github.com/benburw3ll/widgetbutler)
 
-Your desktop, with a butler: glanceable widgets for lights, doorbell, sleep, meals, weight and journal, and an AI assistant that can see and run all of them.
+**One brain, wired into every widget.** It tracks you, nags you, remembers what you forget, and fires rules across lights, door, sleep, meals, habits and money in combos nobody thought to wire together. You text it. It texts first.
 
 #### Outcomes
 
