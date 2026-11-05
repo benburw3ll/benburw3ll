@@ -2,7 +2,7 @@
   <img src="./hack-the-planet.svg" alt="HACK THE PLANET" width="660">
 </p>
 
-<p align="center"><i>"my crime is that of curiosity."</i> &nbsp;&mdash; The Mentor, 1986</p>
+<p align="center"><i>"My crime is that of outsmarting you, something that you will never forgive me for."</i><br>&mdash; The Mentor, <i>The Hacker Manifesto</i>, 1986</p>
 
 ### Building [WidgetButler](https://github.com/benburw3ll/widgetbutler)
 
