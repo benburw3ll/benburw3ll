@@ -1,6 +1,6 @@
 name: Outcomes progress
 
-# Redraws the black-and-red roadmap graphic and the README links from WidgetButler milestones.
+# Redraws the black-and-red roadmap graphic and the README links from Silas Portals milestones.
 on:
   schedule:
     - cron: '17 */3 * * *'

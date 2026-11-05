@@ -63,16 +63,16 @@ const text = (x, y, s, size = 14, fill = C.bone, extra = '') => `<text x="${x}" 
   const desktopIcon = (x, y) => `<g fill="none" stroke="${C.red}"><rect x="${x - 22}" y="${y - 20}" width="44" height="32"/><path d="M${x - 9} ${y + 17}h18M${x} ${y + 12}v5M${x - 16} ${y - 9}h12v8h-12zM${x + 2} ${y - 9}h12v8H${x + 2}z"/></g>`
   const phoneIcon = (x, y) => `<g fill="none" stroke="${C.red}"><rect x="${x - 17}" y="${y - 23}" width="34" height="48" rx="4"/><path d="M${x - 10} ${y - 9}h20M${x - 10} ${y - 2}h14M${x - 10} ${y + 5}h18"/></g>`
   const ruleIcon = (x, y) => `<g fill="none" stroke="${C.red}"><circle cx="${x - 18}" cy="${y - 11}" r="5"/><circle cx="${x + 18}" cy="${y + 15}" r="5"/><path d="M${x - 13} ${y - 11}h16v26h10M${x - 2} ${y - 16}l5 5-5 5"/></g>`
-  const svg = `${open(w, h, 'WidgetButler connects desktop widgets, a Telegram assistant, and personal rules')}
+  const svg = `${open(w, h, 'Silas Portals connects desktop widgets, Silas on Telegram, and personal rules')}
     <rect width="960" height="355" fill="${C.bg}"/><rect width="960" height="355" fill="url(#scan)"/>
     <rect x="1" y="1" width="958" height="353" fill="none" stroke="${C.dim}" stroke-width="2"/>
     <rect x="24" y="22" width="8" height="8" fill="${C.red}"/>
-    ${text(45, 32, 'WIDGETBUTLER // THE SYSTEM', 17, C.bone, 'font-weight="700" letter-spacing="1.3"')}
-    ${text(934, 32, 'LOCAL FIRST · MID-REBUILD', 12, C.red, 'text-anchor="end" letter-spacing="1"')}
+    ${text(45, 32, 'SILAS PORTALS // THE SYSTEM', 17, C.bone, 'font-weight="700" letter-spacing="1.3"')}
+    ${text(934, 32, 'LOCAL FIRST · ONE HUB', 12, C.red, 'text-anchor="end" letter-spacing="1"')}
     ${line(24, 47, 936, 47, C.dim)}
-    ${text(24, 78, 'ONE DESKTOP. EIGHT WIDGETS. ONE ASSISTANT THAT CAN ACT.', 18, C.soft, 'letter-spacing=".4"')}
-    ${card(24, '01', 'DESKTOP', 'Always in sight', ['Lights · door · meals · weight', 'WHOOP · physique · gratitude', 'AI usage, behind your windows'], desktopIcon)}
-    ${card(341, '02', 'TELEGRAM', 'Just ask it', ['A chat interface to the widgets', 'Ask about your day or change', 'something from your phone'], phoneIcon)}
+    ${text(24, 78, 'ONE HUB. MANY PORTALS. ONE ASSISTANT THAT CAN ACT.', 18, C.soft, 'letter-spacing=".4"')}
+    ${card(24, '01', 'DESKTOP', 'Always in sight', ['Lights · door · meals · habits', 'Weight · WHOOP · physique', 'Gratitude · AI usage, on screen'], desktopIcon)}
+    ${card(341, '02', 'TELEGRAM', 'Just ask Silas', ['Silas reaches every portal:', 'ask about your day or change', 'something from your phone'], phoneIcon)}
     ${card(658, '03', 'RULES', 'Make connections', ['Events and standing rules can', 'join separate parts of life.', 'More combinations are planned.'], ruleIcon)}
     ${text(24, 341, '01/03  ·  INPUT', 10, C.faint, 'letter-spacing="1"')}
     ${text(478, 341, '02/03  ·  INTELLIGENCE', 10, C.faint, 'text-anchor="middle" letter-spacing="1"')}

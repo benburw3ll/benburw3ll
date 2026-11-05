@@ -1,8 +1,8 @@
-// Rebuild the live roadmap graphic and README links from WidgetButler milestones.
+// Rebuild the live roadmap graphic and README links from Silas Portals milestones.
 // No dependencies; GITHUB_TOKEN is optional and raises the API rate limit.
 import { mkdirSync, readFileSync, writeFileSync } from 'node:fs'
 
-const REPO = process.env.OUTCOMES_REPO ?? 'benburw3ll/widgetbutler'
+const REPO = process.env.OUTCOMES_REPO ?? 'benburw3ll/silas-portals'
 const root = new URL('../', import.meta.url)
 const START = '<!-- outcomes:start -->'
 const END = '<!-- outcomes:end -->'
@@ -13,7 +13,7 @@ const res = await fetch(`https://api.github.com/repos/${REPO}/milestones?state=a
 if (!res.ok) throw new Error(`GitHub API answered ${res.status}`)
 const order = (m) => Number(/^O(\d+)\b/.exec(m.title)?.[1] ?? Infinity)
 const milestones = (await res.json()).filter((m) => Number.isFinite(order(m))).sort((a, b) => order(a) - order(b))
-if (milestones.length === 0) throw new Error('No WidgetButler outcome milestones found')
+if (milestones.length === 0) throw new Error('No Silas Portals outcome milestones found')
 
 const C = { bg: '#060607', panel: '#0d0b0e', line: '#6b202d', red: '#f02b43', bone: '#f0e6e1', soft: '#a99a9c', faint: '#594c50' }
 const mono = "'Cascadia Code', Consolas, 'Liberation Mono', monospace"
@@ -40,8 +40,8 @@ const rows = milestones.map((m, i) => {
     <text x="919" y="${y + 27}" text-anchor="end" fill="${parked ? C.faint : C.bone}" font-size="14">${closed}/${count}</text>
   </g>`
 }).join('')
-const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${w} ${h}" width="${w}" height="${h}" role="img" aria-label="WidgetButler roadmap, ${done} of ${total} active milestone issues closed" font-family="${mono}">
-<title>WidgetButler roadmap: ${done} of ${total} active milestone issues closed</title>
+const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${w} ${h}" width="${w}" height="${h}" role="img" aria-label="Silas Portals roadmap, ${done} of ${total} active milestone issues closed" font-family="${mono}">
+<title>Silas Portals roadmap: ${done} of ${total} active milestone issues closed</title>
 <defs><pattern id="scan" width="4" height="4" patternUnits="userSpaceOnUse"><path d="M0 3.5H4" stroke="#fff" stroke-opacity=".035"/></pattern></defs>
 <rect width="960" height="${h}" fill="${C.bg}"/><rect width="960" height="${h}" fill="url(#scan)"/>
 <rect x="1" y="1" width="958" height="${h - 2}" fill="none" stroke="${C.line}" stroke-width="2"/>
@@ -61,7 +61,7 @@ mkdirSync(new URL('outcomes/', root), { recursive: true })
 writeFileSync(new URL('outcomes/operations.svg', root), svg)
 
 const links = milestones.map((m) => `<a href="${esc(m.html_url)}">O${order(m)}</a>`).join(' &nbsp;·&nbsp; ')
-const block = `<p align="center"><a href="https://github.com/${REPO}/milestones"><img src="outcomes/operations.svg" width="960" alt="WidgetButler roadmap: ${done} of ${total} active milestone issues closed; parked outcome excluded"></a></p>\n\n<p align="center">${links}</p>\n\n<p align="center"><sub>${done} of ${total} active-outcome issues closed. Generated from live WidgetButler milestones; parked work excluded.</sub></p>`
+const block = `<p align="center"><a href="https://github.com/${REPO}/milestones"><img src="outcomes/operations.svg" width="960" alt="Silas Portals roadmap: ${done} of ${total} active milestone issues closed; parked outcome excluded"></a></p>\n\n<p align="center">${links}</p>\n\n<p align="center"><sub>${done} of ${total} active-outcome issues closed. Generated from live Silas Portals milestones; parked work excluded.</sub></p>`
 const file = new URL('README.md', root)
 const readme = readFileSync(file, 'utf8')
 const start = readme.indexOf(START), end = readme.indexOf(END)

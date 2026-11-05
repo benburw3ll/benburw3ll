@@ -1,13 +1,13 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 573" width="960" height="573" role="img" aria-label="WidgetButler roadmap, 0 of 48 active milestone issues closed" font-family="'Cascadia Code', Consolas, 'Liberation Mono', monospace">
-<title>WidgetButler roadmap: 0 of 48 active milestone issues closed</title>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 720" width="960" height="720" role="img" aria-label="Silas Portals roadmap, 3 of 85 active milestone issues closed" font-family="'Cascadia Code', Consolas, 'Liberation Mono', monospace">
+<title>Silas Portals roadmap: 3 of 85 active milestone issues closed</title>
 <defs><pattern id="scan" width="4" height="4" patternUnits="userSpaceOnUse"><path d="M0 3.5H4" stroke="#fff" stroke-opacity=".035"/></pattern></defs>
-<rect width="960" height="573" fill="#060607"/><rect width="960" height="573" fill="url(#scan)"/>
-<rect x="1" y="1" width="958" height="571" fill="none" stroke="#6b202d" stroke-width="2"/>
+<rect width="960" height="720" fill="#060607"/><rect width="960" height="720" fill="url(#scan)"/>
+<rect x="1" y="1" width="958" height="718" fill="none" stroke="#6b202d" stroke-width="2"/>
 <rect x="24" y="25" width="8" height="8" fill="#f02b43"/>
 <text x="45" y="36" fill="#f0e6e1" font-size="19" font-weight="700" letter-spacing="1">ROADMAP // OPEN TRANSMISSIONS</text>
 <text x="936" y="36" text-anchor="end" fill="#f02b43" font-size="12">LIVE GITHUB MILESTONES</text>
 <path d="M24 51H936" stroke="#6b202d"/>
-<text x="24" y="88" fill="#f02b43" font-size="30" font-weight="700">0<tspan fill="#594c50"> / 48</tspan></text>
+<text x="24" y="88" fill="#f02b43" font-size="30" font-weight="700">3<tspan fill="#594c50"> / 85</tspan></text>
 <text x="204" y="87" fill="#a99a9c" font-size="14">ISSUES CLOSED ACROSS ACTIVE OUTCOMES</text>
 <text x="936" y="87" text-anchor="end" fill="#594c50" font-size="11">PARKED EXCLUDED FROM TOTAL</text>
 <g>
@@ -17,22 +17,22 @@
     <text x="85" y="144" fill="#f0e6e1" font-size="16">Decide the shape</text>
     <text x="601" y="143" fill="#a99a9c" font-size="10" letter-spacing="1">IN PROGRESS</text>
     <rect x="701" y="133" width="146" height="10" fill="#241218" stroke="#6b202d"/>
-    <rect x="702" y="134" width="0" height="8" fill="#f02b43"/>
-    <text x="919" y="144" text-anchor="end" fill="#f0e6e1" font-size="14">0/5</text>
+    <rect x="702" y="134" width="18" height="8" fill="#f02b43"/>
+    <text x="919" y="144" text-anchor="end" fill="#f0e6e1" font-size="14">1/8</text>
   </g><g>
     <rect x="24" y="166" width="912" height="42" fill="#0c090b" stroke="#6b202d" stroke-opacity=".55"/>
     <rect x="24" y="166" width="3" height="42" fill="#f02b43"/>
     <text x="41" y="193" fill="#f02b43" font-size="15" font-weight="700">02</text>
-    <text x="85" y="193" fill="#f0e6e1" font-size="16">Mac and Windows, one set of data</text>
+    <text x="85" y="193" fill="#f0e6e1" font-size="16">A safe base</text>
     <text x="601" y="192" fill="#a99a9c" font-size="10" letter-spacing="1">IN PROGRESS</text>
     <rect x="701" y="182" width="146" height="10" fill="#241218" stroke="#6b202d"/>
     <rect x="702" y="183" width="0" height="8" fill="#f02b43"/>
-    <text x="919" y="193" text-anchor="end" fill="#f0e6e1" font-size="14">0/11</text>
+    <text x="919" y="193" text-anchor="end" fill="#f0e6e1" font-size="14">0/7</text>
   </g><g>
     <rect x="24" y="215" width="912" height="42" fill="#0d0b0e" stroke="#6b202d" stroke-opacity=".55"/>
     <rect x="24" y="215" width="3" height="42" fill="#f02b43"/>
     <text x="41" y="242" fill="#f02b43" font-size="15" font-weight="700">03</text>
-    <text x="85" y="242" fill="#f0e6e1" font-size="16">Always-on Telegram</text>
+    <text x="85" y="242" fill="#f0e6e1" font-size="16">AI on a budget</text>
     <text x="601" y="241" fill="#a99a9c" font-size="10" letter-spacing="1">IN PROGRESS</text>
     <rect x="701" y="231" width="146" height="10" fill="#241218" stroke="#6b202d"/>
     <rect x="702" y="232" width="0" height="8" fill="#f02b43"/>
@@ -41,49 +41,76 @@
     <rect x="24" y="264" width="912" height="42" fill="#0c090b" stroke="#6b202d" stroke-opacity=".55"/>
     <rect x="24" y="264" width="3" height="42" fill="#f02b43"/>
     <text x="41" y="291" fill="#f02b43" font-size="15" font-weight="700">04</text>
-    <text x="85" y="291" fill="#f0e6e1" font-size="16">Themes</text>
+    <text x="85" y="291" fill="#f0e6e1" font-size="16">Portals talk to each other</text>
     <text x="601" y="290" fill="#a99a9c" font-size="10" letter-spacing="1">IN PROGRESS</text>
     <rect x="701" y="280" width="146" height="10" fill="#241218" stroke="#6b202d"/>
     <rect x="702" y="281" width="0" height="8" fill="#f02b43"/>
-    <text x="919" y="291" text-anchor="end" fill="#f0e6e1" font-size="14">0/9</text>
+    <text x="919" y="291" text-anchor="end" fill="#f0e6e1" font-size="14">0/6</text>
   </g><g>
     <rect x="24" y="313" width="912" height="42" fill="#0d0b0e" stroke="#6b202d" stroke-opacity=".55"/>
     <rect x="24" y="313" width="3" height="42" fill="#f02b43"/>
     <text x="41" y="340" fill="#f02b43" font-size="15" font-weight="700">05</text>
-    <text x="85" y="340" fill="#f0e6e1" font-size="16">Reach it from anywhere</text>
+    <text x="85" y="340" fill="#f0e6e1" font-size="16">Silas the coach</text>
     <text x="601" y="339" fill="#a99a9c" font-size="10" letter-spacing="1">IN PROGRESS</text>
     <rect x="701" y="329" width="146" height="10" fill="#241218" stroke="#6b202d"/>
-    <rect x="702" y="330" width="0" height="8" fill="#f02b43"/>
-    <text x="919" y="340" text-anchor="end" fill="#f0e6e1" font-size="14">0/6</text>
+    <rect x="702" y="330" width="13" height="8" fill="#f02b43"/>
+    <text x="919" y="340" text-anchor="end" fill="#f0e6e1" font-size="14">1/11</text>
   </g><g>
     <rect x="24" y="362" width="912" height="42" fill="#0c090b" stroke="#6b202d" stroke-opacity=".55"/>
     <rect x="24" y="362" width="3" height="42" fill="#f02b43"/>
     <text x="41" y="389" fill="#f02b43" font-size="15" font-weight="700">06</text>
-    <text x="85" y="389" fill="#f0e6e1" font-size="16">The hub brain</text>
+    <text x="85" y="389" fill="#f0e6e1" font-size="16">Silas remembers and learns</text>
     <text x="601" y="388" fill="#a99a9c" font-size="10" letter-spacing="1">IN PROGRESS</text>
     <rect x="701" y="378" width="146" height="10" fill="#241218" stroke="#6b202d"/>
     <rect x="702" y="379" width="0" height="8" fill="#f02b43"/>
-    <text x="919" y="389" text-anchor="end" fill="#f0e6e1" font-size="14">0/8</text>
+    <text x="919" y="389" text-anchor="end" fill="#f0e6e1" font-size="14">0/13</text>
   </g><g>
     <rect x="24" y="411" width="912" height="42" fill="#0d0b0e" stroke="#6b202d" stroke-opacity=".55"/>
     <rect x="24" y="411" width="3" height="42" fill="#f02b43"/>
     <text x="41" y="438" fill="#f02b43" font-size="15" font-weight="700">07</text>
-    <text x="85" y="438" fill="#f0e6e1" font-size="16">Money in the hub</text>
+    <text x="85" y="438" fill="#f0e6e1" font-size="16">Mac and every screen</text>
     <text x="601" y="437" fill="#a99a9c" font-size="10" letter-spacing="1">IN PROGRESS</text>
     <rect x="701" y="427" width="146" height="10" fill="#241218" stroke="#6b202d"/>
-    <rect x="702" y="428" width="0" height="8" fill="#f02b43"/>
-    <text x="919" y="438" text-anchor="end" fill="#f0e6e1" font-size="14">0/2</text>
+    <rect x="702" y="428" width="10" height="8" fill="#f02b43"/>
+    <text x="919" y="438" text-anchor="end" fill="#f0e6e1" font-size="14">1/14</text>
   </g><g>
     <rect x="24" y="460" width="912" height="42" fill="#0c090b" stroke="#6b202d" stroke-opacity=".55"/>
-    <rect x="24" y="460" width="3" height="42" fill="#594c50"/>
-    <text x="41" y="487" fill="#594c50" font-size="15" font-weight="700">08</text>
-    <text x="85" y="487" fill="#a99a9c" font-size="16">Ready for a second person</text>
-    <text x="601" y="486" fill="#594c50" font-size="10" letter-spacing="1">PARKED</text>
+    <rect x="24" y="460" width="3" height="42" fill="#f02b43"/>
+    <text x="41" y="487" fill="#f02b43" font-size="15" font-weight="700">08</text>
+    <text x="85" y="487" fill="#f0e6e1" font-size="16">Artistic themes</text>
+    <text x="601" y="486" fill="#a99a9c" font-size="10" letter-spacing="1">IN PROGRESS</text>
     <rect x="701" y="476" width="146" height="10" fill="#241218" stroke="#6b202d"/>
     <rect x="702" y="477" width="0" height="8" fill="#f02b43"/>
-    <text x="919" y="487" text-anchor="end" fill="#594c50" font-size="14">0/5</text>
+    <text x="919" y="487" text-anchor="end" fill="#f0e6e1" font-size="14">0/11</text>
+  </g><g>
+    <rect x="24" y="509" width="912" height="42" fill="#0d0b0e" stroke="#6b202d" stroke-opacity=".55"/>
+    <rect x="24" y="509" width="3" height="42" fill="#f02b43"/>
+    <text x="41" y="536" fill="#f02b43" font-size="15" font-weight="700">09</text>
+    <text x="85" y="536" fill="#f0e6e1" font-size="16">Always-on Telegram</text>
+    <text x="601" y="535" fill="#a99a9c" font-size="10" letter-spacing="1">IN PROGRESS</text>
+    <rect x="701" y="525" width="146" height="10" fill="#241218" stroke="#6b202d"/>
+    <rect x="702" y="526" width="0" height="8" fill="#f02b43"/>
+    <text x="919" y="536" text-anchor="end" fill="#f0e6e1" font-size="14">0/6</text>
+  </g><g>
+    <rect x="24" y="558" width="912" height="42" fill="#0c090b" stroke="#6b202d" stroke-opacity=".55"/>
+    <rect x="24" y="558" width="3" height="42" fill="#f02b43"/>
+    <text x="41" y="585" fill="#f02b43" font-size="15" font-weight="700">10</text>
+    <text x="85" y="585" fill="#f0e6e1" font-size="16">Money in the hub</text>
+    <text x="601" y="584" fill="#a99a9c" font-size="10" letter-spacing="1">IN PROGRESS</text>
+    <rect x="701" y="574" width="146" height="10" fill="#241218" stroke="#6b202d"/>
+    <rect x="702" y="575" width="0" height="8" fill="#f02b43"/>
+    <text x="919" y="585" text-anchor="end" fill="#f0e6e1" font-size="14">0/2</text>
+  </g><g>
+    <rect x="24" y="607" width="912" height="42" fill="#0d0b0e" stroke="#6b202d" stroke-opacity=".55"/>
+    <rect x="24" y="607" width="3" height="42" fill="#594c50"/>
+    <text x="41" y="634" fill="#594c50" font-size="15" font-weight="700">11</text>
+    <text x="85" y="634" fill="#a99a9c" font-size="16">Ready for a second person</text>
+    <text x="601" y="633" fill="#594c50" font-size="10" letter-spacing="1">PARKED</text>
+    <rect x="701" y="623" width="146" height="10" fill="#241218" stroke="#6b202d"/>
+    <rect x="702" y="624" width="0" height="8" fill="#f02b43"/>
+    <text x="919" y="634" text-anchor="end" fill="#594c50" font-size="14">0/5</text>
   </g>
-<path d="M24 528H936" stroke="#6b202d"/>
-<text x="24" y="554" fill="#594c50" font-size="11" letter-spacing="1">EACH ROW MAPS TO A REAL GITHUB MILESTONE</text>
-<text x="936" y="554" text-anchor="end" fill="#f02b43" font-size="11" letter-spacing="1">TRANSMISSION CONTINUES_</text>
+<path d="M24 675H936" stroke="#6b202d"/>
+<text x="24" y="701" fill="#594c50" font-size="11" letter-spacing="1">EACH ROW MAPS TO A REAL GITHUB MILESTONE</text>
+<text x="936" y="701" text-anchor="end" fill="#f02b43" font-size="11" letter-spacing="1">TRANSMISSION CONTINUES_</text>
 </svg>
