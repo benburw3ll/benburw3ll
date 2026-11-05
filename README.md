@@ -1,10 +1,6 @@
 <p align="center">
-  <img src="assets/signal.svg" width="960" alt="BENBURW3LL in a black and red NFO-inspired banner with binary, a dial-up archive, and a short Hacker Manifesto excerpt">
+  <img src="assets/signal.svg" width="960" alt="Abstract black and red binary trace inspired by dial-up noise">
 </p>
-
-<p align="center"><b>I build personal software with an artist's eye and a dial-up soul.</b></p>
-
-<p align="center">The 90s internet got into my head and never left: progz, screen names, modem noise, text art, dark corners of the web. I like making software that feels alive, useful, and a little uncanny.</p>
 
 ## 01 // Current operation
 
