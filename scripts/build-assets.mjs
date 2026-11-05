@@ -81,11 +81,13 @@ const blockWord = (text, cx, top, cw, ch) => {
           : ''
       return `<rect x="${x}" y="${y}" width="80" height="80" fill="#0b0b0b" stroke="#2a2a2a"/>
       ${icon(i, cx, cy, '#3a3a3a')}
-      <text x="${cx}" y="${y + 97}" fill="#5a5a5a" text-anchor="middle" font-size="11">Step ${i + 1}: ${label}</text>
+      <text x="${x + 5}" y="${y + 13}" fill="#4a4a4a" font-size="10" font-weight="bold">${i + 1}</text>
+      <text x="${cx}" y="${y + 97}" fill="#5a5a5a" text-anchor="middle" font-size="11">${label}</text>
       <g opacity="${startOpacity(on)}">${during(on, D, D)}
         <rect x="${x + 0.5}" y="${y + 0.5}" width="79" height="79" fill="none" stroke="${lit}"/>
         ${icon(i, cx, cy, lit)}${pupil}
-        <text x="${cx}" y="${y + 97}" fill="#fff" text-anchor="middle" font-size="11">Step ${i + 1}: ${label}</text>
+        <text x="${x + 5}" y="${y + 13}" fill="${lit}" font-size="10" font-weight="bold">${i + 1}</text>
+        <text x="${cx}" y="${y + 97}" fill="#fff" text-anchor="middle" font-size="11">${label}</text>
       </g>`
     })
     .join('')

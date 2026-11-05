@@ -22,7 +22,7 @@ const BLOCKS = 26
 const fileName = (m) => {
   const [code, ...rest] = m.title.split('·')
   const words = rest.join(' ').replace(/\(parked\)/i, '').toUpperCase().replace(/[^A-Z0-9]+/g, '_').replace(/^_|_$/g, '')
-  return `${code.trim()}_${words}`.slice(0, 30).replace(/_$/, '') + '.EXE'
+  return `${code.trim()}_${words}`.slice(0, 22).replace(/_+$/, '') + '.EXE'
 }
 
 function transferSvg(m) {
@@ -48,7 +48,7 @@ function transferSvg(m) {
   <title>${esc(`${m.title}: ${left}`)}</title>
   ${defs()}
   <defs><g id="w${n}">
-    ${windowFrame(W, H, title.length > 52 ? title.slice(0, 51) + '…' : title)}
+    ${windowFrame(W, H, title.length > 44 ? title.slice(0, 43).trimEnd() + '…' : title)}
     <path d="M14 30h10l4 4v12h-14z" fill="#fff" stroke="#000"/><path d="M24 30v4h4" fill="none" stroke="#000"/>
     <text x="36" y="43" font-weight="bold"${parked ? ' fill="#808080"' : ''}>${verb} ${esc(fileName(m))}</text>
     ${sunken(12, 57, 376, 22)}
