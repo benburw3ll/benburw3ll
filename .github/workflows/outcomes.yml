@@ -1,7 +1,6 @@
 name: Outcomes progress
 
-# Redraws the File Transfer windows (outcomes/*.svg) and the README block from the WidgetButler
-# milestones.
+# Redraws the black-and-red roadmap graphic and the README links from WidgetButler milestones.
 on:
   schedule:
     - cron: '17 */3 * * *'

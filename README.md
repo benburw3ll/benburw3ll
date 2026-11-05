@@ -1,33 +1,33 @@
 <p align="center">
-  <img src="assets/signon.svg" width="400" alt="WidgetButler OnLine signing on">
+  <img src="assets/signal.svg" width="960" alt="BENBURW3LL in a black and red terminal, with binary, a signal reticle, and WidgetButler boot messages">
 </p>
 
-<p align="center"><i>"My crime is that of outsmarting you, something that you will never forgive me for."</i><br>&mdash; The Mentor, <i>The Hacker Manifesto</i>, 1986</p>
+<p align="center"><b>I build personal software with an artist's eye and a dial-up soul.</b></p>
 
-<h3 align="center">Building <a href="https://github.com/benburw3ll/widgetbutler">WidgetButler</a></h3>
+<p align="center">The 90s internet got into my head and never left: progz, screen names, modem noise, text art, dark corners of the web. I like making software that feels alive, useful, and a little uncanny.</p>
 
-<p align="center"><b>One brain, wired into every widget.</b> It tracks you, nags you, remembers what you forget, and fires rules across lights, door, sleep, meals, habits and money in combos nobody thought to wire together. You text it. It texts first.</p>
+## 01 // Current operation
+
+I'm building **[WidgetButler](https://github.com/benburw3ll/widgetbutler)**: a Windows desktop with a butler. Eight glanceable widgets cover lights, the front door, meals, AI usage, gratitude, weight, WHOOP, and physique. A Telegram assistant can see and act through the widgets, so I can ask about my day or change something from my phone.
 
 <p align="center">
-  <img src="assets/im.svg" width="400" alt="Instant message from n1ghtc4ll3r: u up?">
-  <img src="assets/buddies.svg" width="180" alt="Buddy List: Online 8 of 8, Humans 0 of 1">
+  <a href="https://github.com/benburw3ll/widgetbutler"><img src="assets/system.svg" width="960" alt="WidgetButler system map: eight desktop widgets, a Telegram assistant, and cross-widget rules"></a>
 </p>
 
-<p align="center"><img src="assets/transfers.svg" width="400" alt="File Transfers"></p>
+The idea is to connect things that separate apps can't: a doorbell event could trigger a light or a message. Standing “from now on…” rules already work; richer cross-widget routines are [on the roadmap](https://github.com/benburw3ll/widgetbutler#-it-doesnt-wait-to-be-asked). **WidgetButler is mid-rebuild.** The existing Windows version still runs most widgets while the new Tauri and TypeScript platform takes shape.
+
+<p align="center"><a href="https://github.com/benburw3ll/widgetbutler">ENTER THE PROJECT</a> &nbsp;·&nbsp; <a href="https://github.com/benburw3ll/widgetbutler/blob/main/docs/ARCHITECTURE.md">READ THE BLUEPRINT</a> &nbsp;·&nbsp; <a href="https://github.com/benburw3ll/widgetbutler/blob/main/docs/migration/status.md">CHECK THE REBUILD</a></p>
+
+## 02 // Live transmission
+
+The build is public. These are the actual [WidgetButler outcomes](https://github.com/benburw3ll/widgetbutler/milestones), updated from GitHub milestones rather than a hand-written progress claim.
 
 <!-- outcomes:start -->
-<p align="center">
-<a href="https://github.com/benburw3ll/widgetbutler/milestone/1"><img src="outcomes/O1.svg" width="400" alt="O1 · Decide the shape: 0 of 5 issues closed"></a><br>
-<a href="https://github.com/benburw3ll/widgetbutler/milestone/2"><img src="outcomes/O2.svg" width="400" alt="O2 · Mac and Windows, one set of data: 0 of 11 issues closed"></a><br>
-<a href="https://github.com/benburw3ll/widgetbutler/milestone/3"><img src="outcomes/O3.svg" width="400" alt="O3 · Always-on Telegram: 0 of 7 issues closed"></a><br>
-<a href="https://github.com/benburw3ll/widgetbutler/milestone/4"><img src="outcomes/O4.svg" width="400" alt="O4 · Themes: 0 of 9 issues closed"></a><br>
-<a href="https://github.com/benburw3ll/widgetbutler/milestone/5"><img src="outcomes/O5.svg" width="400" alt="O5 · Reach it from anywhere: 0 of 6 issues closed"></a><br>
-<a href="https://github.com/benburw3ll/widgetbutler/milestone/6"><img src="outcomes/O6.svg" width="400" alt="O6 · The hub brain: 0 of 8 issues closed"></a><br>
-<a href="https://github.com/benburw3ll/widgetbutler/milestone/7"><img src="outcomes/O7.svg" width="400" alt="O7 · Money in the hub: 0 of 2 issues closed"></a><br>
-<a href="https://github.com/benburw3ll/widgetbutler/milestone/8"><img src="outcomes/O8.svg" width="400" alt="O8 · Ready for a second person (parked): 0 of 5 issues closed"></a>
-</p>
+<p align="center"><a href="https://github.com/benburw3ll/widgetbutler/milestones"><img src="outcomes/operations.svg" width="960" alt="WidgetButler roadmap: 0 of 48 active milestone issues closed; parked outcome excluded"></a></p>
 
-<p align="center"><b>0 of 48 issues closed</b> (parked outcomes not counted)</p>
+<p align="center"><a href="https://github.com/benburw3ll/widgetbutler/milestone/1">O1</a> &nbsp;·&nbsp; <a href="https://github.com/benburw3ll/widgetbutler/milestone/2">O2</a> &nbsp;·&nbsp; <a href="https://github.com/benburw3ll/widgetbutler/milestone/3">O3</a> &nbsp;·&nbsp; <a href="https://github.com/benburw3ll/widgetbutler/milestone/4">O4</a> &nbsp;·&nbsp; <a href="https://github.com/benburw3ll/widgetbutler/milestone/5">O5</a> &nbsp;·&nbsp; <a href="https://github.com/benburw3ll/widgetbutler/milestone/6">O6</a> &nbsp;·&nbsp; <a href="https://github.com/benburw3ll/widgetbutler/milestone/7">O7</a> &nbsp;·&nbsp; <a href="https://github.com/benburw3ll/widgetbutler/milestone/8">O8</a></p>
+
+<p align="center"><sub>0 of 48 active-outcome issues closed. Generated from live WidgetButler milestones; parked work excluded.</sub></p>
 <!-- outcomes:end -->
 
-<p align="center"><img src="assets/greetz.svg" width="400" alt="coded by benburw3ll, greetz: The Mentor"></p>
+<p align="center"><sub>01000010 01000101 01001110 &nbsp; / &nbsp; GREETZ FROM THE OTHER SIDE OF THE SCREEN</sub></p>

@@ -1,211 +1,125 @@
-// Builds the profile's static SVGs into assets/: the sign-on window, the instant message, the
-// buddy list and the fader headings. Run: node scripts/build-assets.mjs
+// Generate self-contained SVG artwork for the GitHub profile README.
+// Run: node scripts/build-assets.mjs
 import { mkdirSync, writeFileSync } from 'node:fs'
-import { UI, MONO, esc, raised, sunken, button, defs, windowFrame, during, startOpacity, tear, binaryRows } from './win95.mjs'
 
-const dir = new URL('../assets/', import.meta.url)
-mkdirSync(dir, { recursive: true })
-const save = (name, svg) => {
-  writeFileSync(new URL(name, dir), svg)
-  console.log(`assets/${name} ${svg.length} bytes`)
-}
-const svgOpen = (w, h, label, extraDefs = '') =>
-  `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${w} ${h}" width="${w}" height="${h}" role="img" aria-label="${esc(label)}" font-family="${UI}" font-size="12">
-  <title>${esc(label)}</title>
-  ${defs(extraDefs)}`
-
-/** Opacity on/off over several windows within one cycle. */
-const flicker = (pairs, dur) => {
-  const values = ['0']
-  const times = ['0']
-  for (const [a, b] of pairs) {
-    values.push('1', '0')
-    times.push((a / dur).toFixed(4), (b / dur).toFixed(4))
-  }
-  return `<animate attributeName="opacity" values="${values.join(';')}" keyTimes="${times.join(';')}" calcMode="discrete" dur="${dur}s" repeatCount="indefinite"/>`
-}
-const GHOSTS = `<filter id="onlyRed"><feColorMatrix type="matrix" values="1 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 1 0"/></filter>
-    <filter id="onlyCyan"><feColorMatrix type="matrix" values="0 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 1 0"/></filter>`
-
-// Block letters, for the moment the sign-on screen breaks.
-const G = {
-  H: ['██╗  ██╗', '██║  ██║', '███████║', '██╔══██║', '██║  ██║', '╚═╝  ╚═╝'],
-  A: [' █████╗ ', '██╔══██╗', '███████║', '██╔══██║', '██║  ██║', '╚═╝  ╚═╝'],
-  C: [' ██████╗', '██╔════╝', '██║     ', '██║     ', '╚██████╗', ' ╚═════╝'],
-  K: ['██╗  ██╗', '██║ ██╔╝', '█████╔╝ ', '██╔═██╗ ', '██║  ██╗', '╚═╝  ╚═╝'],
-  T: ['████████╗', '╚══██╔══╝', '   ██║   ', '   ██║   ', '   ██║   ', '   ╚═╝   '],
-  E: ['███████╗', '██╔════╝', '█████╗  ', '██╔══╝  ', '███████╗', '╚══════╝'],
-  P: ['██████╗ ', '██╔══██╗', '██████╔╝', '██╔═══╝ ', '██║     ', '╚═╝     '],
-  L: ['██╗     ', '██║     ', '██║     ', '██║     ', '███████╗', '╚══════╝'],
-  N: ['███╗   ██╗', '████╗  ██║', '██╔██╗ ██║', '██║╚██╗██║', '██║ ╚████║', '╚═╝  ╚═══╝'],
-  ' ': ['   ', '   ', '   ', '   ', '   ', '   '],
-}
-const blockWord = (text, cx, top, cw, ch) => {
-  const rows = [0, 1, 2, 3, 4, 5].map((i) => [...text].map((c) => G[c][i]).join(''))
-  const x0 = cx - ([...rows[0]].length * cw) / 2
-  const out = []
-  rows.forEach((row, r) => [...row].forEach((c, k) => c === '█' && out.push(`<rect x="${x0 + k * cw}" y="${top + r * ch}" width="${cw}" height="${ch}"/>`)))
-  return out.join('')
+const out = new URL('../assets/', import.meta.url)
+mkdirSync(out, { recursive: true })
+const save = (name, body) => {
+  writeFileSync(new URL(name, out), body)
+  console.log(`assets/${name}`)
 }
 
-// ---------- sign-on window ----------
+const C = {
+  bg: '#060607', panel: '#0d0b0e', panel2: '#140d10',
+  red: '#f02b43', hot: '#ff5568', dim: '#6b202d',
+  bone: '#f0e6e1', soft: '#a99a9c', faint: '#594c50',
+}
+const mono = "'Cascadia Code', Consolas, 'Liberation Mono', monospace"
+const common = `<defs>
+  <pattern id="scan" width="4" height="4" patternUnits="userSpaceOnUse"><path d="M0 3.5H4" stroke="#fff" stroke-opacity=".035"/></pattern>
+  <pattern id="grid" width="28" height="28" patternUnits="userSpaceOnUse"><path d="M28 0H0V28" fill="none" stroke="${C.red}" stroke-opacity=".07"/></pattern>
+  <linearGradient id="fade" x1="0" x2="1"><stop stop-color="${C.red}"/><stop offset="1" stop-color="#370b14"/></linearGradient>
+  <linearGradient id="panel" x1="0" y1="0" x2="1" y2="1"><stop stop-color="${C.panel2}"/><stop offset="1" stop-color="${C.bg}"/></linearGradient>
+  <filter id="glow" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="7"/></filter>
+</defs>`
+const open = (w, h, title) => `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${w} ${h}" width="${w}" height="${h}" role="img" aria-label="${title}" font-family="${mono}"><title>${title}</title>${common}`
+const line = (x1, y1, x2, y2, color = C.dim, opacity = 1, width = 1) => `<path d="M${x1} ${y1}L${x2} ${y2}" stroke="${color}" stroke-opacity="${opacity}" stroke-width="${width}"/>`
+const text = (x, y, s, size = 14, fill = C.bone, extra = '') => `<text x="${x}" y="${y}" font-size="${size}" fill="${fill}" ${extra}>${s}</text>`
+const binary = Array.from({ length: 8 }, (_, row) => {
+  const s = Array.from({ length: 70 }, (_, i) => ((i * 13 + row * 19 + (i >> 2)) % 11 < 5 ? '0' : '1')).join('')
+  return text(35 + (row % 2) * 24, 67 + row * 47, s, 10, C.red, `opacity="${row % 3 === 0 ? '.17' : '.09'}" letter-spacing="5"`)
+}).join('')
+
+// The opening image: dial-up DNA, reframed as a contemporary command surface.
 {
-  const W = 400
-  const H = 290
-  const D = 12
-  const icon = (i, cx, cy, c) => {
-    const s = `stroke="${c}" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"`
-    switch (i) {
-      case 0: // modem
-        return `<rect x="${cx - 24}" y="${cy - 8}" width="48" height="16" rx="3" ${s}/><circle cx="${cx - 12}" cy="${cy}" r="2" fill="${c}"/><circle cx="${cx - 4}" cy="${cy}" r="2" fill="${c}"/><circle cx="${cx + 4}" cy="${cy}" r="2" fill="${c}"/><path d="M${cx + 24} ${cy}c8 0 6 10 14 10" ${s}/>`
-      case 1: // two machines and a signal
-        return `<rect x="${cx - 32}" y="${cy - 15}" width="18" height="14" ${s}/><path d="M${cx - 23} ${cy - 1}v5m-5 0h10" ${s}/><rect x="${cx + 14}" y="${cy - 15}" width="18" height="14" ${s}/><path d="M${cx + 23} ${cy - 1}v5m-5 0h10" ${s}/><path d="M${cx - 11} ${cy - 8}l4 -5l4 10l4 -10l4 10l4 -5" ${s}/>`
-      case 2: // key
-        return `<circle cx="${cx - 14}" cy="${cy}" r="7" ${s}/><path d="M${cx - 7} ${cy}h26m-8 0v6m6 -6v5" ${s}/>`
-      default: // the eye
-        return `<path d="M${cx - 24} ${cy}Q${cx} ${cy - 18} ${cx + 24} ${cy}Q${cx} ${cy + 18} ${cx - 24} ${cy}Z" ${s}/><circle cx="${cx}" cy="${cy}" r="8" ${s}/>`
-    }
-  }
-  const labels = ['Dialing', 'Connecting', 'Password', 'Signing on']
-  const tiles = labels
-    .map((label, i) => {
-      const x = 22 + i * 92
-      const y = 72
-      const cx = x + 40
-      const cy = y + 36
-      const lit = i === 3 ? '#ff1a1a' : '#ffd400'
-      const on = i * 2
-      const pupil =
-        i === 3
-          ? `<circle cx="${cx}" cy="${cy}" r="3.5" fill="${lit}"><animateTransform attributeName="transform" type="translate" values="0 0;-6 0;5 0;0 2;-4 -1;0 0" keyTimes="0;0.55;0.68;0.8;0.9;0.97" calcMode="discrete" dur="${D}s" repeatCount="indefinite"/></circle>`
-          : ''
-      return `<rect x="${x}" y="${y}" width="80" height="80" fill="#0b0b0b" stroke="#2a2a2a"/>
-      ${icon(i, cx, cy, '#3a3a3a')}
-      <text x="${x + 5}" y="${y + 13}" fill="#4a4a4a" font-size="10" font-weight="bold">${i + 1}</text>
-      <text x="${cx}" y="${y + 97}" fill="#5a5a5a" text-anchor="middle" font-size="11">${label}</text>
-      <g opacity="${startOpacity(on)}">${during(on, D, D)}
-        <rect x="${x + 0.5}" y="${y + 0.5}" width="79" height="79" fill="none" stroke="${lit}"/>
-        ${icon(i, cx, cy, lit)}${pupil}
-        <text x="${x + 5}" y="${y + 13}" fill="${lit}" font-size="10" font-weight="bold">${i + 1}</text>
-        <text x="${cx}" y="${y + 97}" fill="#fff" text-anchor="middle" font-size="11">${label}</text>
-      </g>`
-    })
-    .join('')
-  const status = [
-    [0, 2, 'Dialing…', '#000', UI],
-    [2, 4, 'Connecting at 28,800 bps…', '#000', UI],
-    [4, 6, 'Checking password…', '#000', UI],
-    [6, 7.5, 'Signing on…', '#000', UI],
-    [7.5, 10.5, '01010111 01000101 01001100 01000011 01001111 01001101 01000101', '#c00000', MONO],
-    [10.5, D, 'Welcome back.', '#000', UI],
-  ]
-    .map(([a, b, t, c, f]) => `<text x="20" y="${208}" fill="${c}" font-family="${f}" opacity="${startOpacity(a)}">${during(a, b, D)}${esc(t)}</text>`)
-    .join('')
-  const win = `<g id="win">
-    ${windowFrame(W, H, 'WidgetButler OnLine — Sign On')}
-    <text x="${W / 2}" y="54" text-anchor="middle" font-size="25" font-weight="bold" font-style="italic" fill="url(#fader)" stroke="#000" stroke-width="0.8" paint-order="stroke">WidgetButler OnLine</text>
-    ${sunken(12, 64, 376, 124, '#000')}
-    ${tiles}
-    ${sunken(12, 194, 376, 22)}
-    ${status}
-    <text x="12" y="238">Screen Name:</text>${sunken(88, 225, 122, 20)}<text x="94" y="239">benburw3ll</text>
-    <text x="220" y="238">Password:</text>${sunken(280, 225, 108, 20)}<text x="287" y="240" letter-spacing="1">••••••••</text>
-    ${button(12, 256, 70, 24, 'Setup')}${button(88, 256, 60, 24, 'Help')}
-    ${button(232, 256, 72, 24, 'Cancel', { disabled: true })}${button(312, 256, 76, 24, 'Sign On', { primary: true })}
-  </g>`
-  const svg = `${svgOpen(W, H, 'WidgetButler OnLine signing on: dialing, connecting, checking password, signing on', GHOSTS)}
-  <defs>${win}</defs>
-  <use href="#win"/>
-  ${tear('t1', 'win', W, 40, 10, [[7.6, 24], [8.0, 0], [9.1, -30], [9.4, 0]], D)}
-  ${tear('t2', 'win', W, 118, 14, [[7.9, -18], [8.5, 0], [9.8, 40], [10.2, 0]], D, '#ff0040')}
-  ${tear('t3', 'win', W, 196, 9, [[8.2, 50], [8.6, 0], [9.6, -22], [10.0, 0]], D)}
-  ${tear('t4', 'win', W, 258, 12, [[7.7, -12], [8.1, 0], [10.0, 16], [10.4, 0]], D, '#00d5ff')}
-  <g opacity="0">${flicker([[7.5, 8.0], [8.6, 9.3], [9.8, 10.4]], D)}
-    <use href="#win" x="-4" filter="url(#onlyRed)" opacity="0.5"/><use href="#win" x="4" filter="url(#onlyCyan)" opacity="0.45"/>
-  </g>
-  <g opacity="0">${flicker([[7.8, 10.2]], D)}${binaryRows('HACK THE PLANET ', W, 36, H - 4, 11, '#1aff3a')}</g>
-  <g opacity="0">${flicker([[8.4, 8.9], [9.0, 9.6]], D)}
-    <g fill="#ff1a1a" transform="translate(-3 0)">${blockWord('HACK THE', W / 2, 76, 5, 9)}${blockWord('PLANET', W / 2, 138, 5, 9)}</g>
-    <g fill="#39ff14">${blockWord('HACK THE', W / 2, 76, 5, 9)}${blockWord('PLANET', W / 2, 138, 5, 9)}</g>
-  </g>
-  <rect width="${W}" height="${H}" fill="#ff0020" opacity="0">${flicker([[7.5, 7.65], [9.0, 9.12]], D)}</rect>
-</svg>
-`
-  save('signon.svg', svg.replace('<animate attributeName="opacity" values="0;1;0"', '<animate attributeName="opacity" values="0;1;0"'))
-}
-
-// ---------- instant message ----------
-{
-  const W = 400
-  const H = 248
-  const D = 12
-  const name = (n, c) => `<tspan fill="${c}" font-weight="bold">${esc(n)}</tspan>`
-  const lines = [
-    [0.5, `${name('n1ghtc4ll3r', '#ff0000')}<tspan>: u up?</tspan>`],
-    [2.0, `${name('n1ghtc4ll3r', '#ff0000')}<tspan>: i read ur commit history</tspan>`],
-    [3.8, `${name('benburw3ll', '#0000ff')}<tspan>: ...</tspan>`],
-    [5.6, `${name('n1ghtc4ll3r', '#ff0000')}<tspan>: the kill switch isn't built yet. is it</tspan>`],
-    [7.8, `<tspan fill="#808080" font-style="italic">n1ghtc4ll3r has warned you. Warning level: 100%</tspan>`],
-  ]
-  const msg = lines
-    .map(([t, body], i) => `<text x="16" y="${66 + i * 21}" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#000" opacity="0">${during(t, D, D)}${body}</text>`)
-    .join('')
-  const tools = ['A', 'A', 'B', 'I', 'U']
-    .map((t, k) => `${raised(8 + k * 20, 25, 18, 17)}<text x="${17 + k * 20}" y="${38}" text-anchor="middle" font-size="${k === 0 ? 9 : 12}" font-weight="${t === 'B' ? 'bold' : 'normal'}" font-style="${t === 'I' ? 'italic' : 'normal'}" text-decoration="${t === 'U' ? 'underline' : 'none'}">${t}</text>`)
-    .join('')
-  const win = `<g id="im">
-    ${windowFrame(W, H, 'Instant Message From: n1ghtc4ll3r')}
-    ${tools}<rect x="112" y="27" width="14" height="13" fill="#ff0000" stroke="#000"/>
-    ${sunken(8, 46, 384, 128)}
-    ${msg}
-    ${sunken(8, 182, 300, 58)}
-    <rect x="14" y="189" width="1" height="15" fill="#000">${`<animate attributeName="opacity" values="1;0" keyTimes="0;0.5" calcMode="discrete" dur="1s" repeatCount="indefinite"/>`}</rect>
-    ${button(316, 182, 76, 18, 'Warn')}${button(316, 202, 76, 18, 'Block', { disabled: true })}${button(316, 222, 76, 18, 'Send', { primary: true })}
-  </g>`
-  const svg = `${svgOpen(W, H, 'Instant message from n1ghtc4ll3r: u up?', GHOSTS)}
-  <defs>${win}</defs>
-  <use href="#im"/>
-  ${tear('i1', 'im', W, 108, 12, [[9.6, 22], [10.0, 0], [10.8, -26], [11.1, 0]], D, '#ff0040')}
-  ${tear('i2', 'im', W, 150, 8, [[9.9, -34], [10.3, 0], [11.2, 18], [11.5, 0]], D)}
-  <g opacity="0">${flicker([[9.6, 10.1], [10.7, 11.3]], D)}
-    <use href="#im" x="-3" filter="url(#onlyRed)" opacity="0.5"/><use href="#im" x="3" filter="url(#onlyCyan)" opacity="0.45"/>
-  </g>
-  <g opacity="0">${flicker([[10.2, 11.6]], D)}<svg x="9" y="47" width="382" height="126">${binaryRows('u up? ', 382, 12, 126, 11, '#0a8a20')}</svg></g>
-</svg>
-`
-  save('im.svg', svg)
-}
-
-// ---------- buddy list ----------
-{
-  const W = 180
-  const H = 248
-  const online = ['n1ghtc4ll3r', 'zer0fr1endz', 'xXd34dp1x3lXx', 'ph0nephr34k', 'c0ldb00t', 'punt3rX', 'd1alt0ne', 'l0stcarri3r']
+  const w = 960, h = 482
+  const ticks = Array.from({ length: 40 }, (_, i) => {
+    const a = i * Math.PI * 2 / 40
+    const r1 = i % 5 === 0 ? 104 : 111
+    const r2 = 119
+    return line((782 + Math.cos(a) * r1).toFixed(1), (329 + Math.sin(a) * r1).toFixed(1), (782 + Math.cos(a) * r2).toFixed(1), (329 + Math.sin(a) * r2).toFixed(1), C.red, i % 5 === 0 ? .8 : .25)
+  }).join('')
   const rows = [
-    `<text x="12" y="60" font-weight="bold">▾ Online (8/8)</text>`,
-    ...online.map((n, k) => `<text x="28" y="${75 + k * 15}"${k === 0 ? ' font-weight="bold"' : ''}>${n}</text>`),
-    `<text x="12" y="${75 + online.length * 15}" font-weight="bold">▾ Humans (0/1)</text>`,
-    `<text x="28" y="${90 + online.length * 15}" fill="#808080" font-style="italic">benburw3ll</text>`,
-  ].join('')
-  const svg = `${svgOpen(W, H, 'Buddy List: Online 8 of 8, Humans 0 of 1')}
-  ${windowFrame(W, H, 'Buddy List')}
-  ${raised(6, 25, 70, 18)}<text x="41" y="38" text-anchor="middle" font-weight="bold">Online</text>
-  ${raised(78, 27, 80, 16)}<text x="118" y="39" text-anchor="middle" fill="#404040">List Setup</text>
-  ${sunken(6, 44, 168, 170)}
+    ['C:\\&gt; CONNECT BENBURW3LL', C.bone],
+    ['&gt; MOUNT WIDGETBUTLER / WINDOWS_11', C.soft],
+    ['&gt; LOAD 8 WIDGETS + TELEGRAM ASSISTANT', C.soft],
+    ['&gt; STATUS: BUILDING THE NEXT VERSION_', C.red],
+  ].map(([s, color], i) => text(66, 312 + i * 29, s, 17, color, `letter-spacing=".1"`)).join('')
+  const svg = `${open(w, h, 'Ben Burwell: red and black hacker console, binary signal, and WidgetButler status')}
+  <style>
+    @keyframes tear { 0%, 87%, 91%, 100% { transform: translateX(0) } 88% { transform: translateX(15px) } 89% { transform: translateX(-8px) } 90% { transform: translateX(6px) } }
+    @keyframes blink { 0%, 49% { opacity: 1 } 50%, 100% { opacity: 0 } }
+    @media (prefers-reduced-motion: no-preference) { #glitch-a { animation: tear 9s steps(1) infinite } #cursor { animation: blink 1.2s steps(1) infinite } }
+  </style>
+  <clipPath id="slice1"><rect x="0" y="111" width="960" height="9"/></clipPath>
+  <clipPath id="slice2"><rect x="0" y="155" width="960" height="6"/></clipPath>
+  <rect width="960" height="482" fill="${C.bg}"/><rect width="960" height="482" fill="url(#grid)"/>
+  <rect x="0" y="0" width="960" height="482" fill="url(#scan)"/>
+  ${binary}
+  <rect x="1" y="1" width="958" height="480" fill="none" stroke="${C.dim}" stroke-width="2"/>
+  <rect x="15" y="15" width="930" height="452" fill="none" stroke="${C.red}" stroke-opacity=".18"/>
+  <rect x="15" y="15" width="258" height="3" fill="${C.red}"/><rect x="802" y="464" width="143" height="3" fill="${C.red}"/>
+  ${text(43, 52, '[ SYS://BENBURW3LL/ROOT ]', 14, C.red, 'font-weight="700" letter-spacing="1.5"')}
+  ${text(918, 52, '28.8K  →  ALWAYS ON', 12, C.soft, 'text-anchor="end" letter-spacing="1"')}
+  ${line(43, 65, 918, 65, C.dim)}
+  ${text(45, 104, 'INCOMING TRANSMISSION', 13, C.soft, 'letter-spacing="4"')}
+  <text id="glitch-a" x="39" y="187" font-family="${mono}" font-size="91" font-weight="900" letter-spacing="-6" fill="${C.red}" opacity=".6" clip-path="url(#slice1)">BENBURW3LL</text>
+  <text x="55" y="187" font-family="${mono}" font-size="91" font-weight="900" letter-spacing="-6" fill="${C.red}" opacity=".75" clip-path="url(#slice2)">BENBURW3LL</text>
+  <text x="47" y="187" font-family="${mono}" font-size="91" font-weight="900" letter-spacing="-6" fill="${C.bone}">BENBURW3LL</text>
+  <rect x="47" y="199" width="405" height="3" fill="${C.red}"/>
+  ${text(47, 232, 'ART / CODE / MACHINES WITH A MIND OF THEIR OWN', 17, C.red, 'letter-spacing="1.4"')}
+  ${text(47, 253, 'FILE   EDIT   VIEW   SIGN ON   PROGZ   HELP', 10, C.faint, 'letter-spacing="1"')}
+  <rect x="43" y="264" width="572" height="159" fill="url(#panel)" stroke="${C.dim}"/>
+  <rect x="43" y="264" width="572" height="24" fill="${C.red}" fill-opacity=".12"/>
+  ${text(59, 281, 'TERMINAL_01   ::   CURRENT OPERATION', 12, C.red, 'font-weight="700" letter-spacing="1"')}
+  ${text(596, 281, '● ● ●', 12, C.red, 'text-anchor="end"')}
   ${rows}
-  <rect x="24" y="64" width="2" height="13" fill="#ff0000"><animate attributeName="opacity" values="1;0" keyTimes="0;0.5" calcMode="discrete" dur="1.4s" repeatCount="indefinite"/></rect>
-  ${button(6, 220, 50, 20, 'IM')}${button(62, 220, 54, 20, 'Info')}${button(122, 220, 52, 20, 'Away')}
-</svg>
-`
-  save('buddies.svg', svg)
+  <rect id="cursor" x="511" y="385" width="10" height="3" fill="${C.red}"/>
+  <rect x="639" y="264" width="279" height="159" fill="${C.panel}" stroke="${C.dim}"/>
+  ${ticks}
+  <circle cx="782" cy="329" r="95" fill="none" stroke="${C.red}" stroke-opacity=".18" stroke-width="16" filter="url(#glow)"/>
+  <circle cx="782" cy="329" r="95" fill="none" stroke="${C.red}" stroke-opacity=".74" stroke-width="1.5"/>
+  <circle cx="782" cy="329" r="72" fill="none" stroke="${C.red}" stroke-opacity=".25"/>
+  <circle cx="782" cy="329" r="52" fill="none" stroke="${C.red}" stroke-opacity=".45" stroke-dasharray="4 5"/>
+  <path d="M782 274v110M727 329h110" stroke="${C.red}" stroke-opacity=".45"/>
+  <path d="M782 291l38 38-38 38-38-38z" fill="${C.bg}" stroke="${C.red}" stroke-width="2"/>
+  ${text(782, 337, 'B', 32, C.bone, 'text-anchor="middle" font-weight="900"')}
+  <rect x="652" y="274" width="94" height="17" fill="${C.bg}"/>
+  ${text(657, 287, 'SIGNAL: LIVE', 11, C.red, 'font-weight="700"')}
+  ${text(782, 410, '01000010  /  00110011', 10, C.soft, 'text-anchor="middle" letter-spacing="1"')}
+  ${line(43, 444, 918, 444, C.dim)}
+  ${text(43, 461, 'NO CARRIER  →  CARRIER RESTORED', 11, C.faint, 'letter-spacing="1"')}
+  ${text(918, 461, 'WELCOME TO THE OTHER SIDE_ ', 11, C.red, 'text-anchor="end" letter-spacing="1"')}
+  </svg>`
+  save('signal.svg', svg)
 }
 
-// ---------- fader headings ----------
-const fader = (name, W, H, lines) => {
-  const body = lines
-    .map(([text, y, size]) => `<text x="${W / 2}" y="${y}" text-anchor="middle" font-size="${size}" font-weight="bold" font-style="italic" fill="url(#fader)" stroke="#000" stroke-width="0.7" paint-order="stroke">${esc(text)}</text>`)
-    .join('')
-  save(name, `${svgOpen(W, H, lines.map(([t]) => t).join(' · '))}${body}</svg>\n`)
+// A visual summary; the README below it remains real HTML text for accessibility.
+{
+  const w = 960, h = 355
+  const card = (x, n, label, title, lines, icon) => `<rect x="${x}" y="105" width="278" height="212" fill="url(#panel)" stroke="${C.dim}"/>
+    <rect x="${x}" y="105" width="278" height="3" fill="${C.red}"/>
+    ${text(x + 17, 137, `[ ${n} ]  ${label}`, 13, C.red, 'font-weight="700" letter-spacing="1"')}
+    ${icon(x + 228, 151)}
+    ${text(x + 17, 199, title, 20, C.bone, 'font-weight="700"')}
+    ${lines.map((s, i) => text(x + 17, 236 + i * 23, s, 13, C.soft)).join('')}`
+  const desktopIcon = (x, y) => `<g fill="none" stroke="${C.red}"><rect x="${x - 22}" y="${y - 20}" width="44" height="32"/><path d="M${x - 9} ${y + 17}h18M${x} ${y + 12}v5M${x - 16} ${y - 9}h12v8h-12zM${x + 2} ${y - 9}h12v8H${x + 2}z"/></g>`
+  const phoneIcon = (x, y) => `<g fill="none" stroke="${C.red}"><rect x="${x - 17}" y="${y - 23}" width="34" height="48" rx="4"/><path d="M${x - 10} ${y - 9}h20M${x - 10} ${y - 2}h14M${x - 10} ${y + 5}h18"/></g>`
+  const ruleIcon = (x, y) => `<g fill="none" stroke="${C.red}"><circle cx="${x - 18}" cy="${y - 11}" r="5"/><circle cx="${x + 18}" cy="${y + 15}" r="5"/><path d="M${x - 13} ${y - 11}h16v26h10M${x - 2} ${y - 16}l5 5-5 5"/></g>`
+  const svg = `${open(w, h, 'WidgetButler connects desktop widgets, a Telegram assistant, and personal rules')}
+    <rect width="960" height="355" fill="${C.bg}"/><rect width="960" height="355" fill="url(#scan)"/>
+    <rect x="1" y="1" width="958" height="353" fill="none" stroke="${C.dim}" stroke-width="2"/>
+    <rect x="24" y="22" width="8" height="8" fill="${C.red}"/>
+    ${text(45, 32, 'WIDGETBUTLER // THE SYSTEM', 17, C.bone, 'font-weight="700" letter-spacing="1.3"')}
+    ${text(934, 32, 'LOCAL FIRST · MID-REBUILD', 12, C.red, 'text-anchor="end" letter-spacing="1"')}
+    ${line(24, 47, 936, 47, C.dim)}
+    ${text(24, 78, 'ONE DESKTOP. EIGHT WIDGETS. ONE ASSISTANT THAT CAN ACT.', 18, C.soft, 'letter-spacing=".4"')}
+    ${card(24, '01', 'DESKTOP', 'Always in sight', ['Lights · door · meals · weight', 'WHOOP · physique · gratitude', 'AI usage, behind your windows'], desktopIcon)}
+    ${card(341, '02', 'TELEGRAM', 'Just ask it', ['A chat interface to the widgets', 'Ask about your day or change', 'something from your phone'], phoneIcon)}
+    ${card(658, '03', 'RULES', 'Make connections', ['Events and standing rules can', 'join separate parts of life.', 'More combinations are planned.'], ruleIcon)}
+    ${text(24, 341, '01/03  ·  INPUT', 10, C.faint, 'letter-spacing="1"')}
+    ${text(478, 341, '02/03  ·  INTELLIGENCE', 10, C.faint, 'text-anchor="middle" letter-spacing="1"')}
+    ${text(936, 341, '03/03  ·  ACTION', 10, C.faint, 'text-anchor="end" letter-spacing="1"')}
+  </svg>`
+  save('system.svg', svg)
 }
-fader('transfers.svg', 400, 40, [['~*~ File Transfers ~*~', 29, 24]])
-fader('greetz.svg', 400, 56, [['coded by benburw3ll', 24, 20], ['greetz: The Mentor', 46, 14]])
