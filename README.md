@@ -30,4 +30,4 @@ The build is public. These are the actual [WidgetButler outcomes](https://github
 <p align="center"><sub>0 of 48 active-outcome issues closed. Generated from live WidgetButler milestones; parked work excluded.</sub></p>
 <!-- outcomes:end -->
 
-<p align="center"><sub>01000010 01000101 01001110 &nbsp; / &nbsp; GREETZ FROM THE OTHER SIDE OF THE SCREEN</sub></p>
+<p align="center"><i>"My crime is that of outsmarting you, something that you will never forgive me for."</i><br>&mdash; The Mentor, <i>The Hacker Manifesto</i>, 1986</p>
