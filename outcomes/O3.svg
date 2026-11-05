@@ -50,5 +50,5 @@
   </g></defs>
   <use href="#w3"/>
   <clipPath id="g3"><rect x="0" y="58" width="400" height="10"/></clipPath>
-  <g clip-path="url(#g3)"><g><animateTransform attributeName="transform" type="translate" values="0 0;26 0;0 0;-18 0;0 0" keyTimes="0;0.62;0.66;0.83;0.86" calcMode="discrete" dur="10s" repeatCount="indefinite"/><use href="#w3"/><rect x="0" y="58" width="400" height="10" fill="#ff0040" opacity="0.3"/></g></g>
+  <g clip-path="url(#g3)"><g><animateTransform attributeName="transform" type="translate" values="0 0;26 0;0 0;-18 0;0 0" keyTimes="0;0.62;0.66;0.83;0.86" calcMode="discrete" dur="10s" repeatCount="indefinite"/><use href="#w3"/><rect x="0" y="58" width="400" height="10" fill="#ff0040" opacity="0"><animate attributeName="opacity" values="0;0.3;0;0.3;0" keyTimes="0;0.62;0.66;0.83;0.86" calcMode="discrete" dur="10s" repeatCount="indefinite"/></rect></g></g>
 </svg>

@@ -42,7 +42,7 @@ function transferSvg(m) {
   const glitchy = n === 3 || n === 6
   const glitch = glitchy
     ? `<clipPath id="g${n}"><rect x="0" y="58" width="${W}" height="10"/></clipPath>
-  <g clip-path="url(#g${n})"><g><animateTransform attributeName="transform" type="translate" values="0 0;26 0;0 0;-18 0;0 0" keyTimes="0;0.62;0.66;0.83;0.86" calcMode="discrete" dur="${7 + n}s" repeatCount="indefinite"/><use href="#w${n}"/><rect x="0" y="58" width="${W}" height="10" fill="#ff0040" opacity="0.3"/></g></g>`
+  <g clip-path="url(#g${n})"><g><animateTransform attributeName="transform" type="translate" values="0 0;26 0;0 0;-18 0;0 0" keyTimes="0;0.62;0.66;0.83;0.86" calcMode="discrete" dur="${7 + n}s" repeatCount="indefinite"/><use href="#w${n}"/><rect x="0" y="58" width="${W}" height="10" fill="#ff0040" opacity="0"><animate attributeName="opacity" values="0;0.3;0;0.3;0" keyTimes="0;0.62;0.66;0.83;0.86" calcMode="discrete" dur="${7 + n}s" repeatCount="indefinite"/></rect></g></g>`
     : ''
   return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="${esc(`${m.title}: ${left}`)}" font-family="${UI}" font-size="12">
   <title>${esc(`${m.title}: ${left}`)}</title>
