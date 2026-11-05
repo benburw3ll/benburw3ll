@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/signal.svg" width="960" alt="BENBURW3LL in a black and red terminal, with binary, a signal reticle, and WidgetButler boot messages">
+  <img src="assets/signal.svg" width="960" alt="BENBURW3LL in a black and red NFO-inspired banner with binary, a dial-up archive, and a short Hacker Manifesto excerpt">
 </p>
 
 <p align="center"><b>I build personal software with an artist's eye and a dial-up soul.</b></p>
@@ -30,4 +30,4 @@ The build is public. These are the actual [WidgetButler outcomes](https://github
 <p align="center"><sub>0 of 48 active-outcome issues closed. Generated from live WidgetButler milestones; parked work excluded.</sub></p>
 <!-- outcomes:end -->
 
-<p align="center"><i>"My crime is that of outsmarting you, something that you will never forgive me for."</i><br>&mdash; The Mentor, <i>The Hacker Manifesto</i>, 1986</p>
+<p align="center"><i>"My crime is that of outsmarting you, something that you will never forgive me for."</i><br>&mdash; The Mentor, <a href="https://phrack.org/issues/7/hackers-manifesto"><i>The Hacker Manifesto</i></a>, 1986</p>

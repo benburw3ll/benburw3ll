@@ -40,12 +40,12 @@ const binary = Array.from({ length: 8 }, (_, row) => {
     return line((782 + Math.cos(a) * r1).toFixed(1), (329 + Math.sin(a) * r1).toFixed(1), (782 + Math.cos(a) * r2).toFixed(1), (329 + Math.sin(a) * r2).toFixed(1), C.red, i % 5 === 0 ? .8 : .25)
   }).join('')
   const rows = [
-    ['C:\\&gt; CONNECT BENBURW3LL', C.bone],
-    ['&gt; MOUNT WIDGETBUTLER / WINDOWS_11', C.soft],
-    ['&gt; LOAD 8 WIDGETS + TELEGRAM ASSISTANT', C.soft],
-    ['&gt; STATUS: BUILDING THE NEXT VERSION_', C.red],
+    ['C:\\&gt; TYPE PHRACK\\07-03.TXT', C.bone],
+    ['"THE BEAUTY OF THE BAUD."', C.red],
+    ['THE MENTOR / JAN 08 1986', C.soft],
+    ['C:\\&gt;', C.bone],
   ].map(([s, color], i) => text(66, 312 + i * 29, s, 17, color, `letter-spacing=".1"`)).join('')
-  const svg = `${open(w, h, 'Ben Burwell: red and black hacker console, binary signal, and WidgetButler status')}
+  const svg = `${open(w, h, 'Ben Burwell NFO: black and red dial-up archive with a short excerpt from The Hacker Manifesto')}
   <style>
     @keyframes tear { 0%, 87%, 91%, 100% { transform: translateX(0) } 88% { transform: translateX(15px) } 89% { transform: translateX(-8px) } 90% { transform: translateX(6px) } }
     @keyframes blink { 0%, 49% { opacity: 1 } 50%, 100% { opacity: 0 } }
@@ -59,22 +59,21 @@ const binary = Array.from({ length: 8 }, (_, row) => {
   <rect x="1" y="1" width="958" height="480" fill="none" stroke="${C.dim}" stroke-width="2"/>
   <rect x="15" y="15" width="930" height="452" fill="none" stroke="${C.red}" stroke-opacity=".18"/>
   <rect x="15" y="15" width="258" height="3" fill="${C.red}"/><rect x="802" y="464" width="143" height="3" fill="${C.red}"/>
-  ${text(43, 52, '[ SYS://BENBURW3LL/ROOT ]', 14, C.red, 'font-weight="700" letter-spacing="1.5"')}
-  ${text(918, 52, '28.8K  →  ALWAYS ON', 12, C.soft, 'text-anchor="end" letter-spacing="1"')}
+  ${text(43, 52, '[ BENBURW3LL.NFO ]', 14, C.red, 'font-weight="700" letter-spacing="1.5"')}
+  ${text(918, 52, '28.8K  /  ANSI  /  8N1', 12, C.soft, 'text-anchor="end" letter-spacing="1"')}
   ${line(43, 65, 918, 65, C.dim)}
-  ${text(45, 104, 'INCOMING TRANSMISSION', 13, C.soft, 'letter-spacing="4"')}
+  ${text(45, 104, 'FILE_ID.DIZ', 13, C.soft, 'letter-spacing="4"')}
   <text id="glitch-a" x="39" y="187" font-family="${mono}" font-size="91" font-weight="900" letter-spacing="-6" fill="${C.red}" opacity=".6" clip-path="url(#slice1)">BENBURW3LL</text>
   <text x="55" y="187" font-family="${mono}" font-size="91" font-weight="900" letter-spacing="-6" fill="${C.red}" opacity=".75" clip-path="url(#slice2)">BENBURW3LL</text>
   <text x="47" y="187" font-family="${mono}" font-size="91" font-weight="900" letter-spacing="-6" fill="${C.bone}">BENBURW3LL</text>
   <rect x="47" y="199" width="405" height="3" fill="${C.red}"/>
-  ${text(47, 232, 'ART / CODE / MACHINES WITH A MIND OF THEIR OWN', 17, C.red, 'letter-spacing="1.4"')}
-  ${text(47, 253, 'FILE   EDIT   VIEW   SIGN ON   PROGZ   HELP', 10, C.faint, 'letter-spacing="1"')}
+  ${text(47, 232, 'ART  /  CODE  /  PROGZ', 17, C.red, 'letter-spacing="1.4"')}
   <rect x="43" y="264" width="572" height="159" fill="url(#panel)" stroke="${C.dim}"/>
   <rect x="43" y="264" width="572" height="24" fill="${C.red}" fill-opacity=".12"/>
-  ${text(59, 281, 'TERMINAL_01   ::   CURRENT OPERATION', 12, C.red, 'font-weight="700" letter-spacing="1"')}
+  ${text(59, 281, 'C:\\PHRACK\\07-03.TXT', 12, C.red, 'font-weight="700" letter-spacing="1"')}
   ${text(596, 281, '● ● ●', 12, C.red, 'text-anchor="end"')}
   ${rows}
-  <rect id="cursor" x="511" y="385" width="10" height="3" fill="${C.red}"/>
+  <rect id="cursor" x="126" y="401" width="10" height="3" fill="${C.red}"/>
   <rect x="639" y="264" width="279" height="159" fill="${C.panel}" stroke="${C.dim}"/>
   ${ticks}
   <circle cx="782" cy="329" r="95" fill="none" stroke="${C.red}" stroke-opacity=".18" stroke-width="16" filter="url(#glow)"/>
@@ -85,11 +84,11 @@ const binary = Array.from({ length: 8 }, (_, row) => {
   <path d="M782 291l38 38-38 38-38-38z" fill="${C.bg}" stroke="${C.red}" stroke-width="2"/>
   ${text(782, 337, 'B', 32, C.bone, 'text-anchor="middle" font-weight="900"')}
   <rect x="652" y="274" width="94" height="17" fill="${C.bg}"/>
-  ${text(657, 287, 'SIGNAL: LIVE', 11, C.red, 'font-weight="700"')}
+  ${text(657, 287, 'ASCII / 0x42', 11, C.red, 'font-weight="700"')}
   ${text(782, 410, '01000010  /  00110011', 10, C.soft, 'text-anchor="middle" letter-spacing="1"')}
   ${line(43, 444, 918, 444, C.dim)}
-  ${text(43, 461, 'NO CARRIER  →  CARRIER RESTORED', 11, C.faint, 'letter-spacing="1"')}
-  ${text(918, 461, 'WELCOME TO THE OTHER SIDE_ ', 11, C.red, 'text-anchor="end" letter-spacing="1"')}
+  ${text(43, 461, 'PHRACK  /  VOL. 1  /  ISSUE 7  /  PHILE 3', 11, C.faint, 'letter-spacing="1"')}
+  ${text(918, 461, 'EOF', 11, C.red, 'text-anchor="end" letter-spacing="1"')}
   </svg>`
   save('signal.svg', svg)
 }
