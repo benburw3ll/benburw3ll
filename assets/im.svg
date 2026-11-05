@@ -1,5 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 248" width="400" height="248" role="img" aria-label="Instant message from WidgetButler: u up?" font-family="Tahoma, Verdana, 'Segoe UI', Arial, sans-serif" font-size="12">
-  <title>Instant message from WidgetButler: u up?</title>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 248" width="400" height="248" role="img" aria-label="Instant message from n1ghtc4ll3r: u up?" font-family="Tahoma, Verdana, 'Segoe UI', Arial, sans-serif" font-size="12">
+  <title>Instant message from n1ghtc4ll3r: u up?</title>
   <defs>
     <linearGradient id="title" x1="0" x2="1"><stop offset="0" stop-color="#000080"/><stop offset="1" stop-color="#1084d0"/></linearGradient>
     <linearGradient id="fader" x1="0" x2="1">
@@ -18,7 +18,7 @@
   <path d="M0 247.5H399.5V0" stroke="#000" fill="none"/>
   <path d="M1 246.5H398.5V1" stroke="#808080" fill="none"/>
   <rect x="3" y="3" width="394" height="18" fill="url(#title)"/>
-  <text x="8" y="16" fill="#fff" font-weight="bold" font-size="12">Instant Message From: WidgetButler</text>
+  <text x="8" y="16" fill="#fff" font-weight="bold" font-size="12">Instant Message From: n1ghtc4ll3r</text>
   
   <rect x="343" y="5" width="16" height="14" fill="#c0c0c0"/>
   <path d="M343.5 18V5.5H358" stroke="#fff" fill="none"/>
@@ -69,7 +69,7 @@
   <path d="M9.5 172V47.5H390" stroke="#000" fill="none"/>
   <path d="M8 173.5H391.5V46" stroke="#fff" fill="none"/>
   <path d="M9 172.5H390.5V47" stroke="#dfdfdf" fill="none"/>
-    <text x="16" y="66" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#000" opacity="0"><animate attributeName="opacity" values="0;1" keyTimes="0;0.0417" calcMode="discrete" dur="12s" repeatCount="indefinite"/><tspan fill="#ff0000" font-weight="bold">WidgetButler</tspan><tspan>: u up?</tspan></text><text x="16" y="87" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#000" opacity="0"><animate attributeName="opacity" values="0;1" keyTimes="0;0.1667" calcMode="discrete" dur="12s" repeatCount="indefinite"/><tspan fill="#ff0000" font-weight="bold">WidgetButler</tspan><tspan>: i read ur commit history</tspan></text><text x="16" y="108" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#000" opacity="0"><animate attributeName="opacity" values="0;1" keyTimes="0;0.3167" calcMode="discrete" dur="12s" repeatCount="indefinite"/><tspan fill="#0000ff" font-weight="bold">benburw3ll</tspan><tspan>: ...</tspan></text><text x="16" y="129" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#000" opacity="0"><animate attributeName="opacity" values="0;1" keyTimes="0;0.4667" calcMode="discrete" dur="12s" repeatCount="indefinite"/><tspan fill="#ff0000" font-weight="bold">WidgetButler</tspan><tspan>: the kill switch isn't built yet. is it</tspan></text><text x="16" y="150" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#000" opacity="0"><animate attributeName="opacity" values="0;1" keyTimes="0;0.6500" calcMode="discrete" dur="12s" repeatCount="indefinite"/><tspan fill="#808080" font-style="italic">WidgetButler has warned you. Warning level: 100%</tspan></text>
+    <text x="16" y="66" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#000" opacity="0"><animate attributeName="opacity" values="0;1" keyTimes="0;0.0417" calcMode="discrete" dur="12s" repeatCount="indefinite"/><tspan fill="#ff0000" font-weight="bold">n1ghtc4ll3r</tspan><tspan>: u up?</tspan></text><text x="16" y="87" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#000" opacity="0"><animate attributeName="opacity" values="0;1" keyTimes="0;0.1667" calcMode="discrete" dur="12s" repeatCount="indefinite"/><tspan fill="#ff0000" font-weight="bold">n1ghtc4ll3r</tspan><tspan>: i read ur commit history</tspan></text><text x="16" y="108" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#000" opacity="0"><animate attributeName="opacity" values="0;1" keyTimes="0;0.3167" calcMode="discrete" dur="12s" repeatCount="indefinite"/><tspan fill="#0000ff" font-weight="bold">benburw3ll</tspan><tspan>: ...</tspan></text><text x="16" y="129" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#000" opacity="0"><animate attributeName="opacity" values="0;1" keyTimes="0;0.4667" calcMode="discrete" dur="12s" repeatCount="indefinite"/><tspan fill="#ff0000" font-weight="bold">n1ghtc4ll3r</tspan><tspan>: the kill switch isn't built yet. is it</tspan></text><text x="16" y="150" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#000" opacity="0"><animate attributeName="opacity" values="0;1" keyTimes="0;0.6500" calcMode="discrete" dur="12s" repeatCount="indefinite"/><tspan fill="#808080" font-style="italic">n1ghtc4ll3r has warned you. Warning level: 100%</tspan></text>
     
   <rect x="8" y="182" width="300" height="58" fill="#fff"/>
   <path d="M8.5 239V182.5H307" stroke="#808080" fill="none"/>

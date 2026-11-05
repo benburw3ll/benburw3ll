@@ -141,11 +141,11 @@ const blockWord = (text, cx, top, cw, ch) => {
   const D = 12
   const name = (n, c) => `<tspan fill="${c}" font-weight="bold">${esc(n)}</tspan>`
   const lines = [
-    [0.5, `${name('WidgetButler', '#ff0000')}<tspan>: u up?</tspan>`],
-    [2.0, `${name('WidgetButler', '#ff0000')}<tspan>: i read ur commit history</tspan>`],
+    [0.5, `${name('n1ghtc4ll3r', '#ff0000')}<tspan>: u up?</tspan>`],
+    [2.0, `${name('n1ghtc4ll3r', '#ff0000')}<tspan>: i read ur commit history</tspan>`],
     [3.8, `${name('benburw3ll', '#0000ff')}<tspan>: ...</tspan>`],
-    [5.6, `${name('WidgetButler', '#ff0000')}<tspan>: the kill switch isn't built yet. is it</tspan>`],
-    [7.8, `<tspan fill="#808080" font-style="italic">WidgetButler has warned you. Warning level: 100%</tspan>`],
+    [5.6, `${name('n1ghtc4ll3r', '#ff0000')}<tspan>: the kill switch isn't built yet. is it</tspan>`],
+    [7.8, `<tspan fill="#808080" font-style="italic">n1ghtc4ll3r has warned you. Warning level: 100%</tspan>`],
   ]
   const msg = lines
     .map(([t, body], i) => `<text x="16" y="${66 + i * 21}" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#000" opacity="0">${during(t, D, D)}${body}</text>`)
@@ -154,7 +154,7 @@ const blockWord = (text, cx, top, cw, ch) => {
     .map((t, k) => `${raised(8 + k * 20, 25, 18, 17)}<text x="${17 + k * 20}" y="${38}" text-anchor="middle" font-size="${k === 0 ? 9 : 12}" font-weight="${t === 'B' ? 'bold' : 'normal'}" font-style="${t === 'I' ? 'italic' : 'normal'}" text-decoration="${t === 'U' ? 'underline' : 'none'}">${t}</text>`)
     .join('')
   const win = `<g id="im">
-    ${windowFrame(W, H, 'Instant Message From: WidgetButler')}
+    ${windowFrame(W, H, 'Instant Message From: n1ghtc4ll3r')}
     ${tools}<rect x="112" y="27" width="14" height="13" fill="#ff0000" stroke="#000"/>
     ${sunken(8, 46, 384, 128)}
     ${msg}
@@ -162,7 +162,7 @@ const blockWord = (text, cx, top, cw, ch) => {
     <rect x="14" y="189" width="1" height="15" fill="#000">${`<animate attributeName="opacity" values="1;0" keyTimes="0;0.5" calcMode="discrete" dur="1s" repeatCount="indefinite"/>`}</rect>
     ${button(316, 182, 76, 18, 'Warn')}${button(316, 202, 76, 18, 'Block', { disabled: true })}${button(316, 222, 76, 18, 'Send', { primary: true })}
   </g>`
-  const svg = `${svgOpen(W, H, 'Instant message from WidgetButler: u up?', GHOSTS)}
+  const svg = `${svgOpen(W, H, 'Instant message from n1ghtc4ll3r: u up?', GHOSTS)}
   <defs>${win}</defs>
   <use href="#im"/>
   ${tear('i1', 'im', W, 108, 12, [[9.6, 22], [10.0, 0], [10.8, -26], [11.1, 0]], D, '#ff0040')}
@@ -180,7 +180,7 @@ const blockWord = (text, cx, top, cw, ch) => {
 {
   const W = 180
   const H = 248
-  const online = ['WidgetButler', 'HubBrain', 'RelayWorker', 'ThemeDaemon', 'MacPort', 'PhoneScreen', 'MoneyBot', 'MCPServer']
+  const online = ['n1ghtc4ll3r', 'zer0fr1endz', 'xXd34dp1x3lXx', 'ph0nephr34k', 'c0ldb00t', 'punt3rX', 'd1alt0ne', 'l0stcarri3r']
   const rows = [
     `<text x="12" y="60" font-weight="bold">▾ Online (8/8)</text>`,
     ...online.map((n, k) => `<text x="28" y="${75 + k * 15}"${k === 0 ? ' font-weight="bold"' : ''}>${n}</text>`),

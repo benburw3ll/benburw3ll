@@ -9,7 +9,7 @@
 <p align="center"><b>One brain, wired into every widget.</b> It tracks you, nags you, remembers what you forget, and fires rules across lights, door, sleep, meals, habits and money in combos nobody thought to wire together. You text it. It texts first.</p>
 
 <p align="center">
-  <img src="assets/im.svg" width="400" alt="Instant message from WidgetButler: u up?">
+  <img src="assets/im.svg" width="400" alt="Instant message from n1ghtc4ll3r: u up?">
   <img src="assets/buddies.svg" width="180" alt="Buddy List: Online 8 of 8, Humans 0 of 1">
 </p>
 

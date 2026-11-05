@@ -53,7 +53,7 @@
   <path d="M7.5 212V45.5H172" stroke="#000" fill="none"/>
   <path d="M6 213.5H173.5V44" stroke="#fff" fill="none"/>
   <path d="M7 212.5H172.5V45" stroke="#dfdfdf" fill="none"/>
-  <text x="12" y="60" font-weight="bold">▾ Online (8/8)</text><text x="28" y="75" font-weight="bold">WidgetButler</text><text x="28" y="90">HubBrain</text><text x="28" y="105">RelayWorker</text><text x="28" y="120">ThemeDaemon</text><text x="28" y="135">MacPort</text><text x="28" y="150">PhoneScreen</text><text x="28" y="165">MoneyBot</text><text x="28" y="180">MCPServer</text><text x="12" y="195" font-weight="bold">▾ Humans (0/1)</text><text x="28" y="210" fill="#808080" font-style="italic">benburw3ll</text>
+  <text x="12" y="60" font-weight="bold">▾ Online (8/8)</text><text x="28" y="75" font-weight="bold">n1ghtc4ll3r</text><text x="28" y="90">zer0fr1endz</text><text x="28" y="105">xXd34dp1x3lXx</text><text x="28" y="120">ph0nephr34k</text><text x="28" y="135">c0ldb00t</text><text x="28" y="150">punt3rX</text><text x="28" y="165">d1alt0ne</text><text x="28" y="180">l0stcarri3r</text><text x="12" y="195" font-weight="bold">▾ Humans (0/1)</text><text x="28" y="210" fill="#808080" font-style="italic">benburw3ll</text>
   <rect x="24" y="64" width="2" height="13" fill="#ff0000"><animate attributeName="opacity" values="1;0" keyTimes="0;0.5" calcMode="discrete" dur="1.4s" repeatCount="indefinite"/></rect>
   
   <rect x="6" y="220" width="50" height="20" fill="#c0c0c0"/>
