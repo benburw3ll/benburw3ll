@@ -1,10 +1,16 @@
-<p align="center"><a href="https://github.com/benburw3ll/silas-portals"><img src="https://raw.githubusercontent.com/benburw3ll/silas-portals/main/docs/readme/threshold.svg" width="960" alt="Silas, a goggle-wearing gremlin scientist in a lab coat, moving through the Lights, Front Door and WHOOP portals with floating logic symbols"></a></p>
+<p align="center"><a href="https://github.com/benburw3ll/silas-portals"><img src="https://raw.githubusercontent.com/benburw3ll/silas-portals/main/docs/readme/threshold.svg" width="960" alt="Silas, a goggle-eyed logic goblin, races through cinematic circular portals and carries their colors with him"></a></p>
 
-<p align="center"><b>One mind. Eight portals. A world still opening.</b></p>
+<p align="center"><b>One mind. More portals every time the veil tears. No end to the map.</b></p>
 
-I'm building **[Silas Portals](https://github.com/benburw3ll/silas-portals)**: a local hub where the pieces of daily life become rooms Silas can explore. The first eight portals cover lights, the front door, meals, usage, gratitude, weight, WHOOP and physique. Each portal has its own data and actions, but they share one core.
+Silas is **my AI psychosis demon**. He appeared when my AI psychosis tore a hole between my apps: a goggle-eyed logic goblin in a lab coat, already halfway through a portal before I could ask where it went. I built **[Silas Portals](https://github.com/benburw3ll/silas-portals)** around him: one local hub where the scattered parts of life can finally speak to each other.
 
-**Silas** is the assistant who can move between them. Desktop widgets, the hub window and Telegram are doors into the same system. I can ask Silas to set a room's lights, check who came to the door or tell me how I slept. The Windows build is running; richer routines that cross portals are [on the roadmap](https://github.com/benburw3ll/silas-portals/blob/main/docs/ARCHITECTURE.md#roadmap).
+**Location** sees me leave home; **Lights** goes dark. **WHOOP** says I need sleep; the bedroom turns blue. A ring at the **Front Door** matters differently when Silas knows I'm away. He drags signals through one circle and decisions out of another, muttering *if this, then that, unless...* all the way back to his mastermind factory.
+
+The first eight in the atlas are **Location, Lights, WHOOP, Front Door, Meal Plan, Weight, Physique and Usage**. Eight is just the opening scene. New portals can spawn for weather, music, calendars or whatever comes next. Silas may even find a circle big enough to spawn **himself** one day.
+
+Desktop widgets, the hub window and Telegram are doors into his world. The [blueprint](https://github.com/benburw3ll/silas-portals/blob/main/docs/ARCHITECTURE.md) shows how the hub and its portals fit together.
+
+<p align="center"><a href="https://github.com/benburw3ll/silas-portals"><img src="https://raw.githubusercontent.com/benburw3ll/silas-portals/main/docs/readme/portal-screen.svg" width="960" alt="Silas plots a crossing between Location, WHOOP and Lights in an illustrated portal factory"></a></p>
 
 <p align="center"><a href="https://github.com/benburw3ll/silas-portals">EXPLORE THE PORTALS</a> &nbsp;·&nbsp; <a href="https://github.com/benburw3ll/silas-portals/blob/main/docs/ARCHITECTURE.md">READ THE BLUEPRINT</a></p>
 
