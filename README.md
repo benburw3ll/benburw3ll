@@ -1,4 +1,4 @@
-<p align="center"><a href="https://github.com/benburw3ll/silas-portals"><img src="https://raw.githubusercontent.com/benburw3ll/silas-portals/main/docs/readme/threshold.svg" width="960" alt="Silas, a gold signal runner, traveling through the Lights, Front Door and WHOOP portals"></a></p>
+<p align="center"><a href="https://github.com/benburw3ll/silas-portals"><img src="https://raw.githubusercontent.com/benburw3ll/silas-portals/main/docs/readme/threshold.svg" width="960" alt="Silas, a goggle-wearing gremlin scientist in a lab coat, moving through the Lights, Front Door and WHOOP portals with floating logic symbols"></a></p>
 
 <p align="center"><b>One mind. Eight portals. A world still opening.</b></p>
 
