@@ -20,12 +20,12 @@ Silas talks to me through Telegram, the desktop and the hub window. Each new por
 
 ## Road to v1
 
-This board follows the [Silas Portals milestones](https://github.com/benburw3ll/silas-portals/milestones). It updates from GitHub every three hours.
+Stories close; portals take shape. The Watchtower follows the [Silas Portals outcome milestones](https://github.com/benburw3ll/silas-portals/milestones) and updates every three hours.
 
 <!-- outcomes:start -->
-<p align="center"><a href="https://github.com/benburw3ll/silas-portals/milestones"><img src="outcomes/operations.svg" width="960" alt="Silas Portals road to v1: 58 of 131 issues closed"></a></p>
+<p align="center"><a href="https://github.com/benburw3ll/silas-portals/milestones"><img src="outcomes/operations.svg" width="960" alt="Overlord Watchtower outcome board: 63 of 131 issues closed"></a></p>
 
 <p align="center"><a href="https://github.com/benburw3ll/silas-portals/milestone/12">N1</a> &nbsp;·&nbsp; <a href="https://github.com/benburw3ll/silas-portals/milestone/13">N2</a> &nbsp;·&nbsp; <a href="https://github.com/benburw3ll/silas-portals/milestone/14">N3</a> &nbsp;·&nbsp; <a href="https://github.com/benburw3ll/silas-portals/milestone/15">N4</a> &nbsp;·&nbsp; <a href="https://github.com/benburw3ll/silas-portals/milestone/1">O1</a> &nbsp;·&nbsp; <a href="https://github.com/benburw3ll/silas-portals/milestone/5">O2</a> &nbsp;·&nbsp; <a href="https://github.com/benburw3ll/silas-portals/milestone/9">O3</a> &nbsp;·&nbsp; <a href="https://github.com/benburw3ll/silas-portals/milestone/10">O4</a> &nbsp;·&nbsp; <a href="https://github.com/benburw3ll/silas-portals/milestone/11">O5</a> &nbsp;·&nbsp; <a href="https://github.com/benburw3ll/silas-portals/milestone/6">O6</a> &nbsp;·&nbsp; <a href="https://github.com/benburw3ll/silas-portals/milestone/2">O7</a> &nbsp;·&nbsp; <a href="https://github.com/benburw3ll/silas-portals/milestone/4">O8</a> &nbsp;·&nbsp; <a href="https://github.com/benburw3ll/silas-portals/milestone/3">O9</a> &nbsp;·&nbsp; <a href="https://github.com/benburw3ll/silas-portals/milestone/7">O10</a> &nbsp;·&nbsp; <a href="https://github.com/benburw3ll/silas-portals/milestone/8">O11</a></p>
 
-<p align="center"><sub>58 of 131 issues closed across the active milestones · 145 pull requests merged.</sub></p>
+<p align="center"><sub>63 of 131 issues closed across the active milestones · 153 pull requests merged.</sub></p>
 <!-- outcomes:end -->
