@@ -6,6 +6,7 @@
 import { mkdirSync, readFileSync, writeFileSync } from 'node:fs'
 import { renderWatchtowerBoard, versionOf } from './watchtower-board.mjs'
 import { renderPrivateBanner } from './private-banner.mjs'
+import { composeReadme } from './compose-readme.mjs'
 
 const REPO = process.env.OUTCOMES_REPO ?? 'benburw3ll/silas-portals'
 const root = new URL('../', import.meta.url)
@@ -56,7 +57,11 @@ const svg = renderWatchtowerBoard(milestones, { merged, mergedWeek, closedTotal,
 mkdirSync(new URL('outcomes/', root), { recursive: true })
 writeFileSync(new URL('outcomes/operations.svg', root), svg)
 mkdirSync(new URL('assets/', root), { recursive: true })
-writeFileSync(new URL('assets/private-banner.svg', root), renderPrivateBanner())
+const castle = renderPrivateBanner()
+writeFileSync(new URL('assets/private-banner.svg', root), castle)
+const hero = readFileSync(new URL('assets/threshold.svg', root), 'utf8')
+const telegram = readFileSync(new URL('assets/telegram-sample.svg', root), 'utf8')
+writeFileSync(new URL('assets/silas-world.svg', root), composeReadme(hero, castle, svg, telegram))
 
 const group = (version, label) => {
   const items = milestones.filter((m) => versionOf(m.title) === version)
@@ -64,9 +69,7 @@ const group = (version, label) => {
   const links = items.map((m) => `<li>${sourcePublic ? `<a href="${esc(m.html_url)}">${esc(m.title)}</a>` : esc(m.title)}</li>`).join('\n')
   return `<p><b>${label}</b></p>\n<ul>\n${links}\n</ul>\n`
 }
-const boardImage = `<img src="outcomes/operations.svg" width="960" alt="Overlord Watchtower outcome board: ${merged} code merges, ${closedTotal} issues closed, ${done} of ${total} v1 stories finished">`
-const boardLink = sourcePublic ? `<a href="https://github.com/${REPO}/milestones">${boardImage}</a>` : boardImage
-const block = `<p align="center">${boardLink}</p>\n\n<details>\n<summary>Open the stories behind the rings</summary>\n\n${group('v1', 'The road to v1')}${group('v1.1', 'The next board, v1.1')}${group('later', 'Later')}<p>${done} of ${total} v1 stories finished · ${closedTotal} issues closed overall · ${merged} code merges.</p>\n</details>`
+const block = `<details>\n<summary>Open the stories behind the rings</summary>\n\n${group('v1', 'The road to v1')}${group('v1.1', 'The next board, v1.1')}${group('later', 'Later')}<p>${done} of ${total} v1 stories finished · ${closedTotal} issues closed overall · ${merged} code merges.</p>\n</details>`
 const file = new URL('README.md', root)
 const readme = readFileSync(file, 'utf8')
 const start = readme.indexOf(START), end = readme.indexOf(END)
