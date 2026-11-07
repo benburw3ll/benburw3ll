@@ -32,7 +32,7 @@
 <li>O10 · Money in the hub (later)</li>
 <li>O11 · Ready for a second person (parked)</li>
 </ul>
-<p>72 of 86 v1 stories finished · 82 issues closed overall · 185 code merges.</p>
+<p>73 of 87 v1 stories finished · 83 issues closed overall · 186 code merges.</p>
 </details>
 <!-- outcomes:end -->
 
