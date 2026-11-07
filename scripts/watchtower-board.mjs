@@ -76,8 +76,11 @@ const builder = (x, y, scale, color, facing = 1) => `<g transform="translate(${x
   </g>
 </g>`
 
+const statPlate = (x, width, color, fill) => `<path d="M${x+12} 602H${x+width-12}l12 12v118l-12 12H${x+12}l-12-12V614Z" fill="${fill}" stroke="${color}" stroke-opacity=".75" stroke-width="2"/>
+  <path d="M${x+12} 607h37M${x+width-12} 739h-37" stroke="${color}" stroke-width="3" stroke-opacity=".65"/>
+  <circle cx="${x+10}" cy="613" r="2" fill="${color}"/><circle cx="${x+width-10}" cy="733" r="2" fill="${color}"/>`
 
-export function renderWatchtowerBoard(milestones, { merged, mergedWeek, closedWeek }) {
+export function renderWatchtowerBoard(milestones, { merged, mergedWeek, closedTotal, closedWeek }) {
   const outcomes = milestones.map((milestone) => {
     const match = /^([NO])(\d+)\b/.exec(milestone.title)
     if (!match) throw new Error(`Unrecognized outcome milestone: ${milestone.title}`)
@@ -200,12 +203,12 @@ export function renderWatchtowerBoard(milestones, { merged, mergedWeek, closedWe
       ${text(913,y+27,`${complete}/${total}`,14,color,'text-anchor="end" font-weight="700"')}
     </g>`
   }
-  const signalsHeight = 180
+  const signalsHeight = 205
   const roadHeight = 1430 + (outcomes.length - 15) * 45 + (nextCount ? 38 : 0) + (outcomes.length > v1Count + nextCount ? 38 : 0)
   const boardHeight = roadHeight + signalsHeight
   const rows = ordered.map(row).join('')
-  const board = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 ${boardHeight}" width="960" height="${boardHeight}" role="img" aria-label="Overlord Watchtower roadmap: ${merged} pull requests merged and ${v1Done} of ${v1Total} v1 stories finished" font-family="'Cascadia Code', Consolas, 'Liberation Mono', monospace">
-  <title>Overlord Watchtower: ${merged} pull requests merged, ${v1Done} of ${v1Total} v1 stories finished</title>${defs(a,b)}
+  const board = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 ${boardHeight}" width="960" height="${boardHeight}" role="img" aria-label="Overlord Watchtower roadmap: ${merged} code merges, ${closedTotal} issues closed, and ${v1Done} of ${v1Total} v1 stories finished" font-family="'Cascadia Code', Consolas, 'Liberation Mono', monospace">
+  <title>Overlord Watchtower: ${merged} code merges, ${closedTotal} issues closed, ${v1Done} of ${v1Total} v1 stories finished</title>${defs(a,b)}
   <style>@keyframes pulse{50%{opacity:.45}}@keyframes flow{to{stroke-dashoffset:-90}}@keyframes glyph-signal{0%,72%,100%{opacity:.1}76%,80%{opacity:.4}78%{opacity:.2}}@media (prefers-reduced-motion:no-preference){.pulse{animation:pulse 4s ease-in-out infinite}.current{stroke-dasharray:8 7;animation:flow 4s linear infinite}.logic-glyph{animation:glyph-signal 7s ease-in-out infinite}.logic-glyph-1{animation-delay:-2.3s}.logic-glyph-2{animation-delay:-4.7s}.builder-base{animation:builder-fade 12s steps(1,end) infinite}.builder-glitch{animation:builder-echo 12s steps(1,end) infinite}}@keyframes builder-fade{0%,44%,50%,100%{opacity:1}45%,49%{opacity:.22}}@keyframes builder-echo{0%,44%,50%,100%{opacity:0}45%,49%{opacity:.9}}</style>
   <rect width="960" height="${boardHeight}" fill="url(#sky)"/>${starfield(105)}${logicField()}<rect width="960" height="${boardHeight}" fill="url(#scan)"/>
   <g transform="translate(0 ${signalsHeight})">
@@ -213,24 +216,24 @@ export function renderWatchtowerBoard(milestones, { merged, mergedWeek, closedWe
   </g>
   <g transform="translate(0 -545)">
   <path d="M25 565H935" stroke="${a}" stroke-opacity=".4"/>
-  ${text(30,590,'LIVE SIGNALS',12,a,'font-weight="700" letter-spacing="2"')}
+  ${text(30,590,'WATCHTOWER LEDGER',12,a,'font-weight="700" letter-spacing="2"')}
   ${text(930,590,'REFRESHED EVERY THREE HOURS',10,dim,'text-anchor="end" letter-spacing="1"')}
-  <rect x="30" y="602" width="420" height="122" rx="10" fill="#111a2d" stroke="${b}" stroke-opacity=".8" stroke-width="2"/>
-  <path d="M30 627v-15q0-10 10-10h95M450 698v16q0 10-10 10h-88" fill="none" stroke="${b}" stroke-width="3"/>
-  ${text(50,630,'PULL REQUESTS MERGED',13,b,'font-weight="700" letter-spacing="1.4"')}
-  ${text(48,695,merged,61,ink,'font-weight="700"')}
-  ${text(427,696,'ALL TIME',12,b,'text-anchor="end" letter-spacing="1"')}
-  <rect x="465" y="602" width="220" height="122" rx="10" fill="#0e1b2b" stroke="${a}" stroke-opacity=".65" stroke-width="2"/>
-  ${text(483,630,'V1 STORIES FINISHED',11,a,'font-weight="700" letter-spacing=".6"')}
-  ${text(482,681,`${v1Done}/${v1Total}`,37,ink,'font-weight="700"')}
-  <path d="M483 704h184" stroke="#2d3c54" stroke-width="7" stroke-linecap="round"/>
-  <path d="M483 704h${v1Total ? Math.round(184 * v1Done / v1Total) : 0}" stroke="${a}" stroke-width="7" stroke-linecap="round"/>
-  <rect x="700" y="602" width="230" height="122" rx="10" fill="#17142a" stroke="#b8a0fc" stroke-opacity=".65" stroke-width="2"/>
-  ${text(718,630,'LAST 7 DAYS',12,'#b8a0fc','font-weight="700" letter-spacing="1"')}
-  ${text(718,667,mergedWeek,28,ink,'font-weight="700"')}
-  ${text(772,666,'PRS MERGED',11,dim)}
-  ${text(718,702,closedWeek,28,ink,'font-weight="700"')}
-  ${text(772,701,'ISSUES CLOSED',11,dim)}
+  ${statPlate(30,211,b,'#171a2d')}${statPlate(253,211,signal,'#211525')}${statPlate(476,211,a,'#0e1b2b')}${statPlate(699,231,'#b8a0fc','#17142a')}
+  ${text(48,634,'CODE MERGED',12,b,'font-weight="700" letter-spacing="1"')}
+  ${text(47,706,merged,54,ink,'font-weight="700"')}
+  ${text(223,727,'ALL TIME',10,b,'text-anchor="end" letter-spacing="1"')}
+  ${text(271,634,'ISSUES CLOSED',12,signal,'font-weight="700" letter-spacing="1"')}
+  ${text(270,706,closedTotal,54,ink,'font-weight="700"')}
+  ${text(446,727,'ALL TIME',10,signal,'text-anchor="end" letter-spacing="1"')}
+  ${text(494,634,'V1 STORIES',12,a,'font-weight="700" letter-spacing="1"')}
+  ${text(493,693,`${v1Done}/${v1Total}`,34,ink,'font-weight="700"')}
+  <path d="M494 720h174" stroke="#2d3c54" stroke-width="7" stroke-linecap="round"/>
+  <path d="M494 720h${v1Total ? Math.round(174 * v1Done / v1Total) : 0}" stroke="${a}" stroke-width="7" stroke-linecap="round"/>
+  ${text(717,634,'LAST 7 DAYS',12,'#b8a0fc','font-weight="700" letter-spacing="1"')}
+  ${text(716,676,mergedWeek,27,ink,'font-weight="700"')}
+  ${text(772,675,'CODE MERGED',10,dim)}
+  ${text(716,716,closedWeek,27,ink,'font-weight="700"')}
+  ${text(772,715,'ISSUES CLOSED',10,dim)}
   </g>
   <g transform="translate(0 ${signalsHeight})">
   <path d="M25 565H935" stroke="${a}" stroke-opacity=".4"/>
