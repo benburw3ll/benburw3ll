@@ -39,14 +39,14 @@
       }
       @keyframes think { 0%, 100% { transform: translateY(0); opacity: .42 } 50% { transform: translateY(-7px); opacity: .9 } }
       @media (prefers-reduced-motion: no-preference) {
-        #silas-run { animation: roam 24s ease-in-out infinite }
-        #silas-figure { animation: step .38s ease-in-out infinite }
-        #silas-aura { animation: wake-silas 24s ease-in-out infinite }
+        #hero-silas-run { animation: roam 24s ease-in-out infinite }
+        #hero-silas-figure { animation: step .38s ease-in-out infinite }
+        #hero-silas-aura { animation: wake-silas 24s ease-in-out infinite }
         .leg-charge { animation: leg-pigment 24s steps(1, end) infinite }
-        #logic-trail { animation: think 1.9s ease-in-out infinite }
-        #portal-substance-1 { animation: wake-one 24s ease-in-out infinite }
-        #portal-substance-2 { animation: wake-two 24s ease-in-out infinite }
-        #portal-substance-3 { animation: wake-three 24s ease-in-out infinite }
+        #hero-logic-trail { animation: think 1.9s ease-in-out infinite }
+        #hero-portal-substance-1 { animation: wake-one 24s ease-in-out infinite }
+        #hero-portal-substance-2 { animation: wake-two 24s ease-in-out infinite }
+        #hero-portal-substance-3 { animation: wake-three 24s ease-in-out infinite }
         .matter-flow { stroke-dasharray: 9 8; animation: stream 4s linear infinite }
       }
     </style>

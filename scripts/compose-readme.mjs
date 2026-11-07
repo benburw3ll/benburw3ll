@@ -1,14 +1,20 @@
-// Place the three self-contained scenes on one continuous SVG plane. Prefix IDs so
-// gradients, clips and filters from the scenes cannot shadow one another.
+// Place the scenes on one continuous SVG plane. Prefix IDs and their references,
+// including CSS animation selectors, so each scene keeps its own behavior.
 const nest = (source, x, y, prefix) => {
   const opening = /^<svg\b[^>]*>/s.exec(source)
   const dimensions = /\bviewBox="0 0 (\d+) (\d+)"/.exec(opening?.[0] ?? '')
   const width = Number(dimensions?.[1]), height = Number(dimensions?.[2])
   if (!opening || !width || !height || !source.trimEnd().endsWith('</svg>')) throw new Error(`Invalid ${prefix} scene`)
+  const ids = new Set([...source.matchAll(/\bid="([^"]+)"/g)].map((match) => match[1]))
   const svg = source
     .replace(/\bid="([^"]+)"/g, (_, id) => `id="${prefix}-${id}"`)
     .replace(/url\(#([^)]+)\)/g, (_, id) => `url(#${prefix}-${id})`)
     .replace(/\bhref="#([^"]+)"/g, (_, id) => `href="#${prefix}-${id}"`)
+    .replace(/(<style\b[^>]*>)([\s\S]*?)(<\/style>)/g, (_, open, css, close) => {
+      // Only rewrite selectors before an opening brace; declaration colors stay intact.
+      const scoped = css.replace(/[^{}]+(?=\{)/g, (selector) => selector.replace(/#([\w-]+)/g, (ref, id) => ids.has(id) ? `#${prefix}-${id}` : ref))
+      return `${open}${scoped}${close}`
+    })
     .replace(opening[0], `<svg x="${x}" y="${y}" width="${width}" height="${height}" viewBox="0 0 ${width} ${height}" aria-hidden="true">`)
   return { svg, width, height }
 }
