@@ -14,6 +14,12 @@ const starfield = (count, seed = 13) => Array.from({ length: count }, (_, i) => 
   const y = 30 + ((i * 89 + i * i * 7) % 550)
   return `<circle cx="${x}" cy="${y}" r="${i % 11 ? .65 : 1.6}" fill="#d8e8ff" opacity="${i % 7 ? .15 : .4}"/>`
 }).join('')
+const logicField = () => Array.from({ length: 38 }, (_, i) => {
+  const glyphs = ['∧', '∨', '⊕', '¬', '⇒', '0', '1']
+  const x = 38 + ((i * 173 + i * i * 23) % 884)
+  const y = 205 + ((i * 103 + i * i * 17) % 505)
+  return text(x, y, glyphs[i % glyphs.length], i % 5 ? 12 : 17, i % 3 ? '#79e6d7' : '#e46d94', `class="logic-glyph logic-glyph-${i % 3}" opacity=".12"`)
+}).join('')
 
 const defs = (accent, secondary) => `<defs>
   <radialGradient id="sky"><stop stop-color="#1a2038"/><stop offset=".55" stop-color="#0b1022"/><stop offset="1" stop-color="#050710"/></radialGradient>
@@ -46,6 +52,7 @@ const ring = (cx, cy, r, color, state, outcome) => {
 // The Stonebinder is one of the story's imaginary friends: a hooded, non-goblin
 // builder with a tool belt and a masonry hammer. No species design is canon yet.
 const builder = (x, y, scale, color, facing = 1) => `<g transform="translate(${x} ${y}) scale(${scale * facing} ${scale})">
+  <g class="builder-base">
   <ellipse cx="0" cy="4" rx="30" ry="6" fill="#02040a" opacity=".75"/>
   <path d="M-13-35l-8 37h13l10-29M12-34l9 36H8L-2-27" fill="#283246" stroke="#6f809b" stroke-width="2"/>
   <path d="M-22-39Q-31-25-27-9L-14-8Q0-13 13-8L27-9Q30-27 21-40L10-51H-11Z" fill="#d9d3c5" stroke="#506071" stroke-width="3"/>
@@ -56,6 +63,17 @@ const builder = (x, y, scale, color, facing = 1) => `<g transform="translate(${x
   <path d="M-24-49L-39-30L-34-24L-15-36M22-48L36-30L50-52" fill="none" stroke="#d9d3c5" stroke-width="10" stroke-linecap="round"/>
   <path d="M50-52L60-68M49-69L72-68M55-75v20" fill="none" stroke="${color}" stroke-width="5" stroke-linecap="round"/>
   <path d="M-17-15h35" stroke="#594c45" stroke-width="6"/><path d="M7-19v11h9v-11" fill="${color}"/>
+  </g>
+  <g class="builder-glitch" opacity="0">
+    <path d="M-28-11Q-36-55-22-83L-9-93H12L27-78Q38-47 27-10Q8-20-1-12Q-15-22-28-11Z" fill="#16243a" stroke="#79e6d7" stroke-width="2" stroke-dasharray="19 5 4 7"/>
+    <path d="M-20-69Q0-89 20-68L11-48H-12Z" fill="#354465" stroke="#b8a0fc" stroke-width="2"/>
+    <path d="M-15-62h30M-9-54h18" stroke="#e9faff" stroke-width="3" stroke-dasharray="7 4"/>
+    <circle cx="-8" cy="-59" r="3" fill="#79e6d7"/><circle cx="9" cy="-59" r="3" fill="#e46d94"/>
+    <path d="M-26-31l-27 13M25-34l29-15M-21-9l-9 22M20-9l11 22" stroke="#b8a0fc" stroke-width="5" stroke-dasharray="9 7"/>
+    <path d="M44-75l25 1M55-87v25M-36-82h-22M-62-69h17M30-18h32M-49-38h15" stroke="#ffc76e" stroke-width="3" stroke-dasharray="13 6"/>
+    <circle cx="0" cy="-42" r="36" fill="none" stroke="#79e6d7" stroke-opacity=".65" stroke-dasharray="2 9"/>
+    ${text(-48,-86,'∧',11,'#79e6d7')}${text(41,-44,'⊕',12,'#e46d94')}${text(-39,3,'1',11,'#ffc76e')}
+  </g>
 </g>`
 
 
@@ -188,9 +206,12 @@ export function renderWatchtowerBoard(milestones, { merged, mergedWeek, closedWe
   const rows = ordered.map(row).join('')
   const board = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 ${boardHeight}" width="960" height="${boardHeight}" role="img" aria-label="Overlord Watchtower roadmap: ${merged} pull requests merged and ${v1Done} of ${v1Total} v1 stories finished" font-family="'Cascadia Code', Consolas, 'Liberation Mono', monospace">
   <title>Overlord Watchtower: ${merged} pull requests merged, ${v1Done} of ${v1Total} v1 stories finished</title>${defs(a,b)}
-  <style>@keyframes pulse{50%{opacity:.45}}@keyframes flow{to{stroke-dashoffset:-90}}@media (prefers-reduced-motion:no-preference){.pulse{animation:pulse 4s ease-in-out infinite}.current{stroke-dasharray:8 7;animation:flow 4s linear infinite}}</style>
-  <rect width="960" height="${boardHeight}" fill="url(#sky)"/>${starfield(105)}<rect width="960" height="${boardHeight}" fill="url(#scan)"/>
+  <style>@keyframes pulse{50%{opacity:.45}}@keyframes flow{to{stroke-dashoffset:-90}}@keyframes glyph-signal{0%,72%,100%{opacity:.1}76%,80%{opacity:.4}78%{opacity:.2}}@media (prefers-reduced-motion:no-preference){.pulse{animation:pulse 4s ease-in-out infinite}.current{stroke-dasharray:8 7;animation:flow 4s linear infinite}.logic-glyph{animation:glyph-signal 7s ease-in-out infinite}.logic-glyph-1{animation-delay:-2.3s}.logic-glyph-2{animation-delay:-4.7s}.builder-base{animation:builder-fade 12s steps(1,end) infinite}.builder-glitch{animation:builder-echo 12s steps(1,end) infinite}}@keyframes builder-fade{0%,44%,50%,100%{opacity:1}45%,49%{opacity:.22}}@keyframes builder-echo{0%,44%,50%,100%{opacity:0}45%,49%{opacity:.9}}</style>
+  <rect width="960" height="${boardHeight}" fill="url(#sky)"/>${starfield(105)}${logicField()}<rect width="960" height="${boardHeight}" fill="url(#scan)"/>
+  <g transform="translate(0 ${signalsHeight})">
   ${body}
+  </g>
+  <g transform="translate(0 -545)">
   <path d="M25 565H935" stroke="${a}" stroke-opacity=".4"/>
   ${text(30,590,'LIVE SIGNALS',12,a,'font-weight="700" letter-spacing="2"')}
   ${text(930,590,'REFRESHED EVERY THREE HOURS',10,dim,'text-anchor="end" letter-spacing="1"')}
@@ -210,6 +231,7 @@ export function renderWatchtowerBoard(milestones, { merged, mergedWeek, closedWe
   ${text(772,666,'PRS MERGED',11,dim)}
   ${text(718,702,closedWeek,28,ink,'font-weight="700"')}
   ${text(772,701,'ISSUES CLOSED',11,dim)}
+  </g>
   <g transform="translate(0 ${signalsHeight})">
   <path d="M25 565H935" stroke="${a}" stroke-opacity=".4"/>
   ${text(30,606,'ROAD TO V1',23,ink,'font-weight="700" letter-spacing="2"')}
