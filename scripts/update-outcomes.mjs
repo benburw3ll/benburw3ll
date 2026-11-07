@@ -37,14 +37,17 @@ for (const m of raw) {
   milestones.push({ ...m, open_issues: Math.max(0, m.open_issues - deferred), deferred_issues: deferred })
 }
 
-// Merged pull requests come from the search API, so they refresh with the board.
+// Activity counts come from the search API, so they refresh with the board.
 const count = async (q) => (await get(`https://api.github.com/search/issues?q=${encodeURIComponent(`repo:${REPO} ${q}`)}&per_page=1`)).total_count
+const weekAgo = new Date(Date.now() - 7 * 864e5).toISOString().slice(0, 10)
 const merged = await count('is:pr is:merged')
+const mergedWeek = await count(`is:pr is:merged merged:>=${weekAgo}`)
+const closedWeek = await count(`is:issue is:closed reason:completed closed:>=${weekAgo}`)
 
 const v1 = milestones.filter((m) => versionOf(m.title) === 'v1')
 const done = v1.reduce((sum, m) => sum + m.closed_issues, 0)
 const total = v1.reduce((sum, m) => sum + m.closed_issues + m.open_issues, 0)
-const svg = renderWatchtowerBoard(milestones)
+const svg = renderWatchtowerBoard(milestones, { merged, mergedWeek, closedWeek })
 mkdirSync(new URL('outcomes/', root), { recursive: true })
 writeFileSync(new URL('outcomes/operations.svg', root), svg)
 
@@ -54,7 +57,7 @@ const group = (version, label) => {
   const links = items.map((m) => `<li><a href="${esc(m.html_url)}">${esc(m.title)}</a></li>`).join('\n')
   return `<p><b>${label}</b></p>\n<ul>\n${links}\n</ul>\n`
 }
-const block = `<p align="center"><a href="https://github.com/${REPO}/milestones"><img src="outcomes/operations.svg" width="960" alt="Overlord Watchtower outcome board: ${done} of ${total} v1 issues closed"></a></p>\n\n<details>\n<summary>Open the stories behind the rings</summary>\n\n${group('v1', 'The road to v1')}${group('v1.1', 'The next board, v1.1')}${group('later', 'Later')}<p>${done} of ${total} v1 issues closed · ${merged} pull requests merged.</p>\n</details>`
+const block = `<p align="center"><a href="https://github.com/${REPO}/milestones"><img src="outcomes/operations.svg" width="960" alt="Overlord Watchtower outcome board: ${merged} pull requests merged, ${done} of ${total} v1 issues closed"></a></p>\n\n<details>\n<summary>Open the stories behind the rings</summary>\n\n${group('v1', 'The road to v1')}${group('v1.1', 'The next board, v1.1')}${group('later', 'Later')}<p>${done} of ${total} v1 issues closed · ${merged} pull requests merged.</p>\n</details>`
 const file = new URL('README.md', root)
 const readme = readFileSync(file, 'utf8')
 const start = readme.indexOf(START), end = readme.indexOf(END)

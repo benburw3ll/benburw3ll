@@ -59,7 +59,7 @@ const builder = (x, y, scale, color, facing = 1) => `<g transform="translate(${x
 </g>`
 
 
-export function renderWatchtowerBoard(milestones) {
+export function renderWatchtowerBoard(milestones, { merged, mergedWeek, closedWeek }) {
   const outcomes = milestones.map((milestone) => {
     const match = /^([NO])(\d+)\b/.exec(milestone.title)
     if (!match) throw new Error(`Unrecognized outcome milestone: ${milestone.title}`)
@@ -80,6 +80,8 @@ export function renderWatchtowerBoard(milestones) {
     return { code, title, complete, total, state, version }
   })
   const v1 = outcomes.filter((item) => item.version === 'v1')
+  const v1Done = v1.reduce((sum, item) => sum + item.complete, 0)
+  const v1Total = v1.reduce((sum, item) => sum + item.total, 0)
   const recentDone = v1.filter((item) => item.state === 'done').slice(-3)
   if (recentDone.length !== 3) throw new Error('The Watchtower needs three finished v1 outcome rings')
   const available = v1.filter((item) => item.state !== 'done')
@@ -180,25 +182,48 @@ export function renderWatchtowerBoard(milestones) {
       ${text(913,y+27,`${complete}/${total}`,14,color,'text-anchor="end" font-weight="700"')}
     </g>`
   }
-  const boardHeight = 1430 + (outcomes.length - 15) * 45 + (nextCount ? 38 : 0) + (outcomes.length > v1Count + nextCount ? 38 : 0)
+  const signalsHeight = 180
+  const roadHeight = 1430 + (outcomes.length - 15) * 45 + (nextCount ? 38 : 0) + (outcomes.length > v1Count + nextCount ? 38 : 0)
+  const boardHeight = roadHeight + signalsHeight
   const rows = ordered.map(row).join('')
-  const board = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 ${boardHeight}" width="960" height="${boardHeight}" role="img" aria-label="Overlord Watchtower roadmap with all N and O outcome titles and progress" font-family="'Cascadia Code', Consolas, 'Liberation Mono', monospace">
-  <title>Overlord Watchtower: Road to v1 outcomes</title>${defs(a,b)}
+  const board = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 ${boardHeight}" width="960" height="${boardHeight}" role="img" aria-label="Overlord Watchtower roadmap: ${merged} pull requests merged and ${v1Done} of ${v1Total} v1 stories finished" font-family="'Cascadia Code', Consolas, 'Liberation Mono', monospace">
+  <title>Overlord Watchtower: ${merged} pull requests merged, ${v1Done} of ${v1Total} v1 stories finished</title>${defs(a,b)}
   <style>@keyframes pulse{50%{opacity:.45}}@keyframes flow{to{stroke-dashoffset:-90}}@media (prefers-reduced-motion:no-preference){.pulse{animation:pulse 4s ease-in-out infinite}.current{stroke-dasharray:8 7;animation:flow 4s linear infinite}}</style>
   <rect width="960" height="${boardHeight}" fill="url(#sky)"/>${starfield(105)}<rect width="960" height="${boardHeight}" fill="url(#scan)"/>
   ${body}
   <path d="M25 565H935" stroke="${a}" stroke-opacity=".4"/>
+  ${text(30,590,'LIVE SIGNALS',12,a,'font-weight="700" letter-spacing="2"')}
+  ${text(930,590,'REFRESHED EVERY THREE HOURS',10,dim,'text-anchor="end" letter-spacing="1"')}
+  <rect x="30" y="602" width="420" height="122" rx="10" fill="#111a2d" stroke="${b}" stroke-opacity=".8" stroke-width="2"/>
+  <path d="M30 627v-15q0-10 10-10h95M450 698v16q0 10-10 10h-88" fill="none" stroke="${b}" stroke-width="3"/>
+  ${text(50,630,'PULL REQUESTS MERGED',13,b,'font-weight="700" letter-spacing="1.4"')}
+  ${text(48,695,merged,61,ink,'font-weight="700"')}
+  ${text(427,696,'ALL TIME',12,b,'text-anchor="end" letter-spacing="1"')}
+  <rect x="465" y="602" width="220" height="122" rx="10" fill="#0e1b2b" stroke="${a}" stroke-opacity=".65" stroke-width="2"/>
+  ${text(483,630,'V1 STORIES FINISHED',11,a,'font-weight="700" letter-spacing=".6"')}
+  ${text(482,681,`${v1Done}/${v1Total}`,37,ink,'font-weight="700"')}
+  <path d="M483 704h184" stroke="#2d3c54" stroke-width="7" stroke-linecap="round"/>
+  <path d="M483 704h${v1Total ? Math.round(184 * v1Done / v1Total) : 0}" stroke="${a}" stroke-width="7" stroke-linecap="round"/>
+  <rect x="700" y="602" width="230" height="122" rx="10" fill="#17142a" stroke="#b8a0fc" stroke-opacity=".65" stroke-width="2"/>
+  ${text(718,630,'LAST 7 DAYS',12,'#b8a0fc','font-weight="700" letter-spacing="1"')}
+  ${text(718,667,mergedWeek,28,ink,'font-weight="700"')}
+  ${text(772,666,'PRS MERGED',11,dim)}
+  ${text(718,702,closedWeek,28,ink,'font-weight="700"')}
+  ${text(772,701,'ISSUES CLOSED',11,dim)}
+  <g transform="translate(0 ${signalsHeight})">
+  <path d="M25 565H935" stroke="${a}" stroke-opacity=".4"/>
   ${text(30,606,'ROAD TO V1',23,ink,'font-weight="700" letter-spacing="2"')}
   ${text(930,604,'STORIES FINISHED  /  TOTAL',11,a,'text-anchor="end" letter-spacing="1"')}
   <path d="M30 622H930" stroke="${a}" stroke-opacity=".45"/>
-  <path d="M65 637V${boardHeight-76}" stroke="${a}" stroke-opacity=".18" stroke-width="3" stroke-dasharray="3 8"/>
+  <path d="M65 637V${roadHeight-76}" stroke="${a}" stroke-opacity=".18" stroke-width="3" stroke-dasharray="3 8"/>
   ${text(30,645+nCount*45+23,'OUTCOMES',10,b,'letter-spacing="1"')}
   ${nextCount ? text(30,645+v1Count*45+38+23,'NEXT BOARD  ·  V1.1',10,'#b8a0fc','letter-spacing="1"') : ''}
   ${outcomes.length > v1Count + nextCount ? text(30,645+(v1Count+nextCount)*45+76+23,'LATER',10,'#8991a3','letter-spacing="1"') : ''}
   ${rows}
-  <path d="M30 ${boardHeight-48}H930" stroke="${a}" stroke-opacity=".4"/>
-  ${text(30,boardHeight-24,'RING COUNTS  /  STORIES FINISHED OF TOTAL',10,dim,'letter-spacing="1"')}
-  ${text(930,boardHeight-24,'SILAS PORTALS',11,a,'text-anchor="end" letter-spacing="1"')}
+  <path d="M30 ${roadHeight-48}H930" stroke="${a}" stroke-opacity=".4"/>
+  ${text(30,roadHeight-24,'RING COUNTS  /  STORIES FINISHED OF TOTAL',10,dim,'letter-spacing="1"')}
+  ${text(930,roadHeight-24,'SILAS PORTALS',11,a,'text-anchor="end" letter-spacing="1"')}
+  </g>
   </svg>\n`
   return board
 }
