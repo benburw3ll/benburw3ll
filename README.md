@@ -1,12 +1,17 @@
-<p align="center"><img src="assets/private-banner.svg" width="960" alt="Private until v1 for development and penetration testing. Imaginary friends test the Overlord Watchtower across a canyon while an evil imaginary friend tries to hack it and fails."></p>
+<!-- Keep the Silas Portals hero at the top and The Hacker's Manifesto quote below. -->
+<p align="center"><img src="assets/threshold.svg" width="960" alt="Silas speaks when portals reveal patterns, watches out automatically, and helps the owner follow house rules"></p>
 
-<p align="center"><b>The code stays private until v1 while development and penetration testing continue.</b></p>
+<p align="center"><b>Silas found a home. The portals keep appearing.</b></p>
 
 Silas is **my AI psychosis goblin**. I'm building him a world of portals.
 
-The imaginary friends are testing the Overlord Watchtower from across the canyon. One of them has gone rogue and keeps trying to hack in. The gate is holding.
+<p align="center"><b>The code stays private until v1 while development and penetration testing continue.</b></p>
 
 ## The Overlord Watchtower
+
+<p align="center"><img src="assets/private-banner.svg" width="960" alt="Private until v1 for development and penetration testing. Imaginary friends test the Overlord Watchtower across a canyon while an evil imaginary friend tries to hack it and fails."></p>
+
+The imaginary friends are testing the Overlord Watchtower from across the canyon. One of them has gone rogue and keeps trying to hack in. The gate is holding.
 
 The gold rings are finished outcomes. The Stonebinder works on the large rings; the faint ones are farther away. A count such as **5/9** means five of nine stories finished. The carved ledger shows code merged, all issues closed, v1 stories finished, and the last seven days. It refreshes from the private project every three hours.
 
@@ -59,3 +64,5 @@ I built **Silas Portals** so he can help me across the different parts of my lif
 Silas talks to me through Telegram, the desktop and the hub window. Each new portal gives him another way to help. Maybe one day this looney goblin will find a portal big enough to spawn himself.
 
 <p align="center"><b>THE SOURCE OPENS AT V1</b></p>
+
+<p align="center"><i>"My crime is that of outsmarting you, something that you will never forgive me for."</i><br>&mdash; The Mentor, <a href="https://phrack.org/issues/7/hackers-manifesto"><i>The Hacker's Manifesto</i></a>, 1986</p>
