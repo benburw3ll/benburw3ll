@@ -34,8 +34,8 @@ const svg = renderWatchtowerBoard(milestones)
 mkdirSync(new URL('outcomes/', root), { recursive: true })
 writeFileSync(new URL('outcomes/operations.svg', root), svg)
 
-const links = milestones.map((m) => `<a href="${esc(m.html_url)}">${code(m)[1]}${code(m)[2]}</a>`).join(' &nbsp;·&nbsp; ')
-const block = `<p align="center"><a href="https://github.com/${REPO}/milestones"><img src="outcomes/operations.svg" width="960" alt="Overlord Watchtower outcome board: ${done} of ${total} issues closed"></a></p>\n\n<p align="center">${links}</p>\n\n<p align="center"><sub>${done} of ${total} issues closed across the active milestones · ${merged} pull requests merged.</sub></p>`
+const links = milestones.map((m) => `<li><a href="${esc(m.html_url)}">${esc(m.title)}</a></li>`).join('\n')
+const block = `<p align="center"><a href="https://github.com/${REPO}/milestones"><img src="outcomes/operations.svg" width="960" alt="Overlord Watchtower outcome board: ${done} of ${total} issues closed"></a></p>\n\n<p align="center"><sub>Every ring is an outcome. Its glow grows as the work finishes.</sub></p>\n\n<details>\n<summary>Open the stories behind the rings</summary>\n\n<ul>\n${links}\n</ul>\n<p>${done} of ${total} issues closed · ${merged} pull requests merged.</p>\n</details>`
 const file = new URL('README.md', root)
 const readme = readFileSync(file, 'utf8')
 const start = readme.indexOf(START), end = readme.indexOf(END)
