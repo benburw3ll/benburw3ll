@@ -196,14 +196,14 @@
       <rect x="30" y="1178" width="900" height="41" rx="6" fill="#101729" stroke="#a69aba" stroke-opacity="0.64"/>
       <path d="M31 1186v-7h21M929 1186v-7h-21" fill="none" stroke="#a69aba" stroke-opacity=".7" stroke-width="1.5"/>
       <circle cx="65" cy="1199" r="13" fill="#060a17" stroke="#a69aba" stroke-opacity=".34" stroke-width="4"/>
-      <circle cx="65" cy="1199" r="13" fill="none" stroke="#a69aba" stroke-width="4" stroke-dasharray="26 82" transform="rotate(-90 65 1199)"/>
+      <circle cx="65" cy="1199" r="13" fill="none" stroke="#a69aba" stroke-width="4" stroke-dasharray="29 82" transform="rotate(-90 65 1199)"/>
       <circle cx="65" cy="1199" r="4" fill="#a69aba" opacity="0.8"/>
       <text x="96" y="1205" fill="#a69aba" font-size="17" font-weight="700">O8</text>
       <text x="155" y="1205" fill="#f1ecdf" font-size="16" font-weight="600">Artistic themes</text>
       <text x="636" y="1204" fill="#a69aba" font-size="10" text-anchor="middle" letter-spacing="1">FORMING</text>
       <path d="M710 1199h112" stroke="#2d3c54" stroke-width="8" stroke-linecap="round"/>
-      <path d="M710 1199h35" stroke="#a69aba" stroke-width="6" stroke-linecap="round" opacity="0.9"/>
-      <text x="913" y="1205" fill="#a69aba" font-size="14" text-anchor="end" font-weight="700">5/16</text>
+      <path d="M710 1199h39" stroke="#a69aba" stroke-width="6" stroke-linecap="round" opacity="0.9"/>
+      <text x="913" y="1205" fill="#a69aba" font-size="14" text-anchor="end" font-weight="700">6/17</text>
     </g><g>
       <rect x="30" y="1223" width="900" height="41" rx="6" fill="#0c1324" stroke="#a69aba" stroke-opacity="0.32"/>
       <path d="M31 1231v-7h21M929 1231v-7h-21" fill="none" stroke="#a69aba" stroke-opacity=".7" stroke-width="1.5"/>
