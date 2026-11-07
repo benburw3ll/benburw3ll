@@ -219,7 +219,7 @@ export function renderWatchtowerBoard(milestones, { merged, mergedWeek, closedTo
   ${text(30,590,'WATCHTOWER LEDGER',12,a,'font-weight="700" letter-spacing="2"')}
   ${text(930,590,'REFRESHED EVERY THREE HOURS',10,dim,'text-anchor="end" letter-spacing="1"')}
   ${statPlate(30,211,b,'#171a2d')}${statPlate(253,211,signal,'#211525')}${statPlate(476,211,a,'#0e1b2b')}${statPlate(699,231,'#b8a0fc','#17142a')}
-  ${text(48,634,'CODE MERGED',12,b,'font-weight="700" letter-spacing="1"')}
+  ${text(48,634,'CODE MERGES',12,b,'font-weight="700" letter-spacing="1"')}
   ${text(47,706,merged,54,ink,'font-weight="700"')}
   ${text(223,727,'ALL TIME',10,b,'text-anchor="end" letter-spacing="1"')}
   ${text(271,634,'ISSUES CLOSED',12,signal,'font-weight="700" letter-spacing="1"')}
@@ -231,7 +231,7 @@ export function renderWatchtowerBoard(milestones, { merged, mergedWeek, closedTo
   <path d="M494 720h${v1Total ? Math.round(174 * v1Done / v1Total) : 0}" stroke="${a}" stroke-width="7" stroke-linecap="round"/>
   ${text(717,634,'LAST 7 DAYS',12,'#b8a0fc','font-weight="700" letter-spacing="1"')}
   ${text(716,676,mergedWeek,27,ink,'font-weight="700"')}
-  ${text(772,675,'CODE MERGED',10,dim)}
+  ${text(772,675,'CODE MERGES',10,dim)}
   ${text(716,716,closedWeek,27,ink,'font-weight="700"')}
   ${text(772,715,'ISSUES CLOSED',10,dim)}
   </g>

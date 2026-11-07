@@ -81,7 +81,7 @@
   <circle cx="486" cy="613" r="2" fill="#79e6d7"/><circle cx="677" cy="733" r="2" fill="#79e6d7"/><path d="M711 602H918l12 12v118l-12 12H711l-12-12V614Z" fill="#17142a" stroke="#b8a0fc" stroke-opacity=".75" stroke-width="2"/>
   <path d="M711 607h37M918 739h-37" stroke="#b8a0fc" stroke-width="3" stroke-opacity=".65"/>
   <circle cx="709" cy="613" r="2" fill="#b8a0fc"/><circle cx="920" cy="733" r="2" fill="#b8a0fc"/>
-  <text x="48" y="634" fill="#ffc76e" font-size="12" font-weight="700" letter-spacing="1">CODE MERGED</text>
+  <text x="48" y="634" fill="#ffc76e" font-size="12" font-weight="700" letter-spacing="1">CODE MERGES</text>
   <text x="47" y="706" fill="#f1ecdf" font-size="54" font-weight="700">185</text>
   <text x="223" y="727" fill="#ffc76e" font-size="10" text-anchor="end" letter-spacing="1">ALL TIME</text>
   <text x="271" y="634" fill="#e46d94" font-size="12" font-weight="700" letter-spacing="1">ISSUES CLOSED</text>
@@ -93,7 +93,7 @@
   <path d="M494 720h146" stroke="#79e6d7" stroke-width="7" stroke-linecap="round"/>
   <text x="717" y="634" fill="#b8a0fc" font-size="12" font-weight="700" letter-spacing="1">LAST 7 DAYS</text>
   <text x="716" y="676" fill="#f1ecdf" font-size="27" font-weight="700">185</text>
-  <text x="772" y="675" fill="#aab2c7" font-size="10" >CODE MERGED</text>
+  <text x="772" y="675" fill="#aab2c7" font-size="10" >CODE MERGES</text>
   <text x="716" y="716" fill="#f1ecdf" font-size="27" font-weight="700">82</text>
   <text x="772" y="715" fill="#aab2c7" font-size="10" >ISSUES CLOSED</text>
   </g>
