@@ -20,12 +20,21 @@ const defs = (accent, secondary) => `<defs>
   <pattern id="stone" width="74" height="36" patternUnits="userSpaceOnUse"><path d="M0 0H74M0 18H74M37 0V18M0 18V36M74 18V36" stroke="#8ca4c0" stroke-opacity=".13" fill="none"/></pattern>
 </defs>`
 
-const ring = (cx, cy, r, color, state, code, label = '') => {
-  const active = state === 'active', done = state === 'done', ghost = state === 'ghost'
-  const opacity = ghost ? .34 : 1
+const ring = (cx, cy, r, color, state, outcome) => {
+  const active = state === 'active', ghost = state === 'ghost'
+  const { code, title, complete, total } = outcome
+  const opacity = ghost ? .58 : 1
+  const progress = total ? complete / total : 0
+  const progressRadius = r - 17
+  const circumference = Math.round(2 * Math.PI * progressRadius)
   const construction = active ? `<circle cx="${cx}" cy="${cy}" r="${r + 8}" fill="none" stroke="${color}" stroke-width="8" stroke-dasharray="${Math.round(r * 2)} 18 39 14 55 25" transform="rotate(-78 ${cx} ${cy})"/><circle cx="${cx}" cy="${cy}" r="${r + 19}" fill="none" stroke="${color}" stroke-width="1.5" stroke-dasharray="3 8"/>` : ''
-  const core = ghost ? `<circle cx="${cx}" cy="${cy}" r="${r - 7}" fill="#060a16" stroke="${color}" stroke-opacity=".4" stroke-dasharray="5 9"/>` : `<circle cx="${cx}" cy="${cy}" r="${r - 8}" fill="url(#well)"/><path d="M${cx-r*.8} ${cy+r*.25}Q${cx} ${cy-r*.9} ${cx+r*.8} ${cy+r*.3}M${cx-r*.5} ${cy-r*.6}Q${cx+r*.3} ${cy+r*.7} ${cx+r*.7} ${cy-r*.45}" fill="none" stroke="${color}" stroke-width="${Math.max(2,r*.08)}" stroke-opacity=".6" class="current"/>`
-  return `<g opacity="${opacity}"><circle cx="${cx}" cy="${cy}" r="${r + 9}" fill="none" stroke="${color}" stroke-width="19" opacity="${ghost ? .08 : .34}" filter="url(#glow)"/><circle cx="${cx}" cy="${cy}" r="${r}" fill="#050711" stroke="${ghost ? color : 'url(#rim)'}" stroke-width="${active ? 10 : 8}" stroke-dasharray="${ghost ? '3 11' : ''}"/>${core}${construction}<circle cx="${cx}" cy="${cy}" r="${r+13}" fill="none" stroke="${color}" stroke-opacity=".6" stroke-width="1" stroke-dasharray="1 12"/>${text(cx, cy+5, code, Math.max(13,Math.round(r*.29)), ink, 'text-anchor="middle" font-weight="700" letter-spacing="1"')}${label ? text(cx,cy+r+31,label.toUpperCase(),10,color,'text-anchor="middle" letter-spacing="1"') : ''}</g>`
+  const core = ghost ? `<circle cx="${cx}" cy="${cy}" r="${r - 7}" fill="#060a16" stroke="${color}" stroke-opacity=".4" stroke-dasharray="5 9"/>` : `<circle cx="${cx}" cy="${cy}" r="${r - 8}" fill="url(#well)"/><path d="M${cx-r*.8} ${cy+r*.25}Q${cx} ${cy-r*.9} ${cx+r*.8} ${cy+r*.3}M${cx-r*.5} ${cy-r*.6}Q${cx+r*.3} ${cy+r*.7} ${cx+r*.7} ${cy-r*.45}" fill="none" stroke="${color}" stroke-width="${Math.max(2,r*.08)}" stroke-opacity=".6" class="${active ? 'current' : ''}"/>`
+  const progressArc = progress ? `<circle cx="${cx}" cy="${cy}" r="${progressRadius}" fill="none" stroke="${color}" stroke-width="${r < 40 ? 3 : 4}" stroke-linecap="round" stroke-dasharray="${Math.round(circumference * progress)} ${circumference}" transform="rotate(-90 ${cx} ${cy})"/>` : ''
+  const codeSize = r < 40 ? 8 : r < 50 ? 10 : 12
+  const countSize = r < 40 ? 12 : r < 50 ? 17 : 26
+  const codeY = cy - (r < 40 ? 8 : r < 50 ? 11 : 17)
+  const countY = cy + (r < 40 ? 9 : r < 50 ? 13 : 17)
+  return `<g opacity="${opacity}"><title>${esc(`${code} ${title}: ${complete} of ${total} stories finished`)}</title><circle cx="${cx}" cy="${cy}" r="${r + 9}" fill="none" stroke="${color}" stroke-width="19" opacity="${ghost ? .08 : .34}" filter="url(#glow)"/><circle cx="${cx}" cy="${cy}" r="${r}" fill="#050711" stroke="${ghost ? color : 'url(#rim)'}" stroke-width="${active ? 10 : 8}" stroke-dasharray="${ghost ? '3 11' : ''}"/>${core}<circle cx="${cx}" cy="${cy}" r="${progressRadius}" fill="none" stroke="${color}" stroke-opacity=".16" stroke-width="${r < 40 ? 3 : 4}"/>${progressArc}${construction}<circle cx="${cx}" cy="${cy}" r="${r+13}" fill="none" stroke="${color}" stroke-opacity=".6" stroke-width="1" stroke-dasharray="1 12"/>${text(cx, codeY, code, codeSize, ink, 'text-anchor="middle" font-weight="700" letter-spacing="1"')}${text(cx, countY, `${complete}/${total}`, countSize, color, 'text-anchor="middle" font-weight="700"')}</g>`
 }
 
 // The Stonebinder is one of the story's imaginary friends: a hooded, non-goblin
@@ -61,6 +70,8 @@ export function renderWatchtowerBoard(milestones) {
           : 'planned'
     return { code, title, complete, total, state }
   })
+  const recentDone = outcomes.filter((item) => item.state === 'done').slice(-3)
+  if (recentDone.length !== 3) throw new Error('The Watchtower needs three finished outcome rings')
   const available = outcomes.filter((item) => item.state !== 'done' && item.state !== 'parked')
   const primary = available[0] ?? outcomes.at(-2)
   const secondary = available[1] ?? outcomes.find((item) => item.code !== primary.code && item.state !== 'done') ?? outcomes.at(-1)
@@ -110,18 +121,19 @@ export function renderWatchtowerBoard(milestones) {
   <path d="M285 325H675M264 494H696" stroke="#7585a1" stroke-opacity=".45" stroke-width="2"/>
   <path d="M321 196h318M333 208h294" stroke="${a}" stroke-opacity=".3"/>
   ${text(480,225,'IF   ∧   THEN   ∨   ELSE',12,b,'text-anchor="middle" letter-spacing="3"')}
-  ${ring(339,282,45,b,'done','N1')}${ring(470,282,45,b,'done','N2')}${ring(601,282,45,b,'done','N3')}
-  ${ring(374,420,65,a,primary.state === 'done' ? 'done' : 'active',primary.code)}${ring(565,420,65,'#b8a0fc',secondary.state === 'done' ? 'done' : 'active',secondary.code)}
+  ${ring(339,282,45,b,'done',recentDone[0])}${ring(470,282,45,b,'done',recentDone[1])}${ring(601,282,45,b,'done',recentDone[2])}
+  ${ring(374,420,65,a,primary.state === 'done' ? 'done' : 'active',primary)}${ring(565,420,65,'#b8a0fc',secondary.state === 'done' ? 'done' : 'active',secondary)}
   <path d="M338 343v14h-27v22m159-36v16h-32v20m163-36v17h25v19" fill="none" stroke="${a}" stroke-opacity=".5" stroke-width="2"/>
   <path d="M437 420h58M470 366v-24m0 156v21" stroke="${signal}" stroke-opacity=".7" stroke-width="3" stroke-dasharray="4 7" class="current"/>
   <path d="M627 374h100v13H627m37 0v180m42-180v180m-42-122h42m-42 52h42m-42 52h42" fill="none" stroke="${b}" stroke-width="3"/>
   ${builder(666,383,1.03,b,-1)}
   <path d="M608 373l-16-20m23 17l-8-26m15 23l1-23" stroke="${b}" stroke-width="2" stroke-linecap="round" class="pulse"/>
+  ${text(374,531,primary.title,11,a,'text-anchor="middle" font-weight="700"')}${text(565,531,secondary.title,11,'#b8a0fc','text-anchor="middle" font-weight="700"')}
   <path d="M88 454l-19 67 28 48h110l26-76-38-54zM872 454l19 67-28 48H753l-26-76 38-54z" fill="#070d19" stroke="#46536d" stroke-width="3"/>
   <path d="M93 494l-9 29 21 38h81l27-63M867 494l9 29-21 38h-81l-27-63" fill="none" stroke="${signal}" stroke-opacity=".55" stroke-width="3"/>
   <path d="M89 566h122M749 566h122" stroke="${a}" stroke-width="5" stroke-opacity=".65" filter="url(#smallGlow)"/>
-  ${ring(125,456,34,'#b8a0fc','ghost',leftGhost.code)}${ring(835,456,34,'#b8a0fc','ghost',rightGhost.code)}
-  ${text(38,101,'N1—N3  /  COMPLETE',11,b,'letter-spacing="1"')}${text(922,101,`${primary.code} + ${secondary.code}  /  NEXT RINGS`,11,a,'text-anchor="end" letter-spacing="1"')}`
+  ${ring(125,456,34,'#b8a0fc','ghost',leftGhost)}${ring(835,456,34,'#b8a0fc','ghost',rightGhost)}
+  ${text(38,101,'LATEST FINISHED OUTCOMES',11,b,'letter-spacing="1"')}${text(922,101,'NEXT OUTCOMES',11,a,'text-anchor="end" letter-spacing="1"')}`
 
   const nCount = outcomes.filter((item) => item.code.startsWith('N')).length
   const row = (item, i) => {
@@ -156,13 +168,13 @@ export function renderWatchtowerBoard(milestones) {
   ${body}
   <path d="M25 565H935" stroke="${a}" stroke-opacity=".4"/>
   ${text(30,606,'ROAD TO V1',23,ink,'font-weight="700" letter-spacing="2"')}
-  ${text(930,604,'OUTCOMES  /  BUILD STATUS',11,a,'text-anchor="end" letter-spacing="1"')}
+  ${text(930,604,'STORIES FINISHED  /  TOTAL',11,a,'text-anchor="end" letter-spacing="1"')}
   <path d="M30 622H930" stroke="${a}" stroke-opacity=".45"/>
   <path d="M65 637V${boardHeight-76}" stroke="${a}" stroke-opacity=".18" stroke-width="3" stroke-dasharray="3 8"/>
   ${text(30,645+nCount*45+23,'OUTCOMES',10,b,'letter-spacing="1"')}
   ${rows}
   <path d="M30 ${boardHeight-48}H930" stroke="${a}" stroke-opacity=".4"/>
-  ${text(30,boardHeight-24,'ISSUES CLOSED  /  LIVE FROM GITHUB MILESTONES',10,dim,'letter-spacing="1"')}
+  ${text(30,boardHeight-24,'RING COUNTS  /  STORIES FINISHED OF TOTAL',10,dim,'letter-spacing="1"')}
   ${text(930,boardHeight-24,'SILAS PORTALS',11,a,'text-anchor="end" letter-spacing="1"')}
   </svg>\n`
   return board
