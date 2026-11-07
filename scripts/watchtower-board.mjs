@@ -20,6 +20,12 @@ const logicField = () => Array.from({ length: 38 }, (_, i) => {
   const y = 205 + ((i * 103 + i * i * 17) % 505)
   return text(x, y, glyphs[i % glyphs.length], i % 5 ? 12 : 17, i % 3 ? '#79e6d7' : '#e46d94', `class="logic-glyph logic-glyph-${i % 3}" opacity=".12"`)
 }).join('')
+const logicPacket = (path, glyph, color, duration, offset) => `<g class="logic-packet" opacity="0" aria-hidden="true">
+  <circle r="13" fill="${color}" opacity=".3" filter="url(#smallGlow)"/>
+  <path d="M0-15 13-8 13 8 0 15 -13 8 -13-8Z" fill="none" stroke="${color}" stroke-width="1.5" opacity=".72" class="logic-orbit"/>
+  <text y="5" text-anchor="middle" fill="${color}" font-size="17" font-weight="700">${glyph}</text>
+  <animateMotion path="${path}" dur="${duration}s" begin="-${offset}s" repeatCount="indefinite" rotate="0"/>
+</g>`
 
 const defs = (accent, secondary) => `<defs>
   <radialGradient id="sky"><stop stop-color="#1a2038"/><stop offset=".55" stop-color="#0b1022"/><stop offset="1" stop-color="#050710"/></radialGradient>
@@ -40,13 +46,14 @@ const ring = (cx, cy, r, color, state, outcome) => {
   const progressRadius = r - 17
   const circumference = Math.round(2 * Math.PI * progressRadius)
   const construction = active ? `<circle cx="${cx}" cy="${cy}" r="${r + 8}" fill="none" stroke="${color}" stroke-width="8" stroke-dasharray="${Math.round(r * 2)} 18 39 14 55 25" transform="rotate(-78 ${cx} ${cy})"/><circle cx="${cx}" cy="${cy}" r="${r + 19}" fill="none" stroke="${color}" stroke-width="1.5" stroke-dasharray="3 8"/>` : ''
+  const progressHalo = active && outcome.state === 'building' ? `<circle cx="${cx}" cy="${cy}" r="${r + 9}" fill="none" stroke="${color}" stroke-width="20" filter="url(#glow)" opacity="0" class="progress-ring-halo"/>` : ''
   const core = ghost ? `<circle cx="${cx}" cy="${cy}" r="${r - 7}" fill="#060a16" stroke="${color}" stroke-opacity=".4" stroke-dasharray="5 9"/>` : `<circle cx="${cx}" cy="${cy}" r="${r - 8}" fill="url(#well)"/><path d="M${cx-r*.8} ${cy+r*.25}Q${cx} ${cy-r*.9} ${cx+r*.8} ${cy+r*.3}M${cx-r*.5} ${cy-r*.6}Q${cx+r*.3} ${cy+r*.7} ${cx+r*.7} ${cy-r*.45}" fill="none" stroke="${color}" stroke-width="${Math.max(2,r*.08)}" stroke-opacity=".6" class="${active ? 'current' : ''}"/>`
   const progressArc = progress ? `<circle cx="${cx}" cy="${cy}" r="${progressRadius}" fill="none" stroke="${color}" stroke-width="${r < 40 ? 3 : 4}" stroke-linecap="round" stroke-dasharray="${Math.round(circumference * progress)} ${circumference}" transform="rotate(-90 ${cx} ${cy})"/>` : ''
   const codeSize = r < 40 ? 8 : r < 50 ? 10 : 12
   const countSize = r < 40 ? 12 : r < 50 ? 17 : 26
   const codeY = cy - (r < 40 ? 8 : r < 50 ? 11 : 17)
   const countY = cy + (r < 40 ? 9 : r < 50 ? 13 : 17)
-  return `<g opacity="${opacity}"><title>${esc(`${code} ${title}: ${complete} of ${total} stories finished`)}</title><circle cx="${cx}" cy="${cy}" r="${r + 9}" fill="none" stroke="${color}" stroke-width="19" opacity="${ghost ? .08 : .34}" filter="url(#glow)"/><circle cx="${cx}" cy="${cy}" r="${r}" fill="#050711" stroke="${ghost ? color : 'url(#rim)'}" stroke-width="${active ? 10 : 8}" stroke-dasharray="${ghost ? '3 11' : ''}"/>${core}<circle cx="${cx}" cy="${cy}" r="${progressRadius}" fill="none" stroke="${color}" stroke-opacity=".16" stroke-width="${r < 40 ? 3 : 4}"/>${progressArc}${construction}<circle cx="${cx}" cy="${cy}" r="${r+13}" fill="none" stroke="${color}" stroke-opacity=".6" stroke-width="1" stroke-dasharray="1 12"/>${text(cx, codeY, code, codeSize, ink, 'text-anchor="middle" font-weight="700" letter-spacing="1"')}${text(cx, countY, `${complete}/${total}`, countSize, color, 'text-anchor="middle" font-weight="700"')}</g>`
+  return `<g opacity="${opacity}"><title>${esc(`${code} ${title}: ${complete} of ${total} stories finished`)}</title><circle cx="${cx}" cy="${cy}" r="${r + 9}" fill="none" stroke="${color}" stroke-width="19" opacity="${ghost ? .08 : .34}" filter="url(#glow)"/><circle cx="${cx}" cy="${cy}" r="${r}" fill="#050711" stroke="${ghost ? color : 'url(#rim)'}" stroke-width="${active ? 10 : 8}" stroke-dasharray="${ghost ? '3 11' : ''}"/>${core}<circle cx="${cx}" cy="${cy}" r="${progressRadius}" fill="none" stroke="${color}" stroke-opacity=".16" stroke-width="${r < 40 ? 3 : 4}"/>${progressArc}${construction}${progressHalo}<circle cx="${cx}" cy="${cy}" r="${r+13}" fill="none" stroke="${color}" stroke-opacity=".6" stroke-width="1" stroke-dasharray="1 12"/>${text(cx, codeY, code, codeSize, ink, 'text-anchor="middle" font-weight="700" letter-spacing="1"')}${text(cx, countY, `${complete}/${total}`, countSize, color, 'text-anchor="middle" font-weight="700"')}</g>`
 }
 
 // The Stonebinder is one of the story's imaginary friends: a hooded, non-goblin
@@ -113,17 +120,20 @@ export function renderWatchtowerBoard(milestones, { merged, mergedWeek, closedTo
   const leftGhost = future.at(-2) ?? outcomes.at(-2)
   const rightGhost = future.at(-1) ?? outcomes.at(-1)
   const a = '#79e6d7', b = '#ffc76e', signal = '#e46d94'
+  const signalGlyphs = ['∧', '∨', '⊕', '¬', '⇒', '0', '1']
   const leftTraces = Array.from({ length: 13 }, (_, i) => {
     const y = 197 + i * 26
     const end = 290 + (i % 4) * 22
     const notch = 167 + (i % 3) * 17
-    return `<path d="M${48 + i % 3 * 9} ${y}h${notch}l${18 + i % 3 * 4} ${i % 2 ? 11 : -11}H${end}" fill="none" stroke="${i % 4 ? a : signal}" stroke-width="${i % 4 ? 1.3 : 2.2}" stroke-opacity="${i % 4 ? .25 : .5}"/><circle cx="${end}" cy="${y + (i % 2 ? 11 : -11)}" r="${i % 4 ? 2 : 3}" fill="${i % 4 ? a : signal}" opacity=".7"/>`
+    const path = `M${48 + i % 3 * 9} ${y}h${notch}l${18 + i % 3 * 4} ${i % 2 ? 11 : -11}H${end}`
+    return `<path d="${path}" fill="none" stroke="${i % 4 ? a : signal}" stroke-width="${i % 4 ? 1.3 : 2.2}" stroke-opacity="${i % 4 ? .25 : .5}"/><circle cx="${end}" cy="${y + (i % 2 ? 11 : -11)}" r="${i % 4 ? 2 : 3}" fill="${i % 4 ? a : signal}" opacity=".7"/>${i % 3 === 0 ? logicPacket(path, signalGlyphs[i % signalGlyphs.length], i % 4 ? a : signal, 5 + i % 4, i * .6) : ''}`
   }).join('')
   const rightTraces = Array.from({ length: 13 }, (_, i) => {
     const y = 204 + i * 25
     const start = 671 - (i % 4) * 22
     const notch = 786 - (i % 3) * 17
-    return `<path d="M${start} ${y}h${notch-start}l${18 + i % 3 * 4} ${i % 2 ? -11 : 11}H${919 - i % 3 * 9}" fill="none" stroke="${i % 5 ? a : signal}" stroke-width="${i % 5 ? 1.3 : 2.2}" stroke-opacity="${i % 5 ? .25 : .55}"/><circle cx="${start}" cy="${y}" r="${i % 5 ? 2 : 3}" fill="${i % 5 ? a : signal}" opacity=".7"/>`
+    const path = `M${start} ${y}h${notch-start}l${18 + i % 3 * 4} ${i % 2 ? -11 : 11}H${919 - i % 3 * 9}`
+    return `<path d="${path}" fill="none" stroke="${i % 5 ? a : signal}" stroke-width="${i % 5 ? 1.3 : 2.2}" stroke-opacity="${i % 5 ? .25 : .55}"/><circle cx="${start}" cy="${y}" r="${i % 5 ? 2 : 3}" fill="${i % 5 ? a : signal}" opacity=".7"/>${i % 3 === 1 ? logicPacket(path, signalGlyphs[(i + 3) % signalGlyphs.length], i % 5 ? a : signal, 5.5 + i % 3, i * .7) : ''}`
   }).join('')
   const towerCircuits = Array.from({ length: 18 }, (_, i) => {
     const y = 196 + i * 19
@@ -190,7 +200,7 @@ export function renderWatchtowerBoard(milestones, { merged, mergedWeek, closedTo
     const arc = Math.round(82 * fraction)
     const bar = Math.round(111 * fraction)
     return `<g>
-      <rect x="30" y="${y}" width="900" height="41" rx="6" fill="${i % 2 ? '#101729' : '#0c1324'}" stroke="${color}" stroke-opacity="${state === 'building' ? .64 : .32}"/>
+      <rect x="30" y="${y}" width="900" height="41" rx="6" fill="${i % 2 ? '#101729' : '#0c1324'}" stroke="${color}" stroke-opacity="${state === 'building' ? .64 : .32}"/>${status === 'BUILDING' ? `<rect x="30" y="${y}" width="900" height="41" rx="6" fill="${color}" opacity="0" class="progress-row-wash"/><rect x="30" y="${y}" width="900" height="41" rx="6" fill="none" stroke="${color}" stroke-width="12" filter="url(#smallGlow)" opacity="0" class="progress-row-halo"/>` : ''}
       <path d="M31 ${y+8}v-7h21M929 ${y+8}v-7h-21" fill="none" stroke="${color}" stroke-opacity=".7" stroke-width="1.5"/>
       <circle cx="65" cy="${y+21}" r="13" fill="#060a17" stroke="${color}" stroke-opacity=".34" stroke-width="4"/>
       <circle cx="65" cy="${y+21}" r="13" fill="none" stroke="${color}" stroke-width="4" stroke-dasharray="${arc} 82" transform="rotate(-90 65 ${y+21})"/>
@@ -199,7 +209,7 @@ export function renderWatchtowerBoard(milestones, { merged, mergedWeek, closedTo
       ${text(155,y+27,title,16,state === 'parked' || state === 'later' ? '#8991a3' : ink,'font-weight="600"')}
       ${text(636,y+26,status,10,color,'text-anchor="middle" letter-spacing="1"')}
       <path d="M710 ${y+21}h112" stroke="#2d3c54" stroke-width="8" stroke-linecap="round"/>
-      <path d="M710 ${y+21}h${bar}" stroke="${color}" stroke-width="6" stroke-linecap="round" opacity="${state === 'parked' || state === 'later' ? .4 : .9}"/>
+      <path d="M710 ${y+21}h${bar}" stroke="${color}" stroke-width="6" stroke-linecap="round" opacity="${state === 'parked' || state === 'later' ? .4 : .9}"/>${status === 'BUILDING' ? `<path d="M710 ${y+21}h${bar}" stroke="${color}" stroke-width="16" stroke-linecap="round" filter="url(#smallGlow)" opacity="0" class="progress-bar-halo"/>` : ''}
       ${text(913,y+27,`${complete}/${total}`,14,color,'text-anchor="end" font-weight="700"')}
     </g>`
   }
@@ -209,7 +219,33 @@ export function renderWatchtowerBoard(milestones, { merged, mergedWeek, closedTo
   const rows = ordered.map(row).join('')
   const board = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 ${boardHeight}" width="960" height="${boardHeight}" role="img" aria-label="Overlord Watchtower roadmap: ${merged} code merges, ${closedTotal} issues closed, and ${v1Done} of ${v1Total} v1 stories finished" font-family="'Cascadia Code', Consolas, 'Liberation Mono', monospace">
   <title>Overlord Watchtower: ${merged} code merges, ${closedTotal} issues closed, ${v1Done} of ${v1Total} v1 stories finished</title>${defs(a,b)}
-  <style>@keyframes pulse{50%{opacity:.45}}@keyframes flow{to{stroke-dashoffset:-90}}@keyframes glyph-signal{0%,72%,100%{opacity:.1}76%,80%{opacity:.4}78%{opacity:.2}}@media (prefers-reduced-motion:no-preference){.pulse{animation:pulse 4s ease-in-out infinite}.current{stroke-dasharray:8 7;animation:flow 4s linear infinite}.logic-glyph{animation:glyph-signal 7s ease-in-out infinite}.logic-glyph-1{animation-delay:-2.3s}.logic-glyph-2{animation-delay:-4.7s}.builder-base{animation:builder-fade 12s steps(1,end) infinite}.builder-glitch{animation:builder-echo 12s steps(1,end) infinite}}@keyframes builder-fade{0%,44%,50%,100%{opacity:1}45%,49%{opacity:.22}}@keyframes builder-echo{0%,44%,50%,100%{opacity:0}45%,49%{opacity:.9}}</style>
+  <style>
+    @keyframes pulse{50%{opacity:.45}}
+    @keyframes flow{to{stroke-dashoffset:-90}}
+    @keyframes glyph-signal{0%,72%,100%{opacity:.1}76%,80%{opacity:.4}78%{opacity:.2}}
+    @keyframes packet-fade{0%,100%{opacity:.18}35%,70%{opacity:.85}}
+    @keyframes logic-spin{to{transform:rotate(360deg)}}
+    @keyframes progress-ring{0%,100%{opacity:0}50%{opacity:.8}}
+    @keyframes progress-row{0%,100%{opacity:0}50%{opacity:.85}}
+    @keyframes progress-wash{0%,100%{opacity:0}50%{opacity:.12}}
+    @keyframes builder-fade{0%,44%,50%,100%{opacity:1}45%,49%{opacity:.22}}
+    @keyframes builder-echo{0%,44%,50%,100%{opacity:0}45%,49%{opacity:.9}}
+    @media (prefers-reduced-motion:no-preference){
+      .pulse{animation:pulse 4s ease-in-out infinite}
+      .current{stroke-dasharray:8 7;animation:flow 4s linear infinite}
+      .logic-glyph{animation:glyph-signal 7s ease-in-out infinite}
+      .logic-glyph-1{animation-delay:-2.3s}
+      .logic-glyph-2{animation-delay:-4.7s}
+      .logic-packet{animation:packet-fade 5s ease-in-out infinite}
+      .logic-orbit{transform-origin:center;animation:logic-spin 9s linear infinite}
+      .progress-ring-halo{animation:progress-ring 3.8s ease-in-out infinite}
+      .progress-row-halo,.progress-bar-halo{animation:progress-row 3.8s ease-in-out infinite}
+      .progress-row-wash{animation:progress-wash 3.8s ease-in-out infinite}
+      .builder-base{animation:builder-fade 12s steps(1,end) infinite}
+      .builder-glitch{animation:builder-echo 12s steps(1,end) infinite}
+    }
+    @media (prefers-reduced-motion:reduce){.logic-packet{display:none}}
+  </style>
   <rect width="960" height="${boardHeight}" fill="url(#sky)"/>${starfield(105)}${logicField()}<rect width="960" height="${boardHeight}" fill="url(#scan)"/>
   <g transform="translate(0 ${signalsHeight})">
   ${body}
