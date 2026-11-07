@@ -9,29 +9,37 @@ Silas is **my AI psychosis goblin**. I'm building him a world of portals.
 The three gold rings are the latest finished outcomes on the road to v1. The Stonebinder works on the two large rings; the faint rings are farther away. A count such as **5/9** means five of nine stories finished. The road to v1 is the lane and the first outcomes; the next board (v1.1) and what comes later are listed under it. The board follows the [outcome milestones](https://github.com/benburw3ll/silas-portals/milestones) and refreshes every three hours.
 
 <!-- outcomes:start -->
-<p align="center"><a href="https://github.com/benburw3ll/silas-portals/milestones"><img src="outcomes/operations.svg" width="960" alt="Overlord Watchtower outcome board: 64 of 132 issues closed"></a></p>
+<p align="center"><a href="https://github.com/benburw3ll/silas-portals/milestones"><img src="outcomes/operations.svg" width="960" alt="Overlord Watchtower outcome board: 57 of 78 v1 issues closed"></a></p>
 
 <details>
 <summary>Open the stories behind the rings</summary>
 
+<p><b>The road to v1</b></p>
 <ul>
 <li><a href="https://github.com/benburw3ll/silas-portals/milestone/12">N1 · Silas answers, every time</a></li>
 <li><a href="https://github.com/benburw3ll/silas-portals/milestone/13">N2 · A new portal in a day</a></li>
 <li><a href="https://github.com/benburw3ll/silas-portals/milestone/14">N3 · Every portal is born connected</a></li>
 <li><a href="https://github.com/benburw3ll/silas-portals/milestone/15">N4 · The door fits a phone</a></li>
+<li><a href="https://github.com/benburw3ll/silas-portals/milestone/16">N5 · Ready for the testing week</a></li>
 <li><a href="https://github.com/benburw3ll/silas-portals/milestone/1">O1 · Decide the shape</a></li>
 <li><a href="https://github.com/benburw3ll/silas-portals/milestone/5">O2 · A safe base</a></li>
 <li><a href="https://github.com/benburw3ll/silas-portals/milestone/9">O3 · AI on a budget</a></li>
 <li><a href="https://github.com/benburw3ll/silas-portals/milestone/10">O4 · Portals talk to each other</a></li>
-<li><a href="https://github.com/benburw3ll/silas-portals/milestone/11">O5 · Silas the coach</a></li>
-<li><a href="https://github.com/benburw3ll/silas-portals/milestone/6">O6 · Silas remembers and learns</a></li>
-<li><a href="https://github.com/benburw3ll/silas-portals/milestone/2">O7 · Mac and every screen</a></li>
-<li><a href="https://github.com/benburw3ll/silas-portals/milestone/4">O8 · Artistic themes</a></li>
-<li><a href="https://github.com/benburw3ll/silas-portals/milestone/3">O9 · Always-on Telegram</a></li>
-<li><a href="https://github.com/benburw3ll/silas-portals/milestone/7">O10 · Money in the hub</a></li>
+</ul>
+<p><b>The next board, v1.1</b></p>
+<ul>
+<li><a href="https://github.com/benburw3ll/silas-portals/milestone/11">O5 · Silas the coach (v1.1)</a></li>
+<li><a href="https://github.com/benburw3ll/silas-portals/milestone/6">O6 · Silas remembers and learns (v1.1)</a></li>
+</ul>
+<p><b>Later</b></p>
+<ul>
+<li><a href="https://github.com/benburw3ll/silas-portals/milestone/2">O7 · Mac and every screen (later)</a></li>
+<li><a href="https://github.com/benburw3ll/silas-portals/milestone/4">O8 · Artistic themes (later)</a></li>
+<li><a href="https://github.com/benburw3ll/silas-portals/milestone/3">O9 · Always-on Telegram (later)</a></li>
+<li><a href="https://github.com/benburw3ll/silas-portals/milestone/7">O10 · Money in the hub (later)</a></li>
 <li><a href="https://github.com/benburw3ll/silas-portals/milestone/8">O11 · Ready for a second person (parked)</a></li>
 </ul>
-<p>64 of 132 issues closed · 156 pull requests merged.</p>
+<p>57 of 78 v1 issues closed · 158 pull requests merged.</p>
 </details>
 <!-- outcomes:end -->
 
