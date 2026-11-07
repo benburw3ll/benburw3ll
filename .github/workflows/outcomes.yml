@@ -1,6 +1,6 @@
 name: Outcomes progress
 
-# Redraws the black-and-red roadmap graphic and the README links from Silas Portals milestones.
+# Redraws the Watchtower board and the README links from Silas Portals milestones.
 on:
   schedule:
     - cron: '17 */3 * * *'
