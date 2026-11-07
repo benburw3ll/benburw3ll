@@ -11,7 +11,7 @@ The imaginary friends are testing the Overlord Watchtower from across the canyon
 The gold rings are finished outcomes. The Stonebinder works on the large rings; the faint ones are farther away. A count such as **5/9** means five of nine stories finished. The carved ledger shows code merged, all issues closed, v1 stories finished, and the last seven days. It refreshes from the private project every three hours.
 
 <!-- outcomes:start -->
-<p align="center"><img src="outcomes/operations.svg" width="960" alt="Overlord Watchtower outcome board: 184 code merges, 81 issues closed, 71 of 85 v1 stories finished"></p>
+<p align="center"><img src="outcomes/operations.svg" width="960" alt="Overlord Watchtower outcome board: 185 code merges, 82 issues closed, 72 of 86 v1 stories finished"></p>
 
 <details>
 <summary>Open the stories behind the rings</summary>
@@ -41,7 +41,7 @@ The gold rings are finished outcomes. The Stonebinder works on the large rings; 
 <li>O10 · Money in the hub (later)</li>
 <li>O11 · Ready for a second person (parked)</li>
 </ul>
-<p>71 of 85 v1 stories finished · 81 issues closed overall · 184 code merges.</p>
+<p>72 of 86 v1 stories finished · 82 issues closed overall · 185 code merges.</p>
 </details>
 <!-- outcomes:end -->
 
