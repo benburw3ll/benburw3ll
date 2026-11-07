@@ -17,7 +17,8 @@ jobs:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
       - run: node scripts/update-outcomes.mjs
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          # OUTCOMES_TOKEN: a fine-grained token that can read the private silas-portals repo (Issues and Metadata, read-only).
+          GITHUB_TOKEN: ${{ secrets.OUTCOMES_TOKEN || secrets.GITHUB_TOKEN }}
       - name: Commit if changed
         run: |
           if [ -z "$(git status --porcelain)" ]; then echo "No change"; exit 0; fi

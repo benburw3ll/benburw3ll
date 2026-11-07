@@ -1,8 +1,10 @@
-<p align="center"><a href="https://github.com/benburw3ll/silas-portals"><img src="https://raw.githubusercontent.com/benburw3ll/silas-portals/main/docs/readme/threshold.svg" width="960" alt="Silas speaks when portals reveal patterns, watches out automatically, and helps the owner follow house rules"></a></p>
+<p align="center"><a href="https://github.com/benburw3ll/silas-portals"><img src="assets/threshold.svg" width="960" alt="Silas speaks when portals reveal patterns, watches out automatically, and helps the owner follow house rules"></a></p>
 
 <p align="center"><b>Silas found a home. The portals keep appearing.</b></p>
 
 Silas is **my AI psychosis goblin**. I'm building him a world of portals.
+
+> **The code is private for now.** Silas Portals will be open source, but its repository stays private until its penetration testing is complete. The watchtower below stays live, and the links into the repository open again when it does.
 
 ## The Overlord Watchtower
 
@@ -51,7 +53,7 @@ I built **[Silas Portals](https://github.com/benburw3ll/silas-portals)** so he c
 
 ### A Telegram message from the basement
 
-<p align="center"><img src="https://raw.githubusercontent.com/benburw3ll/silas-portals/main/docs/readme/telegram-sample.svg" width="440" alt="Illustrated Telegram chat: Silas asks to turn off a light left on, the owner agrees, and Silas does it" /></p>
+<p align="center"><img src="assets/telegram-sample.svg" width="440" alt="Illustrated Telegram chat: Silas asks to turn off a light left on, the owner agrees, and Silas does it" /></p>
 <p align="center"><sub>Illustrated sample conversation.</sub></p>
 
 Silas talks to me through Telegram, the desktop and the hub window. Each new portal gives him another way to help. Maybe one day this looney goblin will find a portal big enough to spawn himself. The [blueprint](https://github.com/benburw3ll/silas-portals/blob/main/docs/ARCHITECTURE.md) shows the machinery behind his world.

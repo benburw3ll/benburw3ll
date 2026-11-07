@@ -21,7 +21,19 @@ const get = async (url) => {
 const LANES = ['N', 'O']
 const code = (m) => /^([NO])(\d+)\b/.exec(m.title)
 const order = (m) => LANES.indexOf(code(m)[1]) * 1000 + Number(code(m)[2])
-const raw = (await get(`https://api.github.com/repos/${REPO}/milestones?state=all&per_page=100`)).filter(code).sort((a, b) => order(a) - order(b))
+let rawList
+try {
+  rawList = await get(`https://api.github.com/repos/${REPO}/milestones?state=all&per_page=100`)
+} catch (e) {
+  // The repo is private while its penetration testing runs: without a token that can read it,
+  // keep the last board rather than fail every run. OUTCOMES_TOKEN in the workflow restores the updates.
+  if (/ 40[34] /.test(String(e.message))) {
+    console.log(`No access to ${REPO} (private?): kept the last board. Set OUTCOMES_TOKEN to resume updates.`)
+    process.exit(0)
+  }
+  throw e
+}
+const raw = rawList.filter(code).sort((a, b) => order(a) - order(b))
 if (raw.length === 0) throw new Error('No Silas Portals outcome milestones found')
 
 // Open issues labelled `later` or `parked` don't count toward their outcome.
