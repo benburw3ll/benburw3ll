@@ -1,4 +1,10 @@
-// Renders the live README outcome board from public milestone data.
+// Renders the live README outcome board from public milestone data. The version comes from the
+// milestone title: no suffix is v1 (the road to v1), "(v1.1)" the next board, "(later)" and
+// "(parked)" later. Only v1 outcomes are rings in the tower; the rest are listed below the road.
+export const versionOf = (title) => {
+  const m = /\((v1\.1|later|parked)\)\s*$/i.exec(title ?? '')
+  return !m ? 'v1' : m[1].toLowerCase() === 'v1.1' ? 'v1.1' : 'later'
+}
 const ink = '#f1ecdf'
 const dim = '#aab2c7'
 const esc = (s) => String(s).replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('>', '&gt;')
@@ -58,24 +64,29 @@ export function renderWatchtowerBoard(milestones) {
     const match = /^([NO])(\d+)\b/.exec(milestone.title)
     if (!match) throw new Error(`Unrecognized outcome milestone: ${milestone.title}`)
     const code = `${match[1]}${match[2]}`
-    const title = milestone.title.replace(/^[NO]\d+\s*·\s*/, '').replace(/\s*\(parked\)/i, '')
+    const version = versionOf(milestone.title)
+    const title = milestone.title.replace(/^[NO]\d+\s*·\s*/, '').replace(/\s*\((v1\.1|later|parked)\)/i, '')
     const complete = milestone.closed_issues
     const total = milestone.open_issues + complete
     const state = /\(parked\)/i.test(milestone.title)
       ? 'parked'
-      : total > 0 && complete === total
-        ? 'done'
-        : complete > 0
-          ? 'building'
-          : 'planned'
-    return { code, title, complete, total, state }
+      : version === 'later'
+        ? 'later'
+        : total > 0 && complete === total
+          ? 'done'
+          : complete > 0
+            ? 'building'
+            : 'planned'
+    return { code, title, complete, total, state, version }
   })
-  const recentDone = outcomes.filter((item) => item.state === 'done').slice(-3)
-  if (recentDone.length !== 3) throw new Error('The Watchtower needs three finished outcome rings')
-  const available = outcomes.filter((item) => item.state !== 'done' && item.state !== 'parked')
-  const primary = available[0] ?? outcomes.at(-2)
-  const secondary = available[1] ?? outcomes.find((item) => item.code !== primary.code && item.state !== 'done') ?? outcomes.at(-1)
-  const future = outcomes.filter((item) => item.state !== 'done' && item.code !== primary.code && item.code !== secondary.code)
+  const v1 = outcomes.filter((item) => item.version === 'v1')
+  const recentDone = v1.filter((item) => item.state === 'done').slice(-3)
+  if (recentDone.length !== 3) throw new Error('The Watchtower needs three finished v1 outcome rings')
+  const available = v1.filter((item) => item.state !== 'done')
+  const next = outcomes.filter((item) => item.version === 'v1.1')
+  const primary = available[0] ?? next[0] ?? outcomes.at(-2)
+  const secondary = available[1] ?? next.find((item) => item.code !== primary.code) ?? outcomes.find((item) => item.code !== primary.code && item.state !== 'done') ?? outcomes.at(-1)
+  const future = [...available, ...next, ...outcomes.filter((item) => item.version === 'later')].filter((item) => item.state !== 'done' && item.code !== primary.code && item.code !== secondary.code)
   const leftGhost = future.at(-2) ?? outcomes.at(-2)
   const rightGhost = future.at(-1) ?? outcomes.at(-1)
   const a = '#79e6d7', b = '#ffc76e', signal = '#e46d94'
@@ -135,13 +146,23 @@ export function renderWatchtowerBoard(milestones) {
   ${ring(125,456,34,'#b8a0fc','ghost',leftGhost)}${ring(835,456,34,'#b8a0fc','ghost',rightGhost)}
   ${text(38,101,'LATEST FINISHED OUTCOMES',11,b,'letter-spacing="1"')}${text(922,101,'NEXT OUTCOMES',11,a,'text-anchor="end" letter-spacing="1"')}`
 
-  const nCount = outcomes.filter((item) => item.code.startsWith('N')).length
+  // Rows: the v1 lane, the v1 outcomes, then the next board and later, each group under its label.
+  const ordered = [
+    ...v1.filter((item) => item.code.startsWith('N')),
+    ...v1.filter((item) => item.code.startsWith('O')),
+    ...next,
+    ...outcomes.filter((item) => item.version === 'later'),
+  ]
+  const nCount = v1.filter((item) => item.code.startsWith('N')).length
+  const v1Count = v1.length
+  const nextCount = next.length
+  const gapOf = (i) => (i >= nCount ? 38 : 0) + (i >= v1Count ? 38 : 0) + (nextCount && i >= v1Count + nextCount ? 38 : 0)
   const row = (item, i) => {
     const { code, title, complete, total, state } = item
-    const y = 645 + i * 45 + (i >= nCount ? 38 : 0)
+    const y = 645 + i * 45 + gapOf(i)
     const current = code === primary.code || code === secondary.code
-    const color = state === 'done' ? b : state === 'building' && current ? a : state === 'parked' ? '#657086' : '#a69aba'
-    const status = state === 'done' ? 'COMPLETE' : state === 'building' && current ? 'BUILDING' : state === 'building' ? 'FORMING' : state === 'parked' ? 'PARKED' : 'PLANNED'
+    const color = state === 'done' ? b : state === 'building' && current ? a : state === 'parked' || state === 'later' ? '#657086' : '#a69aba'
+    const status = state === 'done' ? 'COMPLETE' : state === 'building' && current ? 'BUILDING' : state === 'building' ? 'FORMING' : state === 'parked' ? 'PARKED' : state === 'later' ? 'LATER' : item.version === 'v1.1' ? 'NEXT BOARD' : 'PLANNED'
     const fraction = total ? complete / total : 0
     const arc = Math.round(82 * fraction)
     const bar = Math.round(111 * fraction)
@@ -150,17 +171,17 @@ export function renderWatchtowerBoard(milestones) {
       <path d="M31 ${y+8}v-7h21M929 ${y+8}v-7h-21" fill="none" stroke="${color}" stroke-opacity=".7" stroke-width="1.5"/>
       <circle cx="65" cy="${y+21}" r="13" fill="#060a17" stroke="${color}" stroke-opacity=".34" stroke-width="4"/>
       <circle cx="65" cy="${y+21}" r="13" fill="none" stroke="${color}" stroke-width="4" stroke-dasharray="${arc} 82" transform="rotate(-90 65 ${y+21})"/>
-      <circle cx="65" cy="${y+21}" r="4" fill="${color}" opacity="${state === 'parked' ? .4 : .8}"/>
+      <circle cx="65" cy="${y+21}" r="4" fill="${color}" opacity="${state === 'parked' || state === 'later' ? .4 : .8}"/>
       ${text(96,y+27,code,17,color,'font-weight="700"')}
-      ${text(155,y+27,title,16,state === 'parked' ? '#8991a3' : ink,'font-weight="600"')}
+      ${text(155,y+27,title,16,state === 'parked' || state === 'later' ? '#8991a3' : ink,'font-weight="600"')}
       ${text(636,y+26,status,10,color,'text-anchor="middle" letter-spacing="1"')}
       <path d="M710 ${y+21}h112" stroke="#2d3c54" stroke-width="8" stroke-linecap="round"/>
-      <path d="M710 ${y+21}h${bar}" stroke="${color}" stroke-width="6" stroke-linecap="round" opacity="${state === 'parked' ? .4 : .9}"/>
+      <path d="M710 ${y+21}h${bar}" stroke="${color}" stroke-width="6" stroke-linecap="round" opacity="${state === 'parked' || state === 'later' ? .4 : .9}"/>
       ${text(913,y+27,`${complete}/${total}`,14,color,'text-anchor="end" font-weight="700"')}
     </g>`
   }
-  const boardHeight = 1430 + (outcomes.length - 15) * 45
-  const rows = outcomes.map(row).join('')
+  const boardHeight = 1430 + (outcomes.length - 15) * 45 + (nextCount ? 38 : 0) + (outcomes.length > v1Count + nextCount ? 38 : 0)
+  const rows = ordered.map(row).join('')
   const board = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 ${boardHeight}" width="960" height="${boardHeight}" role="img" aria-label="Overlord Watchtower roadmap with all N and O outcome titles and progress" font-family="'Cascadia Code', Consolas, 'Liberation Mono', monospace">
   <title>Overlord Watchtower: Road to v1 outcomes</title>${defs(a,b)}
   <style>@keyframes pulse{50%{opacity:.45}}@keyframes flow{to{stroke-dashoffset:-90}}@media (prefers-reduced-motion:no-preference){.pulse{animation:pulse 4s ease-in-out infinite}.current{stroke-dasharray:8 7;animation:flow 4s linear infinite}}</style>
@@ -172,6 +193,8 @@ export function renderWatchtowerBoard(milestones) {
   <path d="M30 622H930" stroke="${a}" stroke-opacity=".45"/>
   <path d="M65 637V${boardHeight-76}" stroke="${a}" stroke-opacity=".18" stroke-width="3" stroke-dasharray="3 8"/>
   ${text(30,645+nCount*45+23,'OUTCOMES',10,b,'letter-spacing="1"')}
+  ${nextCount ? text(30,645+v1Count*45+38+23,'NEXT BOARD  ·  V1.1',10,'#b8a0fc','letter-spacing="1"') : ''}
+  ${outcomes.length > v1Count + nextCount ? text(30,645+(v1Count+nextCount)*45+76+23,'LATER',10,'#8991a3','letter-spacing="1"') : ''}
   ${rows}
   <path d="M30 ${boardHeight-48}H930" stroke="${a}" stroke-opacity=".4"/>
   ${text(30,boardHeight-24,'RING COUNTS  /  STORIES FINISHED OF TOTAL',10,dim,'letter-spacing="1"')}
