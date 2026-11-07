@@ -6,7 +6,7 @@ Silas is **my AI psychosis goblin**. I'm building him a world of portals.
 
 ## The Overlord Watchtower
 
-The three gold rings are the latest finished outcomes. The Stonebinder works on the two large rings; the faint rings are farther away. A count such as **5/9** means five of nine stories finished. The board follows the [outcome milestones](https://github.com/benburw3ll/silas-portals/milestones) and refreshes every three hours.
+The three gold rings are the latest finished outcomes on the road to v1. The Stonebinder works on the two large rings; the faint rings are farther away. A count such as **5/9** means five of nine stories finished. The road to v1 is the lane and the first outcomes; the next board (v1.1) and what comes later are listed under it. The board follows the [outcome milestones](https://github.com/benburw3ll/silas-portals/milestones) and refreshes every three hours.
 
 <!-- outcomes:start -->
 <p align="center"><a href="https://github.com/benburw3ll/silas-portals/milestones"><img src="outcomes/operations.svg" width="960" alt="Overlord Watchtower outcome board: 64 of 132 issues closed"></a></p>
