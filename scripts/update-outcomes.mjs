@@ -1,5 +1,5 @@
 // Rebuild the live roadmap graphic and README links from Silas Portals milestones:
-// the next-up lane (N1, N2, ...) first, then the outcomes (O1, O2, ...). The version comes from the
+// the next-up lane first, then the outcomes in the Roadmap's build order. The version comes from the
 // milestone title: no suffix is v1 (the road to v1), "(v1.1)" the next board, "(later)" and "(parked)"
 // later. Open issues labelled `later` or `parked` are left out of an outcome's count: they sit in it
 // but aren't part of its "done when". GITHUB_TOKEN must read the source repository.
@@ -20,9 +20,15 @@ const get = async (url) => {
   if (!r.ok) throw new Error(`GitHub API answered ${r.status} for ${url}`)
   return r.json()
 }
-const LANES = ['N', 'O']
 const code = (m) => /^([NO])(\d+)\b/.exec(m.title)
-const order = (m) => LANES.indexOf(code(m)[1]) * 1000 + Number(code(m)[2])
+// Keep this in step with docs/ARCHITECTURE.md in the Silas Portals repo.
+const OUTCOME_ORDER = ['O1', 'O2', 'O3', 'O4', 'O12', 'O13', 'O5', 'O6', 'O7', 'O8', 'O9', 'O10', 'O11']
+const order = (m) => {
+  const match = code(m)
+  if (match[1] === 'N') return Number(match[2])
+  const index = OUTCOME_ORDER.indexOf(`${match[1]}${match[2]}`)
+  return 1000 + (index < 0 ? OUTCOME_ORDER.length + Number(match[2]) : index)
+}
 const repository = await get(`https://api.github.com/repos/${REPO}`)
 const sourcePublic = !repository.private
 const rawList = await get(`https://api.github.com/repos/${REPO}/milestones?state=all&per_page=100`)
