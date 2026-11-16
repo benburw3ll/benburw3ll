@@ -24,12 +24,16 @@ I built **Silas Portals** so he can help across my life. Portals let him connect
 <li>O3 · AI on a budget</li>
 <li>O4 · Portals talk to each other</li>
 <li>O12 · The desktop as one scene</li>
+<li>O16 · The desktop as a board</li>
 </ul>
 <p><b>The next board, v1.1</b></p>
 <ul>
 <li>O13 · Quit That, further (v1.1)</li>
 <li>O5 · Silas the coach (v1.1)</li>
 <li>O6 · Silas remembers and learns (v1.1)</li>
+<li>O14 · The red light (v1.1)</li>
+<li>O15 · The Echo joins the hub (v1.1)</li>
+<li>O17 · Silas's senses (v1.1)</li>
 </ul>
 <p><b>Later</b></p>
 <ul>
@@ -39,7 +43,7 @@ I built **Silas Portals** so he can help across my life. Portals let him connect
 <li>O10 · Money in the hub (later)</li>
 <li>O11 · Ready for a second person (parked)</li>
 </ul>
-<p>101 of 112 v1 stories finished · 118 issues closed overall · 270 code merges.</p>
+<p>115 of 133 v1 stories finished · 142 issues closed overall · 324 code merges.</p>
 </details>
 <!-- outcomes:end -->
 
