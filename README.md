@@ -25,6 +25,7 @@ I built **Silas Portals** so he can help across my life. Portals let him connect
 <li>O4 · Portals talk to each other</li>
 <li>O12 · The desktop as one scene</li>
 <li>O16 · The desktop as a board</li>
+<li>O18 · A bigger gate and a hub that scales</li>
 </ul>
 <p><b>The next board, v1.1</b></p>
 <ul>
@@ -43,7 +44,7 @@ I built **Silas Portals** so he can help across my life. Portals let him connect
 <li>O10 · Money in the hub (later)</li>
 <li>O11 · Ready for a second person (parked)</li>
 </ul>
-<p>116 of 134 v1 stories finished · 149 issues closed overall · 342 code merges.</p>
+<p>136 of 154 v1 stories finished · 172 issues closed overall · 373 code merges.</p>
 </details>
 <!-- outcomes:end -->
 
