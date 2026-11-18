@@ -313,7 +313,7 @@
   </svg>
 
   <svg x="0" y="920" width="960" height="2116" viewBox="0 0 960 2116" aria-hidden="true">
-  <title>Overlord Watchtower: 373 code merges, 172 issues closed, 136 of 154 v1 stories finished</title><defs>
+  <title>Overlord Watchtower: 380 code merges, 174 issues closed, 137 of 154 v1 stories finished</title><defs>
   <radialGradient id="board-sky"><stop stop-color="#1a2038"/><stop offset=".55" stop-color="#0b1022"/><stop offset="1" stop-color="#050710"/></radialGradient>
   <radialGradient id="board-well"><stop stop-color="#79e6d7" stop-opacity=".45"/><stop offset=".5" stop-color="#ffc76e" stop-opacity=".22"/><stop offset="1" stop-color="#050710"/></radialGradient>
   <linearGradient id="board-rim" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f8f1df"/><stop offset=".18" stop-color="#79e6d7"/><stop offset=".55" stop-color="#354360"/><stop offset=".8" stop-color="#ffc76e"/><stop offset="1" stop-color="#fff4d9"/></linearGradient>
@@ -416,7 +416,7 @@
   <path d="M285 325H675M264 494H696" stroke="#7585a1" stroke-opacity=".45" stroke-width="2"/>
   <path d="M321 196h318M333 208h294" stroke="#79e6d7" stroke-opacity=".3"/>
   <text x="480" y="225" fill="#ffc76e" font-size="12" text-anchor="middle" letter-spacing="3">IF   ∧   THEN   ∨   ELSE</text>
-  <g opacity="1"><title>N6 Widgets that fit the desktop: 9 of 9 stories finished</title><circle cx="339" cy="282" r="54" fill="none" stroke="#ffc76e" stroke-width="19" opacity="0.34" filter="url(#board-glow)"/><circle cx="339" cy="282" r="45" fill="#050711" stroke="url(#board-rim)" stroke-width="8" stroke-dasharray=""/><circle cx="339" cy="282" r="37" fill="url(#board-well)"/><path d="M303 293.25Q339 241.5 375 295.5M316.5 255Q352.5 313.5 370.5 261.75" fill="none" stroke="#ffc76e" stroke-width="3.6" stroke-opacity=".6" class=""/><circle cx="339" cy="282" r="28" fill="none" stroke="#ffc76e" stroke-opacity=".16" stroke-width="4"/><circle cx="339" cy="282" r="28" fill="none" stroke="#ffc76e" stroke-width="4" stroke-linecap="round" stroke-dasharray="176 176" transform="rotate(-90 339 282)"/><circle cx="339" cy="282" r="58" fill="none" stroke="#ffc76e" stroke-opacity=".6" stroke-width="1" stroke-dasharray="1 12"/><text x="339" y="271" fill="#f1ecdf" font-size="10" text-anchor="middle" font-weight="700" letter-spacing="1">N6</text><text x="339" y="295" fill="#ffc76e" font-size="17" text-anchor="middle" font-weight="700">9/9</text></g><g opacity="1"><title>O1 Decide the shape: 8 of 8 stories finished</title><circle cx="470" cy="282" r="54" fill="none" stroke="#ffc76e" stroke-width="19" opacity="0.34" filter="url(#board-glow)"/><circle cx="470" cy="282" r="45" fill="#050711" stroke="url(#board-rim)" stroke-width="8" stroke-dasharray=""/><circle cx="470" cy="282" r="37" fill="url(#board-well)"/><path d="M434 293.25Q470 241.5 506 295.5M447.5 255Q483.5 313.5 501.5 261.75" fill="none" stroke="#ffc76e" stroke-width="3.6" stroke-opacity=".6" class=""/><circle cx="470" cy="282" r="28" fill="none" stroke="#ffc76e" stroke-opacity=".16" stroke-width="4"/><circle cx="470" cy="282" r="28" fill="none" stroke="#ffc76e" stroke-width="4" stroke-linecap="round" stroke-dasharray="176 176" transform="rotate(-90 470 282)"/><circle cx="470" cy="282" r="58" fill="none" stroke="#ffc76e" stroke-opacity=".6" stroke-width="1" stroke-dasharray="1 12"/><text x="470" y="271" fill="#f1ecdf" font-size="10" text-anchor="middle" font-weight="700" letter-spacing="1">O1</text><text x="470" y="295" fill="#ffc76e" font-size="17" text-anchor="middle" font-weight="700">8/8</text></g><g opacity="1"><title>O4 Portals talk to each other: 7 of 7 stories finished</title><circle cx="601" cy="282" r="54" fill="none" stroke="#ffc76e" stroke-width="19" opacity="0.34" filter="url(#board-glow)"/><circle cx="601" cy="282" r="45" fill="#050711" stroke="url(#board-rim)" stroke-width="8" stroke-dasharray=""/><circle cx="601" cy="282" r="37" fill="url(#board-well)"/><path d="M565 293.25Q601 241.5 637 295.5M578.5 255Q614.5 313.5 632.5 261.75" fill="none" stroke="#ffc76e" stroke-width="3.6" stroke-opacity=".6" class=""/><circle cx="601" cy="282" r="28" fill="none" stroke="#ffc76e" stroke-opacity=".16" stroke-width="4"/><circle cx="601" cy="282" r="28" fill="none" stroke="#ffc76e" stroke-width="4" stroke-linecap="round" stroke-dasharray="176 176" transform="rotate(-90 601 282)"/><circle cx="601" cy="282" r="58" fill="none" stroke="#ffc76e" stroke-opacity=".6" stroke-width="1" stroke-dasharray="1 12"/><text x="601" y="271" fill="#f1ecdf" font-size="10" text-anchor="middle" font-weight="700" letter-spacing="1">O4</text><text x="601" y="295" fill="#ffc76e" font-size="17" text-anchor="middle" font-weight="700">7/7</text></g>
+  <g opacity="1"><title>O1 Decide the shape: 8 of 8 stories finished</title><circle cx="339" cy="282" r="54" fill="none" stroke="#ffc76e" stroke-width="19" opacity="0.34" filter="url(#board-glow)"/><circle cx="339" cy="282" r="45" fill="#050711" stroke="url(#board-rim)" stroke-width="8" stroke-dasharray=""/><circle cx="339" cy="282" r="37" fill="url(#board-well)"/><path d="M303 293.25Q339 241.5 375 295.5M316.5 255Q352.5 313.5 370.5 261.75" fill="none" stroke="#ffc76e" stroke-width="3.6" stroke-opacity=".6" class=""/><circle cx="339" cy="282" r="28" fill="none" stroke="#ffc76e" stroke-opacity=".16" stroke-width="4"/><circle cx="339" cy="282" r="28" fill="none" stroke="#ffc76e" stroke-width="4" stroke-linecap="round" stroke-dasharray="176 176" transform="rotate(-90 339 282)"/><circle cx="339" cy="282" r="58" fill="none" stroke="#ffc76e" stroke-opacity=".6" stroke-width="1" stroke-dasharray="1 12"/><text x="339" y="271" fill="#f1ecdf" font-size="10" text-anchor="middle" font-weight="700" letter-spacing="1">O1</text><text x="339" y="295" fill="#ffc76e" font-size="17" text-anchor="middle" font-weight="700">8/8</text></g><g opacity="1"><title>O4 Portals talk to each other: 7 of 7 stories finished</title><circle cx="470" cy="282" r="54" fill="none" stroke="#ffc76e" stroke-width="19" opacity="0.34" filter="url(#board-glow)"/><circle cx="470" cy="282" r="45" fill="#050711" stroke="url(#board-rim)" stroke-width="8" stroke-dasharray=""/><circle cx="470" cy="282" r="37" fill="url(#board-well)"/><path d="M434 293.25Q470 241.5 506 295.5M447.5 255Q483.5 313.5 501.5 261.75" fill="none" stroke="#ffc76e" stroke-width="3.6" stroke-opacity=".6" class=""/><circle cx="470" cy="282" r="28" fill="none" stroke="#ffc76e" stroke-opacity=".16" stroke-width="4"/><circle cx="470" cy="282" r="28" fill="none" stroke="#ffc76e" stroke-width="4" stroke-linecap="round" stroke-dasharray="176 176" transform="rotate(-90 470 282)"/><circle cx="470" cy="282" r="58" fill="none" stroke="#ffc76e" stroke-opacity=".6" stroke-width="1" stroke-dasharray="1 12"/><text x="470" y="271" fill="#f1ecdf" font-size="10" text-anchor="middle" font-weight="700" letter-spacing="1">O4</text><text x="470" y="295" fill="#ffc76e" font-size="17" text-anchor="middle" font-weight="700">7/7</text></g><g opacity="1"><title>O18 A bigger gate and a hub that scales: 20 of 20 stories finished</title><circle cx="601" cy="282" r="54" fill="none" stroke="#ffc76e" stroke-width="19" opacity="0.34" filter="url(#board-glow)"/><circle cx="601" cy="282" r="45" fill="#050711" stroke="url(#board-rim)" stroke-width="8" stroke-dasharray=""/><circle cx="601" cy="282" r="37" fill="url(#board-well)"/><path d="M565 293.25Q601 241.5 637 295.5M578.5 255Q614.5 313.5 632.5 261.75" fill="none" stroke="#ffc76e" stroke-width="3.6" stroke-opacity=".6" class=""/><circle cx="601" cy="282" r="28" fill="none" stroke="#ffc76e" stroke-opacity=".16" stroke-width="4"/><circle cx="601" cy="282" r="28" fill="none" stroke="#ffc76e" stroke-width="4" stroke-linecap="round" stroke-dasharray="176 176" transform="rotate(-90 601 282)"/><circle cx="601" cy="282" r="58" fill="none" stroke="#ffc76e" stroke-opacity=".6" stroke-width="1" stroke-dasharray="1 12"/><text x="601" y="271" fill="#f1ecdf" font-size="10" text-anchor="middle" font-weight="700" letter-spacing="1">O18</text><text x="601" y="295" fill="#ffc76e" font-size="17" text-anchor="middle" font-weight="700">20/20</text></g>
   <g opacity="1"><title>N5 Ready for the testing week: 19 of 21 stories finished</title><circle cx="374" cy="420" r="74" fill="none" stroke="#79e6d7" stroke-width="19" opacity="0.34" filter="url(#board-glow)"/><circle cx="374" cy="420" r="65" fill="#050711" stroke="url(#board-rim)" stroke-width="10" stroke-dasharray=""/><circle cx="374" cy="420" r="57" fill="url(#board-well)"/><path d="M322 436.25Q374 361.5 426 439.5M341.5 381Q393.5 465.5 419.5 390.75" fill="none" stroke="#79e6d7" stroke-width="5.2" stroke-opacity=".6" class="current"/><circle cx="374" cy="420" r="48" fill="none" stroke="#79e6d7" stroke-opacity=".16" stroke-width="4"/><circle cx="374" cy="420" r="48" fill="none" stroke="#79e6d7" stroke-width="4" stroke-linecap="round" stroke-dasharray="273 302" transform="rotate(-90 374 420)"/><circle cx="374" cy="420" r="73" fill="none" stroke="#79e6d7" stroke-width="8" stroke-dasharray="130 18 39 14 55 25" transform="rotate(-78 374 420)"/><circle cx="374" cy="420" r="84" fill="none" stroke="#79e6d7" stroke-width="1.5" stroke-dasharray="3 8"/><circle cx="374" cy="420" r="74" fill="none" stroke="#79e6d7" stroke-width="20" filter="url(#board-glow)" opacity="0" class="progress-ring-halo"/><circle cx="374" cy="420" r="78" fill="none" stroke="#79e6d7" stroke-opacity=".6" stroke-width="1" stroke-dasharray="1 12"/><text x="374" y="403" fill="#f1ecdf" font-size="12" text-anchor="middle" font-weight="700" letter-spacing="1">N5</text><text x="374" y="437" fill="#79e6d7" font-size="26" text-anchor="middle" font-weight="700">19/21</text></g><g opacity="1"><title>O2 A safe base: 9 of 10 stories finished</title><circle cx="565" cy="420" r="74" fill="none" stroke="#b8a0fc" stroke-width="19" opacity="0.34" filter="url(#board-glow)"/><circle cx="565" cy="420" r="65" fill="#050711" stroke="url(#board-rim)" stroke-width="10" stroke-dasharray=""/><circle cx="565" cy="420" r="57" fill="url(#board-well)"/><path d="M513 436.25Q565 361.5 617 439.5M532.5 381Q584.5 465.5 610.5 390.75" fill="none" stroke="#b8a0fc" stroke-width="5.2" stroke-opacity=".6" class="current"/><circle cx="565" cy="420" r="48" fill="none" stroke="#b8a0fc" stroke-opacity=".16" stroke-width="4"/><circle cx="565" cy="420" r="48" fill="none" stroke="#b8a0fc" stroke-width="4" stroke-linecap="round" stroke-dasharray="272 302" transform="rotate(-90 565 420)"/><circle cx="565" cy="420" r="73" fill="none" stroke="#b8a0fc" stroke-width="8" stroke-dasharray="130 18 39 14 55 25" transform="rotate(-78 565 420)"/><circle cx="565" cy="420" r="84" fill="none" stroke="#b8a0fc" stroke-width="1.5" stroke-dasharray="3 8"/><circle cx="565" cy="420" r="74" fill="none" stroke="#b8a0fc" stroke-width="20" filter="url(#board-glow)" opacity="0" class="progress-ring-halo"/><circle cx="565" cy="420" r="78" fill="none" stroke="#b8a0fc" stroke-opacity=".6" stroke-width="1" stroke-dasharray="1 12"/><text x="565" y="403" fill="#f1ecdf" font-size="12" text-anchor="middle" font-weight="700" letter-spacing="1">O2</text><text x="565" y="437" fill="#b8a0fc" font-size="26" text-anchor="middle" font-weight="700">9/10</text></g>
   <path d="M338 343v14h-27v22m159-36v16h-32v20m163-36v17h25v19" fill="none" stroke="#79e6d7" stroke-opacity=".5" stroke-width="2"/>
   <path d="M437 420h58M470 366v-24m0 156v21" stroke="#e46d94" stroke-opacity=".7" stroke-width="3" stroke-dasharray="4 7" class="current"/>
@@ -467,19 +467,19 @@
   <path d="M711 607h37M918 739h-37" stroke="#b8a0fc" stroke-width="3" stroke-opacity=".65"/>
   <circle cx="709" cy="613" r="2" fill="#b8a0fc"/><circle cx="920" cy="733" r="2" fill="#b8a0fc"/>
   <text x="48" y="634" fill="#ffc76e" font-size="12" font-weight="700" letter-spacing="1">CODE MERGES</text>
-  <text x="47" y="706" fill="#f1ecdf" font-size="54" font-weight="700">373</text>
+  <text x="47" y="706" fill="#f1ecdf" font-size="54" font-weight="700">380</text>
   <text x="223" y="727" fill="#ffc76e" font-size="10" text-anchor="end" letter-spacing="1">ALL TIME</text>
   <text x="271" y="634" fill="#e46d94" font-size="12" font-weight="700" letter-spacing="1">ISSUES CLOSED</text>
-  <text x="270" y="706" fill="#f1ecdf" font-size="54" font-weight="700">172</text>
+  <text x="270" y="706" fill="#f1ecdf" font-size="54" font-weight="700">174</text>
   <text x="446" y="727" fill="#e46d94" font-size="10" text-anchor="end" letter-spacing="1">ALL TIME</text>
   <text x="494" y="634" fill="#79e6d7" font-size="12" font-weight="700" letter-spacing="1">V1 STORIES</text>
-  <text x="493" y="693" fill="#f1ecdf" font-size="34" font-weight="700">136/154</text>
+  <text x="493" y="693" fill="#f1ecdf" font-size="34" font-weight="700">137/154</text>
   <path d="M494 720h174" stroke="#2d3c54" stroke-width="7" stroke-linecap="round"/>
-  <path d="M494 720h154" stroke="#79e6d7" stroke-width="7" stroke-linecap="round"/>
+  <path d="M494 720h155" stroke="#79e6d7" stroke-width="7" stroke-linecap="round"/>
   <text x="717" y="634" fill="#b8a0fc" font-size="12" font-weight="700" letter-spacing="1">LAST 7 DAYS</text>
-  <text x="716" y="676" fill="#f1ecdf" font-size="27" font-weight="700">104</text>
+  <text x="716" y="676" fill="#f1ecdf" font-size="27" font-weight="700">110</text>
   <text x="772" y="675" fill="#aab2c7" font-size="10" >CODE MERGES</text>
-  <text x="716" y="716" fill="#f1ecdf" font-size="27" font-weight="700">55</text>
+  <text x="716" y="716" fill="#f1ecdf" font-size="27" font-weight="700">56</text>
   <text x="772" y="715" fill="#aab2c7" font-size="10" >ISSUES CLOSED</text>
   </g>
   <g transform="translate(0 205)">
@@ -636,17 +636,17 @@
       <path d="M710 1199h33" stroke="#a69aba" stroke-width="6" stroke-linecap="round" opacity="0.9"/>
       <text x="913" y="1205" fill="#a69aba" font-size="14" text-anchor="end" font-weight="700">3/10</text>
     </g><g>
-      <rect x="30" y="1223" width="900" height="41" rx="6" fill="#0c1324" stroke="#a69aba" stroke-opacity="0.64"/>
-      <path d="M31 1231v-7h21M929 1231v-7h-21" fill="none" stroke="#a69aba" stroke-opacity=".7" stroke-width="1.5"/>
-      <circle cx="65" cy="1244" r="13" fill="#060a17" stroke="#a69aba" stroke-opacity=".34" stroke-width="4"/>
-      <circle cx="65" cy="1244" r="13" fill="none" stroke="#a69aba" stroke-width="4" stroke-dasharray="78 82" transform="rotate(-90 65 1244)"/>
-      <circle cx="65" cy="1244" r="4" fill="#a69aba" opacity="0.8"/>
-      <text x="96" y="1250" fill="#a69aba" font-size="17" font-weight="700">O18</text>
+      <rect x="30" y="1223" width="900" height="41" rx="6" fill="#0c1324" stroke="#ffc76e" stroke-opacity="0.32"/>
+      <path d="M31 1231v-7h21M929 1231v-7h-21" fill="none" stroke="#ffc76e" stroke-opacity=".7" stroke-width="1.5"/>
+      <circle cx="65" cy="1244" r="13" fill="#060a17" stroke="#ffc76e" stroke-opacity=".34" stroke-width="4"/>
+      <circle cx="65" cy="1244" r="13" fill="none" stroke="#ffc76e" stroke-width="4" stroke-dasharray="82 82" transform="rotate(-90 65 1244)"/>
+      <circle cx="65" cy="1244" r="4" fill="#ffc76e" opacity="0.8"/>
+      <text x="96" y="1250" fill="#ffc76e" font-size="17" font-weight="700">O18</text>
       <text x="155" y="1250" fill="#f1ecdf" font-size="16" font-weight="600">A bigger gate and a hub that scales</text>
-      <text x="636" y="1249" fill="#a69aba" font-size="10" text-anchor="middle" letter-spacing="1">FORMING</text>
+      <text x="636" y="1249" fill="#ffc76e" font-size="10" text-anchor="middle" letter-spacing="1">COMPLETE</text>
       <path d="M710 1244h112" stroke="#2d3c54" stroke-width="8" stroke-linecap="round"/>
-      <path d="M710 1244h105" stroke="#a69aba" stroke-width="6" stroke-linecap="round" opacity="0.9"/>
-      <text x="913" y="1250" fill="#a69aba" font-size="14" text-anchor="end" font-weight="700">19/20</text>
+      <path d="M710 1244h111" stroke="#ffc76e" stroke-width="6" stroke-linecap="round" opacity="0.9"/>
+      <text x="913" y="1250" fill="#ffc76e" font-size="14" text-anchor="end" font-weight="700">20/20</text>
     </g><g>
       <rect x="30" y="1306" width="900" height="41" rx="6" fill="#101729" stroke="#ffc76e" stroke-opacity="0.32"/>
       <path d="M31 1314v-7h21M929 1314v-7h-21" fill="none" stroke="#ffc76e" stroke-opacity=".7" stroke-width="1.5"/>
@@ -672,17 +672,17 @@
       <path d="M710 1372h63" stroke="#a69aba" stroke-width="6" stroke-linecap="round" opacity="0.9"/>
       <text x="913" y="1378" fill="#a69aba" font-size="14" text-anchor="end" font-weight="700">4/7</text>
     </g><g>
-      <rect x="30" y="1396" width="900" height="41" rx="6" fill="#101729" stroke="#a69aba" stroke-opacity="0.32"/>
+      <rect x="30" y="1396" width="900" height="41" rx="6" fill="#101729" stroke="#a69aba" stroke-opacity="0.64"/>
       <path d="M31 1404v-7h21M929 1404v-7h-21" fill="none" stroke="#a69aba" stroke-opacity=".7" stroke-width="1.5"/>
       <circle cx="65" cy="1417" r="13" fill="#060a17" stroke="#a69aba" stroke-opacity=".34" stroke-width="4"/>
-      <circle cx="65" cy="1417" r="13" fill="none" stroke="#a69aba" stroke-width="4" stroke-dasharray="0 82" transform="rotate(-90 65 1417)"/>
+      <circle cx="65" cy="1417" r="13" fill="none" stroke="#a69aba" stroke-width="4" stroke-dasharray="6 82" transform="rotate(-90 65 1417)"/>
       <circle cx="65" cy="1417" r="4" fill="#a69aba" opacity="0.8"/>
       <text x="96" y="1423" fill="#a69aba" font-size="17" font-weight="700">O6</text>
       <text x="155" y="1423" fill="#f1ecdf" font-size="16" font-weight="600">Silas remembers and learns</text>
-      <text x="636" y="1422" fill="#a69aba" font-size="10" text-anchor="middle" letter-spacing="1">NEXT BOARD</text>
+      <text x="636" y="1422" fill="#a69aba" font-size="10" text-anchor="middle" letter-spacing="1">FORMING</text>
       <path d="M710 1417h112" stroke="#2d3c54" stroke-width="8" stroke-linecap="round"/>
-      <path d="M710 1417h0" stroke="#a69aba" stroke-width="6" stroke-linecap="round" opacity="0.9"/>
-      <text x="913" y="1423" fill="#a69aba" font-size="14" text-anchor="end" font-weight="700">0/12</text>
+      <path d="M710 1417h9" stroke="#a69aba" stroke-width="6" stroke-linecap="round" opacity="0.9"/>
+      <text x="913" y="1423" fill="#a69aba" font-size="14" text-anchor="end" font-weight="700">1/13</text>
     </g><g>
       <rect x="30" y="1441" width="900" height="41" rx="6" fill="#0c1324" stroke="#ffc76e" stroke-opacity="0.32"/>
       <path d="M31 1449v-7h21M929 1449v-7h-21" fill="none" stroke="#ffc76e" stroke-opacity=".7" stroke-width="1.5"/>
