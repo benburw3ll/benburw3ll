@@ -46,7 +46,7 @@ I built **Silas Portals** so he can help across my life. Portals let him connect
 <li><a href="https://github.com/benburw3ll/silas-portals/milestone/7">O10 · Money in the hub (later)</a></li>
 <li><a href="https://github.com/benburw3ll/silas-portals/milestone/8">O11 · Ready for a second person (parked)</a></li>
 </ul>
-<p>144 of 163 v1 stories finished · 181 issues closed overall · 395 code merges.</p>
+<p>145 of 164 v1 stories finished · 182 issues closed overall · 396 code merges.</p>
 </details>
 <!-- outcomes:end -->
 
