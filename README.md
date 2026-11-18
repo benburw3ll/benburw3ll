@@ -13,38 +13,40 @@ I built **Silas Portals** so he can help across my life. Portals let him connect
 
 <p><b>The road to v1</b></p>
 <ul>
-<li>N1 · Silas answers, every time</li>
-<li>N2 · A new portal in a day</li>
-<li>N3 · Every portal is born connected</li>
-<li>N4 · The door fits a phone</li>
-<li>N5 · Ready for the testing week</li>
-<li>N6 · Widgets that fit the desktop</li>
-<li>O1 · Decide the shape</li>
-<li>O2 · A safe base</li>
-<li>O3 · AI on a budget</li>
-<li>O4 · Portals talk to each other</li>
-<li>O12 · The desktop as one scene</li>
-<li>O16 · The desktop as a board</li>
-<li>O18 · A bigger gate and a hub that scales</li>
+<li><a href="https://github.com/benburw3ll/silas-portals/milestone/12">N1 · Silas answers, every time</a></li>
+<li><a href="https://github.com/benburw3ll/silas-portals/milestone/13">N2 · A new portal in a day</a></li>
+<li><a href="https://github.com/benburw3ll/silas-portals/milestone/14">N3 · Every portal is born connected</a></li>
+<li><a href="https://github.com/benburw3ll/silas-portals/milestone/15">N4 · The door fits a phone</a></li>
+<li><a href="https://github.com/benburw3ll/silas-portals/milestone/16">N5 · Ready for the testing week</a></li>
+<li><a href="https://github.com/benburw3ll/silas-portals/milestone/17">N6 · Widgets that fit the desktop</a></li>
+<li><a href="https://github.com/benburw3ll/silas-portals/milestone/1">O1 · Decide the shape</a></li>
+<li><a href="https://github.com/benburw3ll/silas-portals/milestone/5">O2 · A safe base</a></li>
+<li><a href="https://github.com/benburw3ll/silas-portals/milestone/9">O3 · AI on a budget</a></li>
+<li><a href="https://github.com/benburw3ll/silas-portals/milestone/10">O4 · Portals talk to each other</a></li>
+<li><a href="https://github.com/benburw3ll/silas-portals/milestone/18">O12 · The desktop as one scene</a></li>
+<li><a href="https://github.com/benburw3ll/silas-portals/milestone/20">O16 · The desktop as a board</a></li>
+<li><a href="https://github.com/benburw3ll/silas-portals/milestone/24">O18 · A bigger gate and a hub that scales</a></li>
+<li><a href="https://github.com/benburw3ll/silas-portals/milestone/25">O19 · Red Light: a rule per bulb</a></li>
 </ul>
 <p><b>The next board, v1.1</b></p>
 <ul>
-<li>O13 · Quit That, further (v1.1)</li>
-<li>O5 · Silas the coach (v1.1)</li>
-<li>O6 · Silas remembers and learns (v1.1)</li>
-<li>O14 · The red light (v1.1)</li>
-<li>O15 · The Echo joins the hub (v1.1)</li>
-<li>O17 · Silas's senses (v1.1)</li>
+<li><a href="https://github.com/benburw3ll/silas-portals/milestone/19">O13 · Quit That, further (v1.1)</a></li>
+<li><a href="https://github.com/benburw3ll/silas-portals/milestone/11">O5 · Silas the coach (v1.1)</a></li>
+<li><a href="https://github.com/benburw3ll/silas-portals/milestone/6">O6 · Silas remembers and learns (v1.1)</a></li>
+<li><a href="https://github.com/benburw3ll/silas-portals/milestone/21">O14 · The red light (v1.1)</a></li>
+<li><a href="https://github.com/benburw3ll/silas-portals/milestone/22">O15 · The Echo joins the hub (v1.1)</a></li>
+<li><a href="https://github.com/benburw3ll/silas-portals/milestone/23">O17 · Silas's senses (v1.1)</a></li>
+<li><a href="https://github.com/benburw3ll/silas-portals/milestone/26">O20 · The Workshop portal (v1.1)</a></li>
 </ul>
 <p><b>Later</b></p>
 <ul>
-<li>O7 · Mac and every screen (later)</li>
-<li>O8 · Artistic themes (later)</li>
-<li>O9 · Always-on Telegram (later)</li>
-<li>O10 · Money in the hub (later)</li>
-<li>O11 · Ready for a second person (parked)</li>
+<li><a href="https://github.com/benburw3ll/silas-portals/milestone/2">O7 · Mac and every screen (later)</a></li>
+<li><a href="https://github.com/benburw3ll/silas-portals/milestone/4">O8 · Artistic themes (later)</a></li>
+<li><a href="https://github.com/benburw3ll/silas-portals/milestone/3">O9 · Always-on Telegram (later)</a></li>
+<li><a href="https://github.com/benburw3ll/silas-portals/milestone/7">O10 · Money in the hub (later)</a></li>
+<li><a href="https://github.com/benburw3ll/silas-portals/milestone/8">O11 · Ready for a second person (parked)</a></li>
 </ul>
-<p>137 of 154 v1 stories finished · 174 issues closed overall · 380 code merges.</p>
+<p>144 of 163 v1 stories finished · 181 issues closed overall · 395 code merges.</p>
 </details>
 <!-- outcomes:end -->
 
