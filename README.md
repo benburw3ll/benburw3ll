@@ -48,7 +48,7 @@ I built **[Silas Portals](https://github.com/benburw3ll/silas-portals)** so he c
 <li><a href="https://github.com/benburw3ll/silas-portals/milestone/7">O10 · Money in the hub (later)</a></li>
 <li><a href="https://github.com/benburw3ll/silas-portals/milestone/8">O11 · Ready for a second person (parked)</a></li>
 </ul>
-<p>148 of 181 v1 stories finished · 188 issues closed overall · 403 pull requests merged.</p>
+<p>169 of 188 v1 stories finished · 219 issues closed overall · 433 pull requests merged.</p>
 </details>
 <!-- outcomes:end -->
 
