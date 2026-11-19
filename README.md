@@ -28,6 +28,7 @@ I built **Silas Portals** so he can help across my life. Portals let him connect
 <li><a href="https://github.com/benburw3ll/silas-portals/milestone/24">O18 · A bigger gate and a hub that scales</a></li>
 <li><a href="https://github.com/benburw3ll/silas-portals/milestone/25">O19 · Red Light: a rule per bulb</a></li>
 <li><a href="https://github.com/benburw3ll/silas-portals/milestone/27">O21 · Check-ins by message</a></li>
+<li><a href="https://github.com/benburw3ll/silas-portals/milestone/28">O22 · The desktop as a console</a></li>
 </ul>
 <p><b>The next board, v1.1</b></p>
 <ul>
@@ -47,7 +48,7 @@ I built **Silas Portals** so he can help across my life. Portals let him connect
 <li><a href="https://github.com/benburw3ll/silas-portals/milestone/7">O10 · Money in the hub (later)</a></li>
 <li><a href="https://github.com/benburw3ll/silas-portals/milestone/8">O11 · Ready for a second person (parked)</a></li>
 </ul>
-<p>146 of 168 v1 stories finished · 183 issues closed overall · 397 code merges.</p>
+<p>181 of 204 v1 stories finished · 218 issues closed overall · 431 code merges.</p>
 </details>
 <!-- outcomes:end -->
 
