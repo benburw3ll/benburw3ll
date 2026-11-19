@@ -27,7 +27,7 @@ export function composeReadme(hero, castle, board, telegram) {
   const telegramWidth = Number(/\bviewBox="0 0 (\d+) /.exec(telegram)?.[1])
   const telegramScene = nest(telegram, (960 - telegramWidth) / 2, telegramY, 'telegram')
   const height = telegramY + telegramScene.height + 24
-  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 ${height}" width="960" height="${height}" role="img" aria-label="Silas Portals: Silas runs among portals; imaginary friends build the Overlord Watchtower and test it with a cannon while a rogue hacker is denied; the live ledger and Telegram conversation complete the world." font-family="'Cascadia Code', Consolas, 'Liberation Mono', monospace">
+  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 ${height}" width="960" height="${height}" role="img" aria-label="Silas Portals: Silas runs among portals, friends cross an open gate to the defended Overlord Watchtower, and the live ledger and Telegram conversation complete the world." font-family="'Cascadia Code', Consolas, 'Liberation Mono', monospace">
   <title>Silas Portals: one growing world, one live watchtower</title>
   <defs><radialGradient id="world-phone-halo"><stop stop-color="#79e6d7" stop-opacity=".13"/><stop offset="1" stop-color="#79e6d7" stop-opacity="0"/></radialGradient></defs>
   <rect width="960" height="${height}" fill="#050711"/>

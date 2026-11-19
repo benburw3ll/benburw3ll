@@ -105,20 +105,28 @@ export function renderWatchtowerBoard(milestones, { merged, mergedWeek, closedTo
           : complete > 0
             ? 'building'
             : 'planned'
-    return { code, title, complete, total, state, version }
+    return { code, title, complete, total, state, version, lastCompletedAt: milestone.last_completed_at }
   })
   const v1 = outcomes.filter((item) => item.version === 'v1')
   const v1Done = v1.reduce((sum, item) => sum + item.complete, 0)
   const v1Total = v1.reduce((sum, item) => sum + item.total, 0)
-  const recentDone = v1.filter((item) => item.state === 'done').slice(-3)
+  const recentDone = v1.filter((item) => item.state === 'done')
+    .sort((a, b) => (b.lastCompletedAt ?? '').localeCompare(a.lastCompletedAt ?? ''))
+    .slice(0, 3).reverse()
   if (recentDone.length !== 3) throw new Error('The Watchtower needs three finished v1 outcome rings')
   const available = v1.filter((item) => item.state !== 'done')
   const next = outcomes.filter((item) => item.version === 'v1.1')
-  const primary = available[0] ?? next[0] ?? outcomes.at(-2)
-  const secondary = available[1] ?? next.find((item) => item.code !== primary.code) ?? outcomes.find((item) => item.code !== primary.code && item.state !== 'done') ?? outcomes.at(-1)
-  const future = [...available, ...next, ...outcomes.filter((item) => item.version === 'later')].filter((item) => item.state !== 'done' && item.code !== primary.code && item.code !== secondary.code)
-  const leftGhost = future.at(-2) ?? outcomes.at(-2)
-  const rightGhost = future.at(-1) ?? outcomes.at(-1)
+  // The roadmap's present focus is N5 and O19, with O21 after them. Older
+  // milestones can still have open issues without being the current work.
+  const focusOrder = ['N5', 'O19', 'O21']
+  const focus = focusOrder.map((code) => available.find((item) => item.code === code)).filter(Boolean)
+  const upcoming = [...focus, ...available.filter((item) => !focus.includes(item)), ...next]
+  const primary = upcoming[0] ?? outcomes.at(-2)
+  const secondary = upcoming.find((item) => item.code !== primary.code) ?? outcomes.at(-1)
+  const future = [...upcoming, ...outcomes.filter((item) => item.version === 'later')]
+    .filter((item) => item.state !== 'done' && item.code !== primary.code && item.code !== secondary.code)
+  const leftGhost = future[0] ?? outcomes.at(-2)
+  const rightGhost = future[1] ?? outcomes.at(-1)
   const a = '#79e6d7', b = '#ffc76e', signal = '#e46d94'
   const signalGlyphs = ['∧', '∨', '⊕', '¬', '⇒', '0', '1']
   const leftTraces = Array.from({ length: 13 }, (_, i) => {
@@ -177,7 +185,7 @@ export function renderWatchtowerBoard(milestones, { merged, mergedWeek, closedTo
   <path d="M93 494l-9 29 21 38h81l27-63M867 494l9 29-21 38h-81l-27-63" fill="none" stroke="${signal}" stroke-opacity=".55" stroke-width="3"/>
   <path d="M89 566h122M749 566h122" stroke="${a}" stroke-width="5" stroke-opacity=".65" filter="url(#smallGlow)"/>
   ${ring(125,456,34,'#b8a0fc','ghost',leftGhost)}${ring(835,456,34,'#b8a0fc','ghost',rightGhost)}
-  ${text(38,101,'LATEST FINISHED OUTCOMES',11,b,'letter-spacing="1"')}${text(922,101,'NEXT OUTCOMES',11,a,'text-anchor="end" letter-spacing="1"')}`
+  ${text(38,101,'LATEST FINISHED OUTCOMES',11,b,'letter-spacing="1"')}${text(922,101,'CURRENT FOCUS',11,a,'text-anchor="end" letter-spacing="1"')}`
 
   // Rows: the v1 lane, the v1 outcomes, then the next board and later, each group under its label.
   const ordered = [
@@ -217,8 +225,8 @@ export function renderWatchtowerBoard(milestones, { merged, mergedWeek, closedTo
   const roadHeight = 1430 + (outcomes.length - 15) * 45 + (nextCount ? 38 : 0) + (outcomes.length > v1Count + nextCount ? 38 : 0)
   const boardHeight = roadHeight + signalsHeight
   const rows = ordered.map(row).join('')
-  const board = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 ${boardHeight}" width="960" height="${boardHeight}" role="img" aria-label="Overlord Watchtower roadmap: ${merged} code merges, ${closedTotal} issues closed, and ${v1Done} of ${v1Total} v1 stories finished" font-family="'Cascadia Code', Consolas, 'Liberation Mono', monospace">
-  <title>Overlord Watchtower: ${merged} code merges, ${closedTotal} issues closed, ${v1Done} of ${v1Total} v1 stories finished</title>${defs(a,b)}
+  const board = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 ${boardHeight}" width="960" height="${boardHeight}" role="img" aria-label="Overlord Watchtower roadmap: ${merged} pull requests merged, ${closedTotal} issues closed, and ${v1Done} of ${v1Total} v1 stories finished" font-family="'Cascadia Code', Consolas, 'Liberation Mono', monospace">
+  <title>Overlord Watchtower: ${merged} pull requests merged, ${closedTotal} issues closed, ${v1Done} of ${v1Total} v1 stories finished</title>${defs(a,b)}
   <style>
     @keyframes pulse{50%{opacity:.45}}
     @keyframes flow{to{stroke-dashoffset:-90}}
@@ -255,7 +263,7 @@ export function renderWatchtowerBoard(milestones, { merged, mergedWeek, closedTo
   ${text(30,590,'WATCHTOWER LEDGER',12,a,'font-weight="700" letter-spacing="2"')}
   ${text(930,590,'REFRESHED EVERY THREE HOURS',10,dim,'text-anchor="end" letter-spacing="1"')}
   ${statPlate(30,211,b,'#171a2d')}${statPlate(253,211,signal,'#211525')}${statPlate(476,211,a,'#0e1b2b')}${statPlate(699,231,'#b8a0fc','#17142a')}
-  ${text(48,634,'CODE MERGES',12,b,'font-weight="700" letter-spacing="1"')}
+  ${text(48,634,'PRS MERGED',12,b,'font-weight="700" letter-spacing="1"')}
   ${text(47,706,merged,54,ink,'font-weight="700"')}
   ${text(223,727,'ALL TIME',10,b,'text-anchor="end" letter-spacing="1"')}
   ${text(271,634,'ISSUES CLOSED',12,signal,'font-weight="700" letter-spacing="1"')}
@@ -267,7 +275,7 @@ export function renderWatchtowerBoard(milestones, { merged, mergedWeek, closedTo
   <path d="M494 720h${v1Total ? Math.round(174 * v1Done / v1Total) : 0}" stroke="${a}" stroke-width="7" stroke-linecap="round"/>
   ${text(717,634,'LAST 7 DAYS',12,'#b8a0fc','font-weight="700" letter-spacing="1"')}
   ${text(716,676,mergedWeek,27,ink,'font-weight="700"')}
-  ${text(772,675,'CODE MERGES',10,dim)}
+  ${text(772,675,'PRS MERGED',10,dim)}
   ${text(716,716,closedWeek,27,ink,'font-weight="700"')}
   ${text(772,715,'ISSUES CLOSED',10,dim)}
   </g>
