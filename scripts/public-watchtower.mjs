@@ -1,15 +1,20 @@
 // A self-contained public-source scene for the profile. No live data.
 const friend = (x, y, scale, color, pose = 0, prop = 'spark') => `<g transform="translate(${x} ${y}) scale(${scale})">
   <ellipse cx="0" cy="2" rx="22" ry="5" fill="#02050d" opacity=".7"/>
-  <path d="M-10-19l-8 20h11l8-15m9-5 8 20H7L-1-14" fill="#273750" stroke="${color}" stroke-width="2"/>
-  <path d="M-18-51q-13 17-8 35l15 4 11-6 11 6 15-4q5-18-8-35z" fill="#e5dece" stroke="#64738c" stroke-width="2.5"/>
-  <path d="M-23-57l-10-13 5 23m51-10 10-13-5 23" fill="#8cae9f" stroke="#375968" stroke-width="2"/>
-  <path d="M-20-72q20-18 40 0l3 25q-21 16-46 0z" fill="#9cbdad" stroke="#375968" stroke-width="2.5"/>
-  <path d="M-25-72l7-10 9 7 9-15 9 14 11-8 5 13" fill="#f1e8d6" stroke="#77758a" stroke-width="2"/>
-  <circle cx="-9" cy="-56" r="7" fill="#142c3f" stroke="${color}" stroke-width="2.5"/>
-  <circle cx="9" cy="-56" r="7" fill="#142c3f" stroke="${color}" stroke-width="2.5"/>
-  <path d="M-6-40q8 6 14-2" fill="none" stroke="#34516a" stroke-width="2"/>
-  <path d="M-19-34l-13 ${pose ? -17 : -7}m50-17 23-21" stroke="#e5dece" stroke-width="7" stroke-linecap="round"/>
+  <path d="M17-28q28-6 31 12 2 11-9 15" fill="none" stroke="#a86583" stroke-width="6" stroke-linecap="round"/>
+  <path d="M37-2l14-10-1 17z" fill="${color}" stroke="#281c35" stroke-width="2"/>
+  <path d="M-17-43q-21-24-37-8l10 5-5 17 15-7 12 12 11-9M17-43q21-24 37-8l-10 5 5 17-15-7-12 12-11-9" fill="#452b51" stroke="${color}" stroke-opacity=".78" stroke-width="2" stroke-linejoin="round"/>
+  <path d="M-10-19l-8 20h11l8-15m9-5 8 20H7L-1-14" fill="#241a31" stroke="${color}" stroke-width="2"/>
+  <path d="M-18-51q-13 17-8 35l15 4 11-6 11 6 15-4q5-18-8-35z" fill="#35243e" stroke="#aa758e" stroke-width="2.5"/>
+  <path d="M-23-67q-14-3-16-16l17 7m45 9q14-3 16-16l-17 7" fill="#a86583" stroke="#e0a879" stroke-width="2"/>
+  <path d="M-21-70q-15-9-10-36 8 13 17 13l-1 18M21-70q15-9 10-36-8 13-17 13l1 18" fill="#d9ae78" stroke="#76536d" stroke-width="2.5" stroke-linejoin="round"/>
+  <path d="M-21-72q20-18 42 0l3 24q-22 19-48 0z" fill="#94607d" stroke="#e0a879" stroke-width="2.5"/>
+  <path d="M-19-74q20-12 38 0" fill="none" stroke="#c58293" stroke-width="2"/>
+  <circle cx="-9" cy="-56" r="7" fill="#121421" stroke="${color}" stroke-width="2.5"/>
+  <circle cx="9" cy="-56" r="7" fill="#121421" stroke="${color}" stroke-width="2.5"/>
+  <path d="M-9-61v10m18-10v10" stroke="${color}" stroke-width="2" stroke-linecap="round"/>
+  <path d="M-7-41q7 5 14 0m-12-1 1 5m9-5-1 5" fill="none" stroke="#f9e2ce" stroke-width="2" stroke-linecap="round"/>
+  <path d="M-19-34l-13 ${pose ? -17 : -7}m50-17 23-21" stroke="#ad708d" stroke-width="7" stroke-linecap="round"/>
   ${prop === 'spark' ? `<path d="M38-70l18-7m-18 7 17 4" stroke="${color}" stroke-width="3" stroke-linecap="round"/><circle cx="43" cy="-70" r="4" fill="${color}" filter="url(#small-glow)"/>` : ''}
 </g>`
 
@@ -30,8 +35,8 @@ export function renderPublicWatchtower() {
     const y = 300 - (x - 337) * .061
     return `<path d="M${x} ${y}l2 21" stroke="#b6eee8" stroke-opacity="${i % 3 ? .32 : .55}" stroke-width="2"/>`
   }).join('')
-  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 420" width="960" height="420" role="img" aria-label="The Silas Portals source is open. Friends cross a luminous bridge to the Overlord Watchtower while others test its shield with a cannon; its defenses remain online." font-family="'Cascadia Code', Consolas, 'Liberation Mono', monospace">
-  <title>The gate is open: the public Silas Portals watchtower</title>
+  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 420" width="960" height="420" role="img" aria-label="The Silas Portals source is open. Little horned demons cross a luminous bridge to the Overlord Watchtower while their friends test its shield with a cannon; its defenses remain online." font-family="'Cascadia Code', Consolas, 'Liberation Mono', monospace">
+  <title>The gate is open: little demons build and guard the public Silas Portals watchtower</title>
   <defs>
     <radialGradient id="sky"><stop stop-color="#1b2440"/><stop offset=".55" stop-color="#0b1123"/><stop offset="1" stop-color="#050711"/></radialGradient>
     <linearGradient id="canyon" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#18223b"/><stop offset="1" stop-color="#03050d"/></linearGradient>
@@ -106,9 +111,13 @@ export function renderPublicWatchtower() {
   ${builder(737,288,.48,'#ffc76e','brick')}${builder(911,258,.46,'#79e6d7','hammer')}
   <path d="M428 353l43-23 66 6 37 21-19 27H446Z" fill="#17223a" stroke="#ad668b" stroke-width="2"/>
   <g transform="translate(504 335)">
+    <path d="M21-15q27-10 30 9 2 11-8 15" fill="none" stroke="#a6557a" stroke-width="6" stroke-linecap="round"/>
+    <path d="M41 8l13-9-2 16z" fill="#ff719d" stroke="#54274c" stroke-width="2"/>
+    <path d="M-18-31q-16-16-27-8l8 5-4 12 12-5 11 9M18-31q16-16 27-8l-8 5 4 12-12-5-11 9" fill="#492b51" stroke="#e46d94" stroke-width="2" stroke-linejoin="round"/>
     <path d="M-19-45l-9-21 19 9m28 12 9-21-19 9" fill="#6f3b62" stroke="#e46d94" stroke-width="2"/>
     <circle cy="-45" r="19" fill="#38253f" stroke="#e46d94" stroke-width="2.5"/>
     <path d="M-11-48h7m8 0h7" stroke="#ff719d" stroke-width="3" stroke-linecap="round"/>
+    <path d="M-5-37l2 4m8-4-2 4" stroke="#ffd7dd" stroke-width="2" stroke-linecap="round"/>
     <path d="M-21-22q21-10 42 0l9 28h-60z" fill="#2b2540" stroke="#8b6d9d" stroke-width="2"/>
     <path d="M-24-8l13-5 24 1 13 5-4 17h-42z" fill="#10182b" stroke="#e46d94" stroke-width="2"/>
     <text x="0" y="3" text-anchor="middle" fill="#e46d94" font-size="10" font-weight="700">0x!</text>
