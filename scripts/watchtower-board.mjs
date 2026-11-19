@@ -56,22 +56,32 @@ const ring = (cx, cy, r, color, state, outcome) => {
   return `<g opacity="${opacity}"><title>${esc(`${code} ${title}: ${complete} of ${total} stories finished`)}</title><circle cx="${cx}" cy="${cy}" r="${r + 9}" fill="none" stroke="${color}" stroke-width="19" opacity="${ghost ? .08 : .34}" filter="url(#glow)"/><circle cx="${cx}" cy="${cy}" r="${r}" fill="#050711" stroke="${ghost ? color : 'url(#rim)'}" stroke-width="${active ? 10 : 8}" stroke-dasharray="${ghost ? '3 11' : ''}"/>${core}<circle cx="${cx}" cy="${cy}" r="${progressRadius}" fill="none" stroke="${color}" stroke-opacity=".16" stroke-width="${r < 40 ? 3 : 4}"/>${progressArc}${construction}${progressHalo}<circle cx="${cx}" cy="${cy}" r="${r+13}" fill="none" stroke="${color}" stroke-opacity=".6" stroke-width="1" stroke-dasharray="1 12"/>${text(cx, codeY, code, codeSize, ink, 'text-anchor="middle" font-weight="700" letter-spacing="1"')}${text(cx, countY, `${complete}/${total}`, countSize, color, 'text-anchor="middle" font-weight="700"')}</g>`
 }
 
-// The Stonebinder is one of the story's imaginary friends: a hooded, non-goblin
-// builder with a tool belt and a masonry hammer. No species design is canon yet.
+// The Stonebinder is a horned little demon with a masonry hammer: still a
+// builder, now visibly one of Silas's infernal imaginary friends.
 const builder = (x, y, scale, color, facing = 1) => `<g transform="translate(${x} ${y}) scale(${scale * facing} ${scale})">
   <g class="builder-base">
   <ellipse cx="0" cy="4" rx="30" ry="6" fill="#02040a" opacity=".75"/>
-  <path d="M-13-35l-8 37h13l10-29M12-34l9 36H8L-2-27" fill="#283246" stroke="#6f809b" stroke-width="2"/>
-  <path d="M-22-39Q-31-25-27-9L-14-8Q0-13 13-8L27-9Q30-27 21-40L10-51H-11Z" fill="#d9d3c5" stroke="#506071" stroke-width="3"/>
+  <path d="M-16-17Q-49 1-56-22Q-59-34-50-43" fill="none" stroke="#9c5377" stroke-width="7" stroke-linecap="round"/>
+  <path d="M-51-49l-9 13 16-2z" fill="${color}" stroke="#9c5377" stroke-width="2"/>
+  <path d="M-19-44Q-48-72-59-62l9 20-10 15 22-5 11 12M19-44Q48-72 59-62l-9 20 10 15-22-5-11 12" fill="#241c35" stroke="#9c5377" stroke-width="2.5" stroke-linejoin="round"/>
+  <path d="M-13-35l-8 37h13l10-29M12-34l9 36H8L-2-27" fill="#33243b" stroke="#8c6682" stroke-width="2"/>
+  <path d="M-24-1l12-4 4 8h-15M24-1L12-5 8 3h15" fill="#3f3042" stroke="${color}" stroke-width="2"/>
+  <path d="M-22-39Q-31-25-27-9L-14-8Q0-13 13-8L27-9Q30-27 21-40L10-51H-11Z" fill="#392b43" stroke="#a87b9b" stroke-width="3"/>
   <path d="M-26-31Q-7-24 26-31" stroke="${color}" stroke-width="5" opacity=".8"/>
-  <path d="M-24-53Q-34-71-20-81Q-12-95 0-91Q18-95 24-77L19-53Z" fill="#a9a2a5" stroke="#535869" stroke-width="3"/>
-  <path d="M-20-60Q-9-74 0-72Q13-73 20-60Q19-46 10-42H-10Q-20-48-20-60Z" fill="#2b3347"/>
-  <path d="M-8-59h5m11 0h5" stroke="${color}" stroke-width="3" stroke-linecap="round"/>
-  <path d="M-24-49L-39-30L-34-24L-15-36M22-48L36-30L50-52" fill="none" stroke="#d9d3c5" stroke-width="10" stroke-linecap="round"/>
+  <path d="M-18-78Q-36-101-30-116Q-23-109-11-93M18-78Q36-101 30-116Q23-109 11-93" fill="#8e4e6f" stroke="${color}" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M-24-53Q-34-71-20-81Q-12-95 0-91Q18-95 24-77L19-53Z" fill="#57415b" stroke="#b1839d" stroke-width="3"/>
+  <path d="M-20-60Q-9-74 0-72Q13-73 20-60Q19-46 10-42H-10Q-20-48-20-60Z" fill="#2f2237"/>
+  <path d="M-10-59l7 2m6 0 7-2" stroke="${color}" stroke-width="4" stroke-linecap="round"/>
+  <path d="M-7-45l4 5 3-5m1 0 4 5 3-5" fill="none" stroke="#f3decb" stroke-width="1.6" stroke-linejoin="round"/>
+  <path d="M-24-49L-39-30L-34-24L-15-36M22-48L36-30L50-52" fill="none" stroke="#9c708a" stroke-width="10" stroke-linecap="round"/>
   <path d="M50-52L60-68M49-69L72-68M55-75v20" fill="none" stroke="${color}" stroke-width="5" stroke-linecap="round"/>
-  <path d="M-17-15h35" stroke="#594c45" stroke-width="6"/><path d="M7-19v11h9v-11" fill="${color}"/>
+  <path d="M-17-15h35" stroke="#211927" stroke-width="6"/><path d="M7-19v11h9v-11" fill="${color}"/>
+  <path d="M-4-24l4-5 4 5-4 5z" fill="${color}" opacity=".75"/>
   </g>
   <g class="builder-glitch" opacity="0">
+    <path d="M-19-79Q-35-105-30-113l19 20M19-79Q35-105 30-113L11-93" fill="none" stroke="#e46d94" stroke-width="4" stroke-dasharray="11 5"/>
+    <path d="M-17-13Q-51 1-57-23l9-17" fill="none" stroke="#e46d94" stroke-width="5" stroke-dasharray="10 5"/>
+    <path d="M-54-45l-8 10 15-2z" fill="#ffc76e"/>
     <path d="M-28-11Q-36-55-22-83L-9-93H12L27-78Q38-47 27-10Q8-20-1-12Q-15-22-28-11Z" fill="#16243a" stroke="#79e6d7" stroke-width="2" stroke-dasharray="19 5 4 7"/>
     <path d="M-20-69Q0-89 20-68L11-48H-12Z" fill="#354465" stroke="#b8a0fc" stroke-width="2"/>
     <path d="M-15-62h30M-9-54h18" stroke="#e9faff" stroke-width="3" stroke-dasharray="7 4"/>
@@ -105,20 +115,28 @@ export function renderWatchtowerBoard(milestones, { merged, mergedWeek, closedTo
           : complete > 0
             ? 'building'
             : 'planned'
-    return { code, title, complete, total, state, version }
+    return { code, title, complete, total, state, version, lastCompletedAt: milestone.last_completed_at }
   })
   const v1 = outcomes.filter((item) => item.version === 'v1')
   const v1Done = v1.reduce((sum, item) => sum + item.complete, 0)
   const v1Total = v1.reduce((sum, item) => sum + item.total, 0)
-  const recentDone = v1.filter((item) => item.state === 'done').slice(-3)
+  const recentDone = v1.filter((item) => item.state === 'done')
+    .sort((a, b) => (b.lastCompletedAt ?? '').localeCompare(a.lastCompletedAt ?? ''))
+    .slice(0, 3).reverse()
   if (recentDone.length !== 3) throw new Error('The Watchtower needs three finished v1 outcome rings')
   const available = v1.filter((item) => item.state !== 'done')
   const next = outcomes.filter((item) => item.version === 'v1.1')
-  const primary = available[0] ?? next[0] ?? outcomes.at(-2)
-  const secondary = available[1] ?? next.find((item) => item.code !== primary.code) ?? outcomes.find((item) => item.code !== primary.code && item.state !== 'done') ?? outcomes.at(-1)
-  const future = [...available, ...next, ...outcomes.filter((item) => item.version === 'later')].filter((item) => item.state !== 'done' && item.code !== primary.code && item.code !== secondary.code)
-  const leftGhost = future.at(-2) ?? outcomes.at(-2)
-  const rightGhost = future.at(-1) ?? outcomes.at(-1)
+  // The roadmap's present focus is N5 and O19, with O21 after them. Older
+  // milestones can still have open issues without being the current work.
+  const focusOrder = ['N5', 'O19', 'O21']
+  const focus = focusOrder.map((code) => available.find((item) => item.code === code)).filter(Boolean)
+  const upcoming = [...focus, ...available.filter((item) => !focus.includes(item)), ...next]
+  const primary = upcoming[0] ?? outcomes.at(-2)
+  const secondary = upcoming.find((item) => item.code !== primary.code) ?? outcomes.at(-1)
+  const future = [...upcoming, ...outcomes.filter((item) => item.version === 'later')]
+    .filter((item) => item.state !== 'done' && item.code !== primary.code && item.code !== secondary.code)
+  const leftGhost = future[0] ?? outcomes.at(-2)
+  const rightGhost = future[1] ?? outcomes.at(-1)
   const a = '#79e6d7', b = '#ffc76e', signal = '#e46d94'
   const signalGlyphs = ['∧', '∨', '⊕', '¬', '⇒', '0', '1']
   const leftTraces = Array.from({ length: 13 }, (_, i) => {
@@ -177,7 +195,7 @@ export function renderWatchtowerBoard(milestones, { merged, mergedWeek, closedTo
   <path d="M93 494l-9 29 21 38h81l27-63M867 494l9 29-21 38h-81l-27-63" fill="none" stroke="${signal}" stroke-opacity=".55" stroke-width="3"/>
   <path d="M89 566h122M749 566h122" stroke="${a}" stroke-width="5" stroke-opacity=".65" filter="url(#smallGlow)"/>
   ${ring(125,456,34,'#b8a0fc','ghost',leftGhost)}${ring(835,456,34,'#b8a0fc','ghost',rightGhost)}
-  ${text(38,101,'LATEST FINISHED OUTCOMES',11,b,'letter-spacing="1"')}${text(922,101,'NEXT OUTCOMES',11,a,'text-anchor="end" letter-spacing="1"')}`
+  ${text(38,101,'LATEST FINISHED OUTCOMES',11,b,'letter-spacing="1"')}${text(922,101,'CURRENT FOCUS',11,a,'text-anchor="end" letter-spacing="1"')}`
 
   // Rows: the v1 lane, the v1 outcomes, then the next board and later, each group under its label.
   const ordered = [
@@ -217,8 +235,8 @@ export function renderWatchtowerBoard(milestones, { merged, mergedWeek, closedTo
   const roadHeight = 1430 + (outcomes.length - 15) * 45 + (nextCount ? 38 : 0) + (outcomes.length > v1Count + nextCount ? 38 : 0)
   const boardHeight = roadHeight + signalsHeight
   const rows = ordered.map(row).join('')
-  const board = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 ${boardHeight}" width="960" height="${boardHeight}" role="img" aria-label="Overlord Watchtower roadmap: ${merged} code merges, ${closedTotal} issues closed, and ${v1Done} of ${v1Total} v1 stories finished" font-family="'Cascadia Code', Consolas, 'Liberation Mono', monospace">
-  <title>Overlord Watchtower: ${merged} code merges, ${closedTotal} issues closed, ${v1Done} of ${v1Total} v1 stories finished</title>${defs(a,b)}
+  const board = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 ${boardHeight}" width="960" height="${boardHeight}" role="img" aria-label="Overlord Watchtower roadmap: ${merged} pull requests merged, ${closedTotal} issues closed, and ${v1Done} of ${v1Total} v1 stories finished" font-family="'Cascadia Code', Consolas, 'Liberation Mono', monospace">
+  <title>Overlord Watchtower: ${merged} pull requests merged, ${closedTotal} issues closed, ${v1Done} of ${v1Total} v1 stories finished</title>${defs(a,b)}
   <style>
     @keyframes pulse{50%{opacity:.45}}
     @keyframes flow{to{stroke-dashoffset:-90}}
@@ -255,7 +273,7 @@ export function renderWatchtowerBoard(milestones, { merged, mergedWeek, closedTo
   ${text(30,590,'WATCHTOWER LEDGER',12,a,'font-weight="700" letter-spacing="2"')}
   ${text(930,590,'REFRESHED EVERY THREE HOURS',10,dim,'text-anchor="end" letter-spacing="1"')}
   ${statPlate(30,211,b,'#171a2d')}${statPlate(253,211,signal,'#211525')}${statPlate(476,211,a,'#0e1b2b')}${statPlate(699,231,'#b8a0fc','#17142a')}
-  ${text(48,634,'CODE MERGES',12,b,'font-weight="700" letter-spacing="1"')}
+  ${text(48,634,'PRS MERGED',12,b,'font-weight="700" letter-spacing="1"')}
   ${text(47,706,merged,54,ink,'font-weight="700"')}
   ${text(223,727,'ALL TIME',10,b,'text-anchor="end" letter-spacing="1"')}
   ${text(271,634,'ISSUES CLOSED',12,signal,'font-weight="700" letter-spacing="1"')}
@@ -267,7 +285,7 @@ export function renderWatchtowerBoard(milestones, { merged, mergedWeek, closedTo
   <path d="M494 720h${v1Total ? Math.round(174 * v1Done / v1Total) : 0}" stroke="${a}" stroke-width="7" stroke-linecap="round"/>
   ${text(717,634,'LAST 7 DAYS',12,'#b8a0fc','font-weight="700" letter-spacing="1"')}
   ${text(716,676,mergedWeek,27,ink,'font-weight="700"')}
-  ${text(772,675,'CODE MERGES',10,dim)}
+  ${text(772,675,'PRS MERGED',10,dim)}
   ${text(716,716,closedWeek,27,ink,'font-weight="700"')}
   ${text(772,715,'ISSUES CLOSED',10,dim)}
   </g>
