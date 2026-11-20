@@ -1,6 +1,8 @@
-// Rebuild the Watchtower and README from the public Silas Portals milestones.
+// Rebuild the Watchtower and README from the Silas Portals milestones.
 // Count issues rather than milestone totals: milestones can contain pull requests,
 // cancelled issues, and issues deferred with a `later` or `parked` label.
+// A private source is read only with GITHUB_TOKEN set (a token that can read its issues)
+// and OUTCOMES_PRIVATE_OK=1; the board carries titles, counts and dates, never an issue's text.
 import { mkdirSync, readFileSync, writeFileSync } from 'node:fs'
 import { renderWatchtowerBoard, versionOf } from './watchtower-board.mjs'
 import { renderPublicWatchtower } from './public-watchtower.mjs'
@@ -15,14 +17,17 @@ const headers = { Accept: 'application/vnd.github+json', 'User-Agent': 'silas-wa
 if (process.env.GITHUB_TOKEN) headers.Authorization = `Bearer ${process.env.GITHUB_TOKEN}`
 const get = async (url) => {
   const r = await fetch(url, { headers })
+  if (r.status === 404 && !process.env.GITHUB_TOKEN) {
+    throw new Error(`GitHub API answered 404 for ${url}: a private source repository needs GITHUB_TOKEN (with issues: read on it) and OUTCOMES_PRIVATE_OK=1`)
+  }
   if (!r.ok) throw new Error(`GitHub API answered ${r.status} for ${url}`)
   return r.json()
 }
 const code = (m) => /^([NO])(\d+)\b/.exec(m.title)
 // Keep this in step with the Build order in Silas Portals' docs/ARCHITECTURE.md.
 const OUTCOME_ORDER = [
-  'O1', 'O2', 'O3', 'O4', 'O12', 'O16', 'O18', 'O19', 'O21', 'O22',
-  'O13', 'O14', 'O15', 'O20', 'O5', 'O17', 'O6',
+  'O1', 'O2', 'O3', 'O4', 'O12', 'O16', 'O18', 'O19', 'O21', 'O22', 'O23', 'O24',
+  'O13', 'O14', 'O15', 'O20', 'O25', 'O5', 'O17', 'O6',
   'O7', 'O8', 'O9', 'O10', 'O11',
 ]
 const order = (m) => {
@@ -32,7 +37,9 @@ const order = (m) => {
   return 1000 + (index < 0 ? OUTCOME_ORDER.length + Number(match[2]) : index)
 }
 const repository = await get(`https://api.github.com/repos/${REPO}`)
-if (repository.private) throw new Error('The source repository must be public for the profile Watchtower')
+if (repository.private && !(process.env.GITHUB_TOKEN && process.env.OUTCOMES_PRIVATE_OK === '1')) {
+  throw new Error(`${REPO} is private: set GITHUB_TOKEN (with issues: read on it) and OUTCOMES_PRIVATE_OK=1 to draw the board from it`)
+}
 const rawList = await get(`https://api.github.com/repos/${REPO}/milestones?state=all&per_page=100`)
 const raw = rawList.filter(code).sort((a, b) => order(a) - order(b))
 if (raw.length === 0) throw new Error('No Silas Portals outcome milestones found')
@@ -88,7 +95,8 @@ writeFileSync(new URL('assets/silas-world.svg', root), composeReadme(hero, castl
 const group = (version, label) => {
   const items = milestones.filter((m) => versionOf(m.title) === version)
   if (!items.length) return ''
-  const links = items.map((m) => `<li><a href="${esc(m.html_url)}">${esc(m.title)}</a></li>`).join('\n')
+  // Plain titles: a milestone link 404s for everyone but the owner once the source is private.
+  const links = items.map((m) => `<li>${esc(m.title)}</li>`).join('\n')
   return `<p><b>${label}</b></p>\n<ul>\n${links}\n</ul>\n`
 }
 const block = `<details>\n<summary>Open the stories behind the rings</summary>\n\n${group('v1', 'The road to v1')}${group('v1.1', 'The next board, v1.1')}${group('later', 'Later')}<p>${done} of ${total} v1 stories finished · ${closedTotal} issues closed overall · ${merged} pull requests merged.</p>\n</details>`

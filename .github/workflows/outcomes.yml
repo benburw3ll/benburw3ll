@@ -1,9 +1,11 @@
 name: Watchtower progress
 
+# Checks the profile on pull requests. The board itself (README.md, outcomes/, assets/) is
+# refreshed by the source repo's own workflow (profile-watchtower.yml in silas-portals): the
+# source is private, and only its own token can read its milestones and issues. This repo's
+# token cannot, so it no longer runs update-outcomes.mjs.
 on:
   pull_request:
-  schedule:
-    - cron: '17 */3 * * *'
   workflow_dispatch:
 
 jobs:
@@ -14,28 +16,3 @@ jobs:
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
       - run: node scripts/check-profile.mjs
-
-  refresh:
-    if: github.event_name != 'pull_request'
-    needs: verify
-    runs-on: ubuntu-latest
-    timeout-minutes: 5
-    permissions:
-      contents: write
-    concurrency:
-      group: watchtower-progress
-      cancel-in-progress: false
-    steps:
-      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
-      - run: node scripts/update-outcomes.mjs
-        env:
-          GITHUB_TOKEN: ${{ github.token }}
-      - run: node scripts/check-profile.mjs
-      - name: Commit refreshed board
-        run: |
-          git add README.md assets/silas-world.svg assets/public-watchtower.svg outcomes/operations.svg
-          if git diff --cached --quiet; then echo 'No change'; exit 0; fi
-          git config user.name 'github-actions[bot]'
-          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git commit -m 'chore(profile): refresh watchtower progress'
-          git push
