@@ -51,7 +51,7 @@ I built **Silas Portals** so he can help across my life. Portals let him connect
 <li>O10 · Money in the hub (later)</li>
 <li>O11 · Ready for a second person (parked)</li>
 </ul>
-<p>202 of 242 v1 stories finished · 253 issues closed overall · 462 pull requests merged.</p>
+<p>204 of 246 v1 stories finished · 255 issues closed overall · 465 pull requests merged.</p>
 </details>
 <!-- outcomes:end -->
 
