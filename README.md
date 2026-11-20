@@ -29,6 +29,8 @@ I built **[Silas Portals](https://github.com/benburw3ll/silas-portals)** so he c
 <li><a href="https://github.com/benburw3ll/silas-portals/milestone/25">O19 · Red Light: a rule per bulb</a></li>
 <li><a href="https://github.com/benburw3ll/silas-portals/milestone/27">O21 · Check-ins by message</a></li>
 <li><a href="https://github.com/benburw3ll/silas-portals/milestone/28">O22 · The desktop as a console</a></li>
+<li><a href="https://github.com/benburw3ll/silas-portals/milestone/29">O23 · Photos from the phone</a></li>
+<li><a href="https://github.com/benburw3ll/silas-portals/milestone/30">O24 · Meals as a list</a></li>
 </ul>
 <p><b>The next board, v1.1</b></p>
 <ul>
@@ -39,6 +41,7 @@ I built **[Silas Portals](https://github.com/benburw3ll/silas-portals)** so he c
 <li><a href="https://github.com/benburw3ll/silas-portals/milestone/11">O5 · Silas the coach (v1.1)</a></li>
 <li><a href="https://github.com/benburw3ll/silas-portals/milestone/23">O17 · Silas's senses (v1.1)</a></li>
 <li><a href="https://github.com/benburw3ll/silas-portals/milestone/6">O6 · Silas remembers and learns (v1.1)</a></li>
+<li><a href="https://github.com/benburw3ll/silas-portals/milestone/31">O25 · A starter a friend can run (v1.1)</a></li>
 </ul>
 <p><b>Later</b></p>
 <ul>
@@ -48,7 +51,7 @@ I built **[Silas Portals](https://github.com/benburw3ll/silas-portals)** so he c
 <li><a href="https://github.com/benburw3ll/silas-portals/milestone/7">O10 · Money in the hub (later)</a></li>
 <li><a href="https://github.com/benburw3ll/silas-portals/milestone/8">O11 · Ready for a second person (parked)</a></li>
 </ul>
-<p>175 of 197 v1 stories finished · 225 issues closed overall · 440 pull requests merged.</p>
+<p>200 of 242 v1 stories finished · 252 issues closed overall · 461 pull requests merged.</p>
 </details>
 <!-- outcomes:end -->
 
