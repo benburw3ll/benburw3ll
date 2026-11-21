@@ -271,7 +271,7 @@ export function renderWatchtowerBoard(milestones, { merged, mergedWeek, closedTo
   <g transform="translate(0 -545)">
   <path d="M25 565H935" stroke="${a}" stroke-opacity=".4"/>
   ${text(30,590,'WATCHTOWER LEDGER',12,a,'font-weight="700" letter-spacing="2"')}
-  ${text(930,590,'REFRESHED EVERY THREE HOURS',10,dim,'text-anchor="end" letter-spacing="1"')}
+  ${text(930,590,'REFRESHED A FEW TIMES A DAY',10,dim,'text-anchor="end" letter-spacing="1"')}
   ${statPlate(30,211,b,'#171a2d')}${statPlate(253,211,signal,'#211525')}${statPlate(476,211,a,'#0e1b2b')}${statPlate(699,231,'#b8a0fc','#17142a')}
   ${text(48,634,'PRS MERGED',12,b,'font-weight="700" letter-spacing="1"')}
   ${text(47,706,merged,54,ink,'font-weight="700"')}

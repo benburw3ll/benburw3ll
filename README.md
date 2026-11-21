@@ -3,7 +3,7 @@
 
 Silas is a small, logic-mad demon who lives in the walls of my house. He needed a place to stay, so I gave him the walls and a workshop behind the plaster, and every new portal gives him another place to tinker.
 
-I built **Silas Portals** so he can help across my life. Portals let him connect what he notices with what he can do: if I leave home and forget the lights, he turns them off. If WHOOP says I need sleep, he turns my bedroom blue.
+I built **Silas Portals** so he can help across my life. Portals let him connect what he notices with what he can do: if I leave home and forget the lights, he turns them off. If a goal slips past its time, he turns the room's lights red until it's done.
 
 <p align="center"><img src="https://raw.githubusercontent.com/benburw3ll/benburw3ll/refs/heads/main/assets/silas-world.svg" width="960" alt="Silas and his demon friends among the portals, the open Watchtower gate, its live roadmap, and a Telegram conversation" /></p>
 
@@ -21,7 +21,7 @@ I built **Silas Portals** so he can help across my life. Portals let him connect
 <li>N6 · Widgets that fit the desktop</li>
 <li>O1 · Decide the shape</li>
 <li>O2 · A safe base</li>
-<li>O3 · AI on a budget</li>
+<li>O3 · Thinking on a budget</li>
 <li>O4 · Portals talk to each other</li>
 <li>O12 · The desktop as one scene</li>
 <li>O16 · The desktop as a board</li>
@@ -59,8 +59,6 @@ I built **Silas Portals** so he can help across my life. Portals let him connect
 
 I want to tell him how things should work: "When the doorbell rings after dark, turn on the hall light for three minutes." That becomes an automation. "From now on, keep your replies short" becomes one of his standing rules.
 
-The conversational controls are being built now: Silas will show a change to a rule or automation, wait for my approval, then rewire the portals. The workshop grows through conversation.
+Silas shows me a change to a rule or automation, waits for my OK, then rewires the portals. The workshop grows through conversation.
 
 Each new portal gives Silas another way to help. Maybe one day he'll find one big enough to spawn himself.
-
-<p align="center"><b>EXPLORE THE SOURCE</b> &nbsp;·&nbsp; READ THE BLUEPRINT</p>

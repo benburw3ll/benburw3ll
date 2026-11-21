@@ -35,8 +35,8 @@ export function renderPublicWatchtower() {
     const y = 300 - (x - 337) * .061
     return `<path d="M${x} ${y}l2 21" stroke="#b6eee8" stroke-opacity="${i % 3 ? .32 : .55}" stroke-width="2"/>`
   }).join('')
-  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 420" width="960" height="420" role="img" aria-label="The Silas Portals source is open. Little horned demons cross a luminous bridge to the Overlord Watchtower while their friends test its shield with a cannon; its defenses remain online." font-family="'Cascadia Code', Consolas, 'Liberation Mono', monospace">
-  <title>The gate is open: little demons build and guard the public Silas Portals watchtower</title>
+  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 420" width="960" height="420" role="img" aria-label="The Silas Portals source stays private. Little horned demons cross a luminous bridge to the Overlord Watchtower while their friends test its shield with a cannon; its defenses remain online." font-family="'Cascadia Code', Consolas, 'Liberation Mono', monospace">
+  <title>The gate is open: little demons build and guard the Silas Portals watchtower</title>
   <defs>
     <radialGradient id="sky"><stop stop-color="#1b2440"/><stop offset=".55" stop-color="#0b1123"/><stop offset="1" stop-color="#050711"/></radialGradient>
     <linearGradient id="canyon" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#18223b"/><stop offset="1" stop-color="#03050d"/></linearGradient>
@@ -67,7 +67,7 @@ export function renderPublicWatchtower() {
   <rect width="960" height="420" fill="url(#sky)"/>${stars}<rect width="960" height="420" fill="url(#scan)"/>
   <path d="M22 28h166m584 0h166M22 392h916" stroke="#7a91af" stroke-opacity=".35"/>
   <text x="480" y="65" text-anchor="middle" fill="#f2ecdf" font-size="41" font-weight="700" letter-spacing="4">THE GATE IS OPEN</text>
-  <text x="480" y="94" text-anchor="middle" fill="#79e6d7" font-size="14" font-weight="700" letter-spacing="2">OPEN SOURCE  ·  DEFENSES ONLINE</text>
+  <text x="480" y="94" text-anchor="middle" fill="#79e6d7" font-size="14" font-weight="700" letter-spacing="2">PRIVATE BUILD  ·  DEFENSES ONLINE</text>
   <path d="M0 282L138 262L236 280L322 270L362 300L337 420H0ZM960 278L861 264L766 279L704 270L660 307L681 420H960Z" fill="url(#stone)" stroke="#71849e" stroke-width="3"/>
   <path d="M339 301Q480 365 671 305L681 420H337Z" fill="url(#canyon)"/>
   <path d="M367 317Q474 354 652 320M360 340Q473 385 660 343M353 370Q476 405 668 372" fill="none" stroke="#7e80a8" stroke-opacity=".17" stroke-width="2"/>
