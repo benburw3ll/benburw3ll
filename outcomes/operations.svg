@@ -1,5 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 2431" width="960" height="2431" role="img" aria-label="Overlord Watchtower roadmap: 488 pull requests merged, 350 issues closed, and 242 of 255 v1 stories finished" font-family="'Cascadia Code', Consolas, 'Liberation Mono', monospace">
-  <title>Overlord Watchtower: 488 pull requests merged, 350 issues closed, 242 of 255 v1 stories finished</title><defs>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 2476" width="960" height="2476" role="img" aria-label="Overlord Watchtower roadmap: 498 pull requests merged, 360 issues closed, and 247 of 260 v1 stories finished" font-family="'Cascadia Code', Consolas, 'Liberation Mono', monospace">
+  <title>Overlord Watchtower: 498 pull requests merged, 360 issues closed, 247 of 260 v1 stories finished</title><defs>
   <radialGradient id="sky"><stop stop-color="#1a2038"/><stop offset=".55" stop-color="#0b1022"/><stop offset="1" stop-color="#050710"/></radialGradient>
   <radialGradient id="well"><stop stop-color="#79e6d7" stop-opacity=".45"/><stop offset=".5" stop-color="#ffc76e" stop-opacity=".22"/><stop offset="1" stop-color="#050710"/></radialGradient>
   <linearGradient id="rim" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f8f1df"/><stop offset=".18" stop-color="#79e6d7"/><stop offset=".55" stop-color="#354360"/><stop offset=".8" stop-color="#ffc76e"/><stop offset="1" stop-color="#fff4d9"/></linearGradient>
@@ -36,7 +36,7 @@
     }
     @media (prefers-reduced-motion:reduce){.logic-packet{display:none}}
   </style>
-  <rect width="960" height="2431" fill="url(#sky)"/><circle cx="20" cy="30" r="1.6" fill="#d8e8ff" opacity="0.4"/><circle cx="214" cy="126" r="0.65" fill="#d8e8ff" opacity="0.15"/><circle cx="434" cy="236" r="0.65" fill="#d8e8ff" opacity="0.15"/><circle cx="680" cy="360" r="0.65" fill="#d8e8ff" opacity="0.15"/><circle cx="32" cy="498" r="0.65" fill="#d8e8ff" opacity="0.15"/><circle cx="330" cy="100" r="0.65" fill="#d8e8ff" opacity="0.15"/><circle cx="654" cy="266" r="0.65" fill="#d8e8ff" opacity="0.15"/><circle cx="84" cy="446" r="0.65" fill="#d8e8ff" opacity="0.4"/><circle cx="460" cy="90" r="0.65" fill="#d8e8ff" opacity="0.15"/><circle cx="862" cy="298" r="0.65" fill="#d8e8ff" opacity="0.15"/><circle cx="370" cy="520" r="0.65" fill="#d8e8ff" opacity="0.15"/><circle cx="824" cy="206" r="1.6" fill="#d8e8ff" opacity="0.15"/><circle cx="384" cy="456" r="0.65" fill="#d8e8ff" opacity="0.15"/><circle cx="890" cy="170" r="0.65" fill="#d8e8ff" opacity="0.15"/><circle cx="502" cy="448" r="0.65" fill="#d8e8ff" opacity="0.4"/><circle cx="140" cy="190" r="0.65" fill="#d8e8ff" opacity="0.15"/><circle cx="724" cy="496" r="0.65" fill="#d8e8ff" opacity="0.15"/><circle cx="414" cy="266" r="0.65" fill="#d8e8ff" opacity="0.15"/><circle cx="130" cy="50" r="0.65" fill="#d8e8ff" opacity="0.15"/><circle cx="792" cy="398" r="0.65" fill="#d8e8ff" opacity="0.15"/><circle cx="560" cy="210" r="0.65" fill="#d8e8ff" opacity="0.15"/><circle cx="354" cy="36" r="0.65" fill="#d8e8ff" opacity="0.4"/><circle cx="174" cy="426" r="1.6" fill="#d8e8ff" opacity="0.15"/><circle cx="20" cy="280" r="0.65" fill="#d8e8ff" opacity="0.15"/><circle cx="812" cy="148" r="0.65" fill="#d8e8ff" opacity="0.15"/><circle cx="710" cy="30" r="0.65" fill="#d8e8ff" opacity="0.15"/><circle cx="634" cy="476" r="0.65" fill="#d8e8ff" opacity="0.15"/><circle cx="584" cy="386" r="0.65" fill="#d8e8ff" opacity="0.15"/><circle cx="560" cy="310" r="0.65" fill="#d8e8ff" opacity="0.4"/><circle cx="562" cy="248" r="0.65" fill="#d8e8ff" opacity="0.15"/><circle cx="590" cy="200" r="0.65" fill="#d8e8ff" opacity="0.15"/><circle cx="644" cy="166" r="0.65" fill="#d8e8ff" opacity="0.15"/><circle cx="724" cy="146" r="0.65" fill="#d8e8ff" opacity="0.15"/><circle cx="830" cy="140" r="1.6" fill="#d8e8ff" opacity="0.15"/><circle cx="42" cy="148" r="0.65" fill="#d8e8ff" opacity="0.15"/><circle cx="200" cy="170" r="0.65" fill="#d8e8ff" opacity="0.4"/><circle cx="384" cy="206" r="0.65" fill="#d8e8ff" opacity="0.15"/><circle cx="594" cy="256" r="0.65" fill="#d8e8ff" opacity="0.15"/><circle cx="830" cy="320" r="0.65" fill="#d8e8ff" opacity="0.15"/><circle cx="172" cy="398" r="0.65" fill="#d8e8ff" opacity="0.15"/><circle cx="460" cy="490" r="0.65" fill="#d8e8ff" opacity="0.15"/><circle cx="774" cy="46" r="0.65" fill="#d8e8ff" opacity="0.15"/><circle cx="194" cy="166" r="0.65" fill="#d8e8ff" opacity="0.4"/><circle cx="560" cy="300" r="0.65" fill="#d8e8ff" opacity="0.15"/><circle cx="32" cy="448" r="1.6" fill="#d8e8ff" opacity="0.15"/><circle cx="450" cy="60" r="0.65" fill="#d8e8ff" opacity="0.15"/><circle cx="894" cy="236" r="0.65" fill="#d8e8ff" opacity="0.15"/><circle cx="444" cy="426" r="0.65" fill="#d8e8ff" opacity="0.15"/><circle cx="20" cy="80" r="0.65" fill="#d8e8ff" opacity="0.15"/><circle cx="542" cy="298" r="0.65" fill="#d8e8ff" opacity="0.4"/><circle cx="170" cy="530" r="0.65" fill="#d8e8ff" opacity="0.15"/><circle cx="744" cy="226" r="0.65" fill="#d8e8ff" opacity="0.15"/><circle cx="424" cy="486" r="0.65" fill="#d8e8ff" opacity="0.15"/><circle cx="130" cy="210" r="0.65" fill="#d8e8ff" opacity="0.15"/><circle cx="782" cy="498" r="0.65" fill="#d8e8ff" opacity="0.15"/><circle cx="540" cy="250" r="1.6" fill="#d8e8ff" opacity="0.15"/><circle cx="324" cy="566" r="0.65" fill="#d8e8ff" opacity="0.4"/><circle cx="134" cy="346" r="0.65" fill="#d8e8ff" opacity="0.15"/><circle cx="890" cy="140" r="0.65" fill="#d8e8ff" opacity="0.15"/><circle cx="752" cy="498" r="0.65" fill="#d8e8ff" opacity="0.15"/><circle cx="640" cy="320" r="0.65" fill="#d8e8ff" opacity="0.15"/><circle cx="554" cy="156" r="0.65" fill="#d8e8ff" opacity="0.15"/><circle cx="494" cy="556" r="0.65" fill="#d8e8ff" opacity="0.15"/><circle cx="460" cy="420" r="0.65" fill="#d8e8ff" opacity="0.4"/><circle cx="452" cy="298" r="0.65" fill="#d8e8ff" opacity="0.15"/><circle cx="470" cy="190" r="0.65" fill="#d8e8ff" opacity="0.15"/><circle cx="514" cy="96" r="1.6" fill="#d8e8ff" opacity="0.15"/><circle cx="584" cy="566" r="0.65" fill="#d8e8ff" opacity="0.15"/><circle cx="680" cy="500" r="0.65" fill="#d8e8ff" opacity="0.15"/><circle cx="802" cy="448" r="0.65" fill="#d8e8ff" opacity="0.15"/><circle cx="30" cy="410" r="0.65" fill="#d8e8ff" opacity="0.4"/><circle cx="204" cy="386" r="0.65" fill="#d8e8ff" opacity="0.15"/><circle cx="404" cy="376" r="0.65" fill="#d8e8ff" opacity="0.15"/><circle cx="630" cy="380" r="0.65" fill="#d8e8ff" opacity="0.15"/><circle cx="882" cy="398" r="0.65" fill="#d8e8ff" opacity="0.15"/><circle cx="240" cy="430" r="0.65" fill="#d8e8ff" opacity="0.15"/><circle cx="544" cy="476" r="0.65" fill="#d8e8ff" opacity="0.15"/><circle cx="874" cy="536" r="1.6" fill="#d8e8ff" opacity="0.4"/><circle cx="310" cy="60" r="0.65" fill="#d8e8ff" opacity="0.15"/><circle cx="692" cy="148" r="0.65" fill="#d8e8ff" opacity="0.15"/><circle cx="180" cy="250" r="0.65" fill="#d8e8ff" opacity="0.15"/><circle cx="614" cy="366" r="0.65" fill="#d8e8ff" opacity="0.15"/><circle cx="154" cy="496" r="0.65" fill="#d8e8ff" opacity="0.15"/><circle cx="640" cy="90" r="0.65" fill="#d8e8ff" opacity="0.15"/><circle cx="232" cy="248" r="0.65" fill="#d8e8ff" opacity="0.4"/><circle cx="770" cy="420" r="0.65" fill="#d8e8ff" opacity="0.15"/><circle cx="414" cy="56" r="0.65" fill="#d8e8ff" opacity="0.15"/><circle cx="84" cy="256" r="0.65" fill="#d8e8ff" opacity="0.15"/><circle cx="700" cy="470" r="1.6" fill="#d8e8ff" opacity="0.15"/><circle cx="422" cy="148" r="0.65" fill="#d8e8ff" opacity="0.15"/><circle cx="170" cy="390" r="0.65" fill="#d8e8ff" opacity="0.15"/><circle cx="864" cy="96" r="0.65" fill="#d8e8ff" opacity="0.4"/><circle cx="664" cy="366" r="0.65" fill="#d8e8ff" opacity="0.15"/><circle cx="490" cy="100" r="0.65" fill="#d8e8ff" opacity="0.15"/><circle cx="342" cy="398" r="0.65" fill="#d8e8ff" opacity="0.15"/><circle cx="220" cy="160" r="0.65" fill="#d8e8ff" opacity="0.15"/><circle cx="124" cy="486" r="0.65" fill="#d8e8ff" opacity="0.15"/><circle cx="54" cy="276" r="0.65" fill="#d8e8ff" opacity="0.15"/><circle cx="930" cy="80" r="0.65" fill="#d8e8ff" opacity="0.4"/><circle cx="912" cy="448" r="1.6" fill="#d8e8ff" opacity="0.15"/><circle cx="920" cy="280" r="0.65" fill="#d8e8ff" opacity="0.15"/><circle cx="34" cy="126" r="0.65" fill="#d8e8ff" opacity="0.15"/><circle cx="94" cy="536" r="0.65" fill="#d8e8ff" opacity="0.15"/><circle cx="180" cy="410" r="0.65" fill="#d8e8ff" opacity="0.15"/><circle cx="292" cy="298" r="0.65" fill="#d8e8ff" opacity="0.15"/><text x="38" y="205" fill="#e46d94" font-size="17" class="logic-glyph logic-glyph-0" opacity=".12">∧</text><text x="234" y="325" fill="#79e6d7" font-size="12" class="logic-glyph logic-glyph-1" opacity=".12">∨</text><text x="476" y="479" fill="#79e6d7" font-size="12" class="logic-glyph logic-glyph-2" opacity=".12">⊕</text><text x="764" y="667" fill="#e46d94" font-size="12" class="logic-glyph logic-glyph-0" opacity=".12">¬</text><text x="214" y="384" fill="#79e6d7" font-size="12" class="logic-glyph logic-glyph-1" opacity=".12">⇒</text><text x="594" y="640" fill="#79e6d7" font-size="17" class="logic-glyph logic-glyph-2" opacity=".12">0</text><text x="136" y="425" fill="#e46d94" font-size="12" class="logic-glyph logic-glyph-0" opacity=".12">1</text><text x="608" y="244" fill="#79e6d7" font-size="12" class="logic-glyph logic-glyph-1" opacity=".12">∧</text><text x="242" y="602" fill="#79e6d7" font-size="12" class="logic-glyph logic-glyph-2" opacity=".12">∨</text><text x="806" y="489" fill="#e46d94" font-size="12" class="logic-glyph logic-glyph-0" opacity=".12">⊕</text><text x="532" y="410" fill="#79e6d7" font-size="17" class="logic-glyph logic-glyph-1" opacity=".12">¬</text><text x="304" y="365" fill="#79e6d7" font-size="12" class="logic-glyph logic-glyph-2" opacity=".12">⇒</text><text x="122" y="354" fill="#e46d94" font-size="12" class="logic-glyph logic-glyph-0" opacity=".12">0</text><text x="870" y="377" fill="#79e6d7" font-size="12" class="logic-glyph logic-glyph-1" opacity=".12">1</text><text x="780" y="434" fill="#79e6d7" font-size="12" class="logic-glyph logic-glyph-2" opacity=".12">∧</text><text x="736" y="525" fill="#e46d94" font-size="17" class="logic-glyph logic-glyph-0" opacity=".12">∨</text><text x="738" y="650" fill="#79e6d7" font-size="12" class="logic-glyph logic-glyph-1" opacity=".12">⊕</text><text x="786" y="304" fill="#79e6d7" font-size="12" class="logic-glyph logic-glyph-2" opacity=".12">¬</text><text x="880" y="497" fill="#e46d94" font-size="12" class="logic-glyph logic-glyph-0" opacity=".12">⇒</text><text x="136" y="219" fill="#79e6d7" font-size="12" class="logic-glyph logic-glyph-1" opacity=".12">0</text><text x="322" y="480" fill="#79e6d7" font-size="17" class="logic-glyph logic-glyph-2" opacity=".12">1</text><text x="554" y="270" fill="#e46d94" font-size="12" class="logic-glyph logic-glyph-0" opacity=".12">∧</text><text x="832" y="599" fill="#79e6d7" font-size="12" class="logic-glyph logic-glyph-1" opacity=".12">∨</text><text x="272" y="457" fill="#79e6d7" font-size="12" class="logic-glyph logic-glyph-2" opacity=".12">⊕</text><text x="642" y="349" fill="#e46d94" font-size="12" class="logic-glyph logic-glyph-0" opacity=".12">¬</text><text x="174" y="275" fill="#79e6d7" font-size="17" class="logic-glyph logic-glyph-1" opacity=".12">⇒</text><text x="636" y="235" fill="#79e6d7" font-size="12" class="logic-glyph logic-glyph-2" opacity=".12">0</text><text x="260" y="229" fill="#e46d94" font-size="12" class="logic-glyph logic-glyph-0" opacity=".12">1</text><text x="814" y="257" fill="#79e6d7" font-size="12" class="logic-glyph logic-glyph-1" opacity=".12">∧</text><text x="530" y="319" fill="#79e6d7" font-size="12" class="logic-glyph logic-glyph-2" opacity=".12">∨</text><text x="292" y="415" fill="#e46d94" font-size="17" class="logic-glyph logic-glyph-0" opacity=".12">⊕</text><text x="100" y="545" fill="#79e6d7" font-size="12" class="logic-glyph logic-glyph-1" opacity=".12">¬</text><text x="838" y="709" fill="#79e6d7" font-size="12" class="logic-glyph logic-glyph-2" opacity=".12">⇒</text><text x="738" y="402" fill="#e46d94" font-size="12" class="logic-glyph logic-glyph-0" opacity=".12">0</text><text x="684" y="634" fill="#79e6d7" font-size="12" class="logic-glyph logic-glyph-1" opacity=".12">1</text><text x="676" y="395" fill="#79e6d7" font-size="17" class="logic-glyph logic-glyph-2" opacity=".12">∧</text><text x="714" y="695" fill="#e46d94" font-size="12" class="logic-glyph logic-glyph-0" opacity=".12">∨</text><text x="798" y="524" fill="#79e6d7" font-size="12" class="logic-glyph logic-glyph-1" opacity=".12">⊕</text><rect width="960" height="2431" fill="url(#scan)"/>
+  <rect width="960" height="2476" fill="url(#sky)"/><circle cx="20" cy="30" r="1.6" fill="#d8e8ff" opacity="0.4"/><circle cx="214" cy="126" r="0.65" fill="#d8e8ff" opacity="0.15"/><circle cx="434" cy="236" r="0.65" fill="#d8e8ff" opacity="0.15"/><circle cx="680" cy="360" r="0.65" fill="#d8e8ff" opacity="0.15"/><circle cx="32" cy="498" r="0.65" fill="#d8e8ff" opacity="0.15"/><circle cx="330" cy="100" r="0.65" fill="#d8e8ff" opacity="0.15"/><circle cx="654" cy="266" r="0.65" fill="#d8e8ff" opacity="0.15"/><circle cx="84" cy="446" r="0.65" fill="#d8e8ff" opacity="0.4"/><circle cx="460" cy="90" r="0.65" fill="#d8e8ff" opacity="0.15"/><circle cx="862" cy="298" r="0.65" fill="#d8e8ff" opacity="0.15"/><circle cx="370" cy="520" r="0.65" fill="#d8e8ff" opacity="0.15"/><circle cx="824" cy="206" r="1.6" fill="#d8e8ff" opacity="0.15"/><circle cx="384" cy="456" r="0.65" fill="#d8e8ff" opacity="0.15"/><circle cx="890" cy="170" r="0.65" fill="#d8e8ff" opacity="0.15"/><circle cx="502" cy="448" r="0.65" fill="#d8e8ff" opacity="0.4"/><circle cx="140" cy="190" r="0.65" fill="#d8e8ff" opacity="0.15"/><circle cx="724" cy="496" r="0.65" fill="#d8e8ff" opacity="0.15"/><circle cx="414" cy="266" r="0.65" fill="#d8e8ff" opacity="0.15"/><circle cx="130" cy="50" r="0.65" fill="#d8e8ff" opacity="0.15"/><circle cx="792" cy="398" r="0.65" fill="#d8e8ff" opacity="0.15"/><circle cx="560" cy="210" r="0.65" fill="#d8e8ff" opacity="0.15"/><circle cx="354" cy="36" r="0.65" fill="#d8e8ff" opacity="0.4"/><circle cx="174" cy="426" r="1.6" fill="#d8e8ff" opacity="0.15"/><circle cx="20" cy="280" r="0.65" fill="#d8e8ff" opacity="0.15"/><circle cx="812" cy="148" r="0.65" fill="#d8e8ff" opacity="0.15"/><circle cx="710" cy="30" r="0.65" fill="#d8e8ff" opacity="0.15"/><circle cx="634" cy="476" r="0.65" fill="#d8e8ff" opacity="0.15"/><circle cx="584" cy="386" r="0.65" fill="#d8e8ff" opacity="0.15"/><circle cx="560" cy="310" r="0.65" fill="#d8e8ff" opacity="0.4"/><circle cx="562" cy="248" r="0.65" fill="#d8e8ff" opacity="0.15"/><circle cx="590" cy="200" r="0.65" fill="#d8e8ff" opacity="0.15"/><circle cx="644" cy="166" r="0.65" fill="#d8e8ff" opacity="0.15"/><circle cx="724" cy="146" r="0.65" fill="#d8e8ff" opacity="0.15"/><circle cx="830" cy="140" r="1.6" fill="#d8e8ff" opacity="0.15"/><circle cx="42" cy="148" r="0.65" fill="#d8e8ff" opacity="0.15"/><circle cx="200" cy="170" r="0.65" fill="#d8e8ff" opacity="0.4"/><circle cx="384" cy="206" r="0.65" fill="#d8e8ff" opacity="0.15"/><circle cx="594" cy="256" r="0.65" fill="#d8e8ff" opacity="0.15"/><circle cx="830" cy="320" r="0.65" fill="#d8e8ff" opacity="0.15"/><circle cx="172" cy="398" r="0.65" fill="#d8e8ff" opacity="0.15"/><circle cx="460" cy="490" r="0.65" fill="#d8e8ff" opacity="0.15"/><circle cx="774" cy="46" r="0.65" fill="#d8e8ff" opacity="0.15"/><circle cx="194" cy="166" r="0.65" fill="#d8e8ff" opacity="0.4"/><circle cx="560" cy="300" r="0.65" fill="#d8e8ff" opacity="0.15"/><circle cx="32" cy="448" r="1.6" fill="#d8e8ff" opacity="0.15"/><circle cx="450" cy="60" r="0.65" fill="#d8e8ff" opacity="0.15"/><circle cx="894" cy="236" r="0.65" fill="#d8e8ff" opacity="0.15"/><circle cx="444" cy="426" r="0.65" fill="#d8e8ff" opacity="0.15"/><circle cx="20" cy="80" r="0.65" fill="#d8e8ff" opacity="0.15"/><circle cx="542" cy="298" r="0.65" fill="#d8e8ff" opacity="0.4"/><circle cx="170" cy="530" r="0.65" fill="#d8e8ff" opacity="0.15"/><circle cx="744" cy="226" r="0.65" fill="#d8e8ff" opacity="0.15"/><circle cx="424" cy="486" r="0.65" fill="#d8e8ff" opacity="0.15"/><circle cx="130" cy="210" r="0.65" fill="#d8e8ff" opacity="0.15"/><circle cx="782" cy="498" r="0.65" fill="#d8e8ff" opacity="0.15"/><circle cx="540" cy="250" r="1.6" fill="#d8e8ff" opacity="0.15"/><circle cx="324" cy="566" r="0.65" fill="#d8e8ff" opacity="0.4"/><circle cx="134" cy="346" r="0.65" fill="#d8e8ff" opacity="0.15"/><circle cx="890" cy="140" r="0.65" fill="#d8e8ff" opacity="0.15"/><circle cx="752" cy="498" r="0.65" fill="#d8e8ff" opacity="0.15"/><circle cx="640" cy="320" r="0.65" fill="#d8e8ff" opacity="0.15"/><circle cx="554" cy="156" r="0.65" fill="#d8e8ff" opacity="0.15"/><circle cx="494" cy="556" r="0.65" fill="#d8e8ff" opacity="0.15"/><circle cx="460" cy="420" r="0.65" fill="#d8e8ff" opacity="0.4"/><circle cx="452" cy="298" r="0.65" fill="#d8e8ff" opacity="0.15"/><circle cx="470" cy="190" r="0.65" fill="#d8e8ff" opacity="0.15"/><circle cx="514" cy="96" r="1.6" fill="#d8e8ff" opacity="0.15"/><circle cx="584" cy="566" r="0.65" fill="#d8e8ff" opacity="0.15"/><circle cx="680" cy="500" r="0.65" fill="#d8e8ff" opacity="0.15"/><circle cx="802" cy="448" r="0.65" fill="#d8e8ff" opacity="0.15"/><circle cx="30" cy="410" r="0.65" fill="#d8e8ff" opacity="0.4"/><circle cx="204" cy="386" r="0.65" fill="#d8e8ff" opacity="0.15"/><circle cx="404" cy="376" r="0.65" fill="#d8e8ff" opacity="0.15"/><circle cx="630" cy="380" r="0.65" fill="#d8e8ff" opacity="0.15"/><circle cx="882" cy="398" r="0.65" fill="#d8e8ff" opacity="0.15"/><circle cx="240" cy="430" r="0.65" fill="#d8e8ff" opacity="0.15"/><circle cx="544" cy="476" r="0.65" fill="#d8e8ff" opacity="0.15"/><circle cx="874" cy="536" r="1.6" fill="#d8e8ff" opacity="0.4"/><circle cx="310" cy="60" r="0.65" fill="#d8e8ff" opacity="0.15"/><circle cx="692" cy="148" r="0.65" fill="#d8e8ff" opacity="0.15"/><circle cx="180" cy="250" r="0.65" fill="#d8e8ff" opacity="0.15"/><circle cx="614" cy="366" r="0.65" fill="#d8e8ff" opacity="0.15"/><circle cx="154" cy="496" r="0.65" fill="#d8e8ff" opacity="0.15"/><circle cx="640" cy="90" r="0.65" fill="#d8e8ff" opacity="0.15"/><circle cx="232" cy="248" r="0.65" fill="#d8e8ff" opacity="0.4"/><circle cx="770" cy="420" r="0.65" fill="#d8e8ff" opacity="0.15"/><circle cx="414" cy="56" r="0.65" fill="#d8e8ff" opacity="0.15"/><circle cx="84" cy="256" r="0.65" fill="#d8e8ff" opacity="0.15"/><circle cx="700" cy="470" r="1.6" fill="#d8e8ff" opacity="0.15"/><circle cx="422" cy="148" r="0.65" fill="#d8e8ff" opacity="0.15"/><circle cx="170" cy="390" r="0.65" fill="#d8e8ff" opacity="0.15"/><circle cx="864" cy="96" r="0.65" fill="#d8e8ff" opacity="0.4"/><circle cx="664" cy="366" r="0.65" fill="#d8e8ff" opacity="0.15"/><circle cx="490" cy="100" r="0.65" fill="#d8e8ff" opacity="0.15"/><circle cx="342" cy="398" r="0.65" fill="#d8e8ff" opacity="0.15"/><circle cx="220" cy="160" r="0.65" fill="#d8e8ff" opacity="0.15"/><circle cx="124" cy="486" r="0.65" fill="#d8e8ff" opacity="0.15"/><circle cx="54" cy="276" r="0.65" fill="#d8e8ff" opacity="0.15"/><circle cx="930" cy="80" r="0.65" fill="#d8e8ff" opacity="0.4"/><circle cx="912" cy="448" r="1.6" fill="#d8e8ff" opacity="0.15"/><circle cx="920" cy="280" r="0.65" fill="#d8e8ff" opacity="0.15"/><circle cx="34" cy="126" r="0.65" fill="#d8e8ff" opacity="0.15"/><circle cx="94" cy="536" r="0.65" fill="#d8e8ff" opacity="0.15"/><circle cx="180" cy="410" r="0.65" fill="#d8e8ff" opacity="0.15"/><circle cx="292" cy="298" r="0.65" fill="#d8e8ff" opacity="0.15"/><text x="38" y="205" fill="#e46d94" font-size="17" class="logic-glyph logic-glyph-0" opacity=".12">∧</text><text x="234" y="325" fill="#79e6d7" font-size="12" class="logic-glyph logic-glyph-1" opacity=".12">∨</text><text x="476" y="479" fill="#79e6d7" font-size="12" class="logic-glyph logic-glyph-2" opacity=".12">⊕</text><text x="764" y="667" fill="#e46d94" font-size="12" class="logic-glyph logic-glyph-0" opacity=".12">¬</text><text x="214" y="384" fill="#79e6d7" font-size="12" class="logic-glyph logic-glyph-1" opacity=".12">⇒</text><text x="594" y="640" fill="#79e6d7" font-size="17" class="logic-glyph logic-glyph-2" opacity=".12">0</text><text x="136" y="425" fill="#e46d94" font-size="12" class="logic-glyph logic-glyph-0" opacity=".12">1</text><text x="608" y="244" fill="#79e6d7" font-size="12" class="logic-glyph logic-glyph-1" opacity=".12">∧</text><text x="242" y="602" fill="#79e6d7" font-size="12" class="logic-glyph logic-glyph-2" opacity=".12">∨</text><text x="806" y="489" fill="#e46d94" font-size="12" class="logic-glyph logic-glyph-0" opacity=".12">⊕</text><text x="532" y="410" fill="#79e6d7" font-size="17" class="logic-glyph logic-glyph-1" opacity=".12">¬</text><text x="304" y="365" fill="#79e6d7" font-size="12" class="logic-glyph logic-glyph-2" opacity=".12">⇒</text><text x="122" y="354" fill="#e46d94" font-size="12" class="logic-glyph logic-glyph-0" opacity=".12">0</text><text x="870" y="377" fill="#79e6d7" font-size="12" class="logic-glyph logic-glyph-1" opacity=".12">1</text><text x="780" y="434" fill="#79e6d7" font-size="12" class="logic-glyph logic-glyph-2" opacity=".12">∧</text><text x="736" y="525" fill="#e46d94" font-size="17" class="logic-glyph logic-glyph-0" opacity=".12">∨</text><text x="738" y="650" fill="#79e6d7" font-size="12" class="logic-glyph logic-glyph-1" opacity=".12">⊕</text><text x="786" y="304" fill="#79e6d7" font-size="12" class="logic-glyph logic-glyph-2" opacity=".12">¬</text><text x="880" y="497" fill="#e46d94" font-size="12" class="logic-glyph logic-glyph-0" opacity=".12">⇒</text><text x="136" y="219" fill="#79e6d7" font-size="12" class="logic-glyph logic-glyph-1" opacity=".12">0</text><text x="322" y="480" fill="#79e6d7" font-size="17" class="logic-glyph logic-glyph-2" opacity=".12">1</text><text x="554" y="270" fill="#e46d94" font-size="12" class="logic-glyph logic-glyph-0" opacity=".12">∧</text><text x="832" y="599" fill="#79e6d7" font-size="12" class="logic-glyph logic-glyph-1" opacity=".12">∨</text><text x="272" y="457" fill="#79e6d7" font-size="12" class="logic-glyph logic-glyph-2" opacity=".12">⊕</text><text x="642" y="349" fill="#e46d94" font-size="12" class="logic-glyph logic-glyph-0" opacity=".12">¬</text><text x="174" y="275" fill="#79e6d7" font-size="17" class="logic-glyph logic-glyph-1" opacity=".12">⇒</text><text x="636" y="235" fill="#79e6d7" font-size="12" class="logic-glyph logic-glyph-2" opacity=".12">0</text><text x="260" y="229" fill="#e46d94" font-size="12" class="logic-glyph logic-glyph-0" opacity=".12">1</text><text x="814" y="257" fill="#79e6d7" font-size="12" class="logic-glyph logic-glyph-1" opacity=".12">∧</text><text x="530" y="319" fill="#79e6d7" font-size="12" class="logic-glyph logic-glyph-2" opacity=".12">∨</text><text x="292" y="415" fill="#e46d94" font-size="17" class="logic-glyph logic-glyph-0" opacity=".12">⊕</text><text x="100" y="545" fill="#79e6d7" font-size="12" class="logic-glyph logic-glyph-1" opacity=".12">¬</text><text x="838" y="709" fill="#79e6d7" font-size="12" class="logic-glyph logic-glyph-2" opacity=".12">⇒</text><text x="738" y="402" fill="#e46d94" font-size="12" class="logic-glyph logic-glyph-0" opacity=".12">0</text><text x="684" y="634" fill="#79e6d7" font-size="12" class="logic-glyph logic-glyph-1" opacity=".12">1</text><text x="676" y="395" fill="#79e6d7" font-size="17" class="logic-glyph logic-glyph-2" opacity=".12">∧</text><text x="714" y="695" fill="#e46d94" font-size="12" class="logic-glyph logic-glyph-0" opacity=".12">∨</text><text x="798" y="524" fill="#79e6d7" font-size="12" class="logic-glyph logic-glyph-1" opacity=".12">⊕</text><rect width="960" height="2476" fill="url(#scan)"/>
   <g transform="translate(0 205)">
   <defs><radialGradient id="ship-halo"><stop stop-color="#e46d94" stop-opacity=".22"/><stop offset=".52" stop-color="#79e6d7" stop-opacity=".11"/><stop offset="1" stop-color="#050710" stop-opacity="0"/></radialGradient><linearGradient id="hull" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#202b41"/><stop offset=".45" stop-color="#0c1325"/><stop offset="1" stop-color="#060913"/></linearGradient></defs>
   <ellipse cx="480" cy="347" rx="451" ry="284" fill="url(#ship-halo)"/>
@@ -102,7 +102,7 @@
   <path d="M285 325H675M264 494H696" stroke="#7585a1" stroke-opacity=".45" stroke-width="2"/>
   <path d="M321 196h318M333 208h294" stroke="#79e6d7" stroke-opacity=".3"/>
   <text x="480" y="225" fill="#ffc76e" font-size="12" text-anchor="middle" letter-spacing="3">IF   ∧   THEN   ∨   ELSE</text>
-  <g opacity="1"><title>O18 A bigger gate and a hub that scales: 20 of 20 stories finished</title><circle cx="339" cy="282" r="54" fill="none" stroke="#ffc76e" stroke-width="19" opacity="0.34" filter="url(#glow)"/><circle cx="339" cy="282" r="45" fill="#050711" stroke="url(#rim)" stroke-width="8" stroke-dasharray=""/><circle cx="339" cy="282" r="37" fill="url(#well)"/><path d="M303 293.25Q339 241.5 375 295.5M316.5 255Q352.5 313.5 370.5 261.75" fill="none" stroke="#ffc76e" stroke-width="3.6" stroke-opacity=".6" class=""/><circle cx="339" cy="282" r="28" fill="none" stroke="#ffc76e" stroke-opacity=".16" stroke-width="4"/><circle cx="339" cy="282" r="28" fill="none" stroke="#ffc76e" stroke-width="4" stroke-linecap="round" stroke-dasharray="176 176" transform="rotate(-90 339 282)"/><circle cx="339" cy="282" r="58" fill="none" stroke="#ffc76e" stroke-opacity=".6" stroke-width="1" stroke-dasharray="1 12"/><text x="339" y="271" fill="#f1ecdf" font-size="10" text-anchor="middle" font-weight="700" letter-spacing="1">O18</text><text x="339" y="295" fill="#ffc76e" font-size="17" text-anchor="middle" font-weight="700">20/20</text></g><g opacity="1"><title>O23 Photos from the phone: 5 of 5 stories finished</title><circle cx="470" cy="282" r="54" fill="none" stroke="#ffc76e" stroke-width="19" opacity="0.34" filter="url(#glow)"/><circle cx="470" cy="282" r="45" fill="#050711" stroke="url(#rim)" stroke-width="8" stroke-dasharray=""/><circle cx="470" cy="282" r="37" fill="url(#well)"/><path d="M434 293.25Q470 241.5 506 295.5M447.5 255Q483.5 313.5 501.5 261.75" fill="none" stroke="#ffc76e" stroke-width="3.6" stroke-opacity=".6" class=""/><circle cx="470" cy="282" r="28" fill="none" stroke="#ffc76e" stroke-opacity=".16" stroke-width="4"/><circle cx="470" cy="282" r="28" fill="none" stroke="#ffc76e" stroke-width="4" stroke-linecap="round" stroke-dasharray="176 176" transform="rotate(-90 470 282)"/><circle cx="470" cy="282" r="58" fill="none" stroke="#ffc76e" stroke-opacity=".6" stroke-width="1" stroke-dasharray="1 12"/><text x="470" y="271" fill="#f1ecdf" font-size="10" text-anchor="middle" font-weight="700" letter-spacing="1">O23</text><text x="470" y="295" fill="#ffc76e" font-size="17" text-anchor="middle" font-weight="700">5/5</text></g><g opacity="1"><title>O24 Meals as a list: 5 of 5 stories finished</title><circle cx="601" cy="282" r="54" fill="none" stroke="#ffc76e" stroke-width="19" opacity="0.34" filter="url(#glow)"/><circle cx="601" cy="282" r="45" fill="#050711" stroke="url(#rim)" stroke-width="8" stroke-dasharray=""/><circle cx="601" cy="282" r="37" fill="url(#well)"/><path d="M565 293.25Q601 241.5 637 295.5M578.5 255Q614.5 313.5 632.5 261.75" fill="none" stroke="#ffc76e" stroke-width="3.6" stroke-opacity=".6" class=""/><circle cx="601" cy="282" r="28" fill="none" stroke="#ffc76e" stroke-opacity=".16" stroke-width="4"/><circle cx="601" cy="282" r="28" fill="none" stroke="#ffc76e" stroke-width="4" stroke-linecap="round" stroke-dasharray="176 176" transform="rotate(-90 601 282)"/><circle cx="601" cy="282" r="58" fill="none" stroke="#ffc76e" stroke-opacity=".6" stroke-width="1" stroke-dasharray="1 12"/><text x="601" y="271" fill="#f1ecdf" font-size="10" text-anchor="middle" font-weight="700" letter-spacing="1">O24</text><text x="601" y="295" fill="#ffc76e" font-size="17" text-anchor="middle" font-weight="700">5/5</text></g>
+  <g opacity="1"><title>O23 Photos from the phone: 5 of 5 stories finished</title><circle cx="339" cy="282" r="54" fill="none" stroke="#ffc76e" stroke-width="19" opacity="0.34" filter="url(#glow)"/><circle cx="339" cy="282" r="45" fill="#050711" stroke="url(#rim)" stroke-width="8" stroke-dasharray=""/><circle cx="339" cy="282" r="37" fill="url(#well)"/><path d="M303 293.25Q339 241.5 375 295.5M316.5 255Q352.5 313.5 370.5 261.75" fill="none" stroke="#ffc76e" stroke-width="3.6" stroke-opacity=".6" class=""/><circle cx="339" cy="282" r="28" fill="none" stroke="#ffc76e" stroke-opacity=".16" stroke-width="4"/><circle cx="339" cy="282" r="28" fill="none" stroke="#ffc76e" stroke-width="4" stroke-linecap="round" stroke-dasharray="176 176" transform="rotate(-90 339 282)"/><circle cx="339" cy="282" r="58" fill="none" stroke="#ffc76e" stroke-opacity=".6" stroke-width="1" stroke-dasharray="1 12"/><text x="339" y="271" fill="#f1ecdf" font-size="10" text-anchor="middle" font-weight="700" letter-spacing="1">O23</text><text x="339" y="295" fill="#ffc76e" font-size="17" text-anchor="middle" font-weight="700">5/5</text></g><g opacity="1"><title>O24 Meals as a list: 5 of 5 stories finished</title><circle cx="470" cy="282" r="54" fill="none" stroke="#ffc76e" stroke-width="19" opacity="0.34" filter="url(#glow)"/><circle cx="470" cy="282" r="45" fill="#050711" stroke="url(#rim)" stroke-width="8" stroke-dasharray=""/><circle cx="470" cy="282" r="37" fill="url(#well)"/><path d="M434 293.25Q470 241.5 506 295.5M447.5 255Q483.5 313.5 501.5 261.75" fill="none" stroke="#ffc76e" stroke-width="3.6" stroke-opacity=".6" class=""/><circle cx="470" cy="282" r="28" fill="none" stroke="#ffc76e" stroke-opacity=".16" stroke-width="4"/><circle cx="470" cy="282" r="28" fill="none" stroke="#ffc76e" stroke-width="4" stroke-linecap="round" stroke-dasharray="176 176" transform="rotate(-90 470 282)"/><circle cx="470" cy="282" r="58" fill="none" stroke="#ffc76e" stroke-opacity=".6" stroke-width="1" stroke-dasharray="1 12"/><text x="470" y="271" fill="#f1ecdf" font-size="10" text-anchor="middle" font-weight="700" letter-spacing="1">O24</text><text x="470" y="295" fill="#ffc76e" font-size="17" text-anchor="middle" font-weight="700">5/5</text></g><g opacity="1"><title>O26 An ADHD to-do list: 1 of 1 stories finished</title><circle cx="601" cy="282" r="54" fill="none" stroke="#ffc76e" stroke-width="19" opacity="0.34" filter="url(#glow)"/><circle cx="601" cy="282" r="45" fill="#050711" stroke="url(#rim)" stroke-width="8" stroke-dasharray=""/><circle cx="601" cy="282" r="37" fill="url(#well)"/><path d="M565 293.25Q601 241.5 637 295.5M578.5 255Q614.5 313.5 632.5 261.75" fill="none" stroke="#ffc76e" stroke-width="3.6" stroke-opacity=".6" class=""/><circle cx="601" cy="282" r="28" fill="none" stroke="#ffc76e" stroke-opacity=".16" stroke-width="4"/><circle cx="601" cy="282" r="28" fill="none" stroke="#ffc76e" stroke-width="4" stroke-linecap="round" stroke-dasharray="176 176" transform="rotate(-90 601 282)"/><circle cx="601" cy="282" r="58" fill="none" stroke="#ffc76e" stroke-opacity=".6" stroke-width="1" stroke-dasharray="1 12"/><text x="601" y="271" fill="#f1ecdf" font-size="10" text-anchor="middle" font-weight="700" letter-spacing="1">O26</text><text x="601" y="295" fill="#ffc76e" font-size="17" text-anchor="middle" font-weight="700">1/1</text></g>
   <g opacity="1"><title>N5 Ready for the testing week: 19 of 21 stories finished</title><circle cx="374" cy="420" r="74" fill="none" stroke="#79e6d7" stroke-width="19" opacity="0.34" filter="url(#glow)"/><circle cx="374" cy="420" r="65" fill="#050711" stroke="url(#rim)" stroke-width="10" stroke-dasharray=""/><circle cx="374" cy="420" r="57" fill="url(#well)"/><path d="M322 436.25Q374 361.5 426 439.5M341.5 381Q393.5 465.5 419.5 390.75" fill="none" stroke="#79e6d7" stroke-width="5.2" stroke-opacity=".6" class="current"/><circle cx="374" cy="420" r="48" fill="none" stroke="#79e6d7" stroke-opacity=".16" stroke-width="4"/><circle cx="374" cy="420" r="48" fill="none" stroke="#79e6d7" stroke-width="4" stroke-linecap="round" stroke-dasharray="273 302" transform="rotate(-90 374 420)"/><circle cx="374" cy="420" r="73" fill="none" stroke="#79e6d7" stroke-width="8" stroke-dasharray="130 18 39 14 55 25" transform="rotate(-78 374 420)"/><circle cx="374" cy="420" r="84" fill="none" stroke="#79e6d7" stroke-width="1.5" stroke-dasharray="3 8"/><circle cx="374" cy="420" r="74" fill="none" stroke="#79e6d7" stroke-width="20" filter="url(#glow)" opacity="0" class="progress-ring-halo"/><circle cx="374" cy="420" r="78" fill="none" stroke="#79e6d7" stroke-opacity=".6" stroke-width="1" stroke-dasharray="1 12"/><text x="374" y="403" fill="#f1ecdf" font-size="12" text-anchor="middle" font-weight="700" letter-spacing="1">N5</text><text x="374" y="437" fill="#79e6d7" font-size="26" text-anchor="middle" font-weight="700">19/21</text></g><g opacity="1"><title>O19 Red Light: a rule per bulb: 16 of 18 stories finished</title><circle cx="565" cy="420" r="74" fill="none" stroke="#b8a0fc" stroke-width="19" opacity="0.34" filter="url(#glow)"/><circle cx="565" cy="420" r="65" fill="#050711" stroke="url(#rim)" stroke-width="10" stroke-dasharray=""/><circle cx="565" cy="420" r="57" fill="url(#well)"/><path d="M513 436.25Q565 361.5 617 439.5M532.5 381Q584.5 465.5 610.5 390.75" fill="none" stroke="#b8a0fc" stroke-width="5.2" stroke-opacity=".6" class="current"/><circle cx="565" cy="420" r="48" fill="none" stroke="#b8a0fc" stroke-opacity=".16" stroke-width="4"/><circle cx="565" cy="420" r="48" fill="none" stroke="#b8a0fc" stroke-width="4" stroke-linecap="round" stroke-dasharray="268 302" transform="rotate(-90 565 420)"/><circle cx="565" cy="420" r="73" fill="none" stroke="#b8a0fc" stroke-width="8" stroke-dasharray="130 18 39 14 55 25" transform="rotate(-78 565 420)"/><circle cx="565" cy="420" r="84" fill="none" stroke="#b8a0fc" stroke-width="1.5" stroke-dasharray="3 8"/><circle cx="565" cy="420" r="74" fill="none" stroke="#b8a0fc" stroke-width="20" filter="url(#glow)" opacity="0" class="progress-ring-halo"/><circle cx="565" cy="420" r="78" fill="none" stroke="#b8a0fc" stroke-opacity=".6" stroke-width="1" stroke-dasharray="1 12"/><text x="565" y="403" fill="#f1ecdf" font-size="12" text-anchor="middle" font-weight="700" letter-spacing="1">O19</text><text x="565" y="437" fill="#b8a0fc" font-size="26" text-anchor="middle" font-weight="700">16/18</text></g>
   <path d="M338 343v14h-27v22m159-36v16h-32v20m163-36v17h25v19" fill="none" stroke="#79e6d7" stroke-opacity=".5" stroke-width="2"/>
   <path d="M437 420h58M470 366v-24m0 156v21" stroke="#e46d94" stroke-opacity=".7" stroke-width="3" stroke-dasharray="4 7" class="current"/>
@@ -146,13 +146,13 @@
   <path d="M88 454l-19 67 28 48h110l26-76-38-54zM872 454l19 67-28 48H753l-26-76 38-54z" fill="#070d19" stroke="#46536d" stroke-width="3"/>
   <path d="M93 494l-9 29 21 38h81l27-63M867 494l9 29-21 38h-81l-27-63" fill="none" stroke="#e46d94" stroke-opacity=".55" stroke-width="3"/>
   <path d="M89 566h122M749 566h122" stroke="#79e6d7" stroke-width="5" stroke-opacity=".65" filter="url(#smallGlow)"/>
-  <g opacity="0.58"><title>O21 Check-ins by message: 11 of 13 stories finished</title><circle cx="125" cy="456" r="43" fill="none" stroke="#b8a0fc" stroke-width="19" opacity="0.08" filter="url(#glow)"/><circle cx="125" cy="456" r="34" fill="#050711" stroke="#b8a0fc" stroke-width="8" stroke-dasharray="3 11"/><circle cx="125" cy="456" r="27" fill="#060a16" stroke="#b8a0fc" stroke-opacity=".4" stroke-dasharray="5 9"/><circle cx="125" cy="456" r="17" fill="none" stroke="#b8a0fc" stroke-opacity=".16" stroke-width="3"/><circle cx="125" cy="456" r="17" fill="none" stroke="#b8a0fc" stroke-width="3" stroke-linecap="round" stroke-dasharray="91 107" transform="rotate(-90 125 456)"/><circle cx="125" cy="456" r="47" fill="none" stroke="#b8a0fc" stroke-opacity=".6" stroke-width="1" stroke-dasharray="1 12"/><text x="125" y="448" fill="#f1ecdf" font-size="8" text-anchor="middle" font-weight="700" letter-spacing="1">O21</text><text x="125" y="465" fill="#b8a0fc" font-size="12" text-anchor="middle" font-weight="700">11/13</text></g><g opacity="0.58"><title>O2 A safe base: 16 of 17 stories finished</title><circle cx="835" cy="456" r="43" fill="none" stroke="#b8a0fc" stroke-width="19" opacity="0.08" filter="url(#glow)"/><circle cx="835" cy="456" r="34" fill="#050711" stroke="#b8a0fc" stroke-width="8" stroke-dasharray="3 11"/><circle cx="835" cy="456" r="27" fill="#060a16" stroke="#b8a0fc" stroke-opacity=".4" stroke-dasharray="5 9"/><circle cx="835" cy="456" r="17" fill="none" stroke="#b8a0fc" stroke-opacity=".16" stroke-width="3"/><circle cx="835" cy="456" r="17" fill="none" stroke="#b8a0fc" stroke-width="3" stroke-linecap="round" stroke-dasharray="101 107" transform="rotate(-90 835 456)"/><circle cx="835" cy="456" r="47" fill="none" stroke="#b8a0fc" stroke-opacity=".6" stroke-width="1" stroke-dasharray="1 12"/><text x="835" y="448" fill="#f1ecdf" font-size="8" text-anchor="middle" font-weight="700" letter-spacing="1">O2</text><text x="835" y="465" fill="#b8a0fc" font-size="12" text-anchor="middle" font-weight="700">16/17</text></g>
+  <g opacity="0.58"><title>O21 Check-ins by message: 12 of 14 stories finished</title><circle cx="125" cy="456" r="43" fill="none" stroke="#b8a0fc" stroke-width="19" opacity="0.08" filter="url(#glow)"/><circle cx="125" cy="456" r="34" fill="#050711" stroke="#b8a0fc" stroke-width="8" stroke-dasharray="3 11"/><circle cx="125" cy="456" r="27" fill="#060a16" stroke="#b8a0fc" stroke-opacity=".4" stroke-dasharray="5 9"/><circle cx="125" cy="456" r="17" fill="none" stroke="#b8a0fc" stroke-opacity=".16" stroke-width="3"/><circle cx="125" cy="456" r="17" fill="none" stroke="#b8a0fc" stroke-width="3" stroke-linecap="round" stroke-dasharray="92 107" transform="rotate(-90 125 456)"/><circle cx="125" cy="456" r="47" fill="none" stroke="#b8a0fc" stroke-opacity=".6" stroke-width="1" stroke-dasharray="1 12"/><text x="125" y="448" fill="#f1ecdf" font-size="8" text-anchor="middle" font-weight="700" letter-spacing="1">O21</text><text x="125" y="465" fill="#b8a0fc" font-size="12" text-anchor="middle" font-weight="700">12/14</text></g><g opacity="0.58"><title>O2 A safe base: 16 of 17 stories finished</title><circle cx="835" cy="456" r="43" fill="none" stroke="#b8a0fc" stroke-width="19" opacity="0.08" filter="url(#glow)"/><circle cx="835" cy="456" r="34" fill="#050711" stroke="#b8a0fc" stroke-width="8" stroke-dasharray="3 11"/><circle cx="835" cy="456" r="27" fill="#060a16" stroke="#b8a0fc" stroke-opacity=".4" stroke-dasharray="5 9"/><circle cx="835" cy="456" r="17" fill="none" stroke="#b8a0fc" stroke-opacity=".16" stroke-width="3"/><circle cx="835" cy="456" r="17" fill="none" stroke="#b8a0fc" stroke-width="3" stroke-linecap="round" stroke-dasharray="101 107" transform="rotate(-90 835 456)"/><circle cx="835" cy="456" r="47" fill="none" stroke="#b8a0fc" stroke-opacity=".6" stroke-width="1" stroke-dasharray="1 12"/><text x="835" y="448" fill="#f1ecdf" font-size="8" text-anchor="middle" font-weight="700" letter-spacing="1">O2</text><text x="835" y="465" fill="#b8a0fc" font-size="12" text-anchor="middle" font-weight="700">16/17</text></g>
   <text x="38" y="101" fill="#ffc76e" font-size="11" letter-spacing="1">LATEST FINISHED OUTCOMES</text><text x="922" y="101" fill="#79e6d7" font-size="11" text-anchor="end" letter-spacing="1">CURRENT FOCUS</text>
   </g>
   <g transform="translate(0 -545)">
   <path d="M25 565H935" stroke="#79e6d7" stroke-opacity=".4"/>
   <text x="30" y="590" fill="#79e6d7" font-size="12" font-weight="700" letter-spacing="2">WATCHTOWER LEDGER</text>
-  <text x="930" y="590" fill="#aab2c7" font-size="10" text-anchor="end" letter-spacing="1">REFRESHED EVERY THREE HOURS</text>
+  <text x="930" y="590" fill="#aab2c7" font-size="10" text-anchor="end" letter-spacing="1">REFRESHED A FEW TIMES A DAY</text>
   <path d="M42 602H229l12 12v118l-12 12H42l-12-12V614Z" fill="#171a2d" stroke="#ffc76e" stroke-opacity=".75" stroke-width="2"/>
   <path d="M42 607h37M229 739h-37" stroke="#ffc76e" stroke-width="3" stroke-opacity=".65"/>
   <circle cx="40" cy="613" r="2" fill="#ffc76e"/><circle cx="231" cy="733" r="2" fill="#ffc76e"/><path d="M265 602H452l12 12v118l-12 12H265l-12-12V614Z" fill="#211525" stroke="#e46d94" stroke-opacity=".75" stroke-width="2"/>
@@ -163,19 +163,19 @@
   <path d="M711 607h37M918 739h-37" stroke="#b8a0fc" stroke-width="3" stroke-opacity=".65"/>
   <circle cx="709" cy="613" r="2" fill="#b8a0fc"/><circle cx="920" cy="733" r="2" fill="#b8a0fc"/>
   <text x="48" y="634" fill="#ffc76e" font-size="12" font-weight="700" letter-spacing="1">PRS MERGED</text>
-  <text x="47" y="706" fill="#f1ecdf" font-size="54" font-weight="700">488</text>
+  <text x="47" y="706" fill="#f1ecdf" font-size="54" font-weight="700">498</text>
   <text x="223" y="727" fill="#ffc76e" font-size="10" text-anchor="end" letter-spacing="1">ALL TIME</text>
   <text x="271" y="634" fill="#e46d94" font-size="12" font-weight="700" letter-spacing="1">ISSUES CLOSED</text>
-  <text x="270" y="706" fill="#f1ecdf" font-size="54" font-weight="700">350</text>
+  <text x="270" y="706" fill="#f1ecdf" font-size="54" font-weight="700">360</text>
   <text x="446" y="727" fill="#e46d94" font-size="10" text-anchor="end" letter-spacing="1">ALL TIME</text>
   <text x="494" y="634" fill="#79e6d7" font-size="12" font-weight="700" letter-spacing="1">V1 STORIES</text>
-  <text x="493" y="693" fill="#f1ecdf" font-size="34" font-weight="700">242/255</text>
+  <text x="493" y="693" fill="#f1ecdf" font-size="34" font-weight="700">247/260</text>
   <path d="M494 720h174" stroke="#2d3c54" stroke-width="7" stroke-linecap="round"/>
   <path d="M494 720h165" stroke="#79e6d7" stroke-width="7" stroke-linecap="round"/>
   <text x="717" y="634" fill="#b8a0fc" font-size="12" font-weight="700" letter-spacing="1">LAST 7 DAYS</text>
-  <text x="716" y="676" fill="#f1ecdf" font-size="27" font-weight="700">218</text>
+  <text x="716" y="676" fill="#f1ecdf" font-size="27" font-weight="700">228</text>
   <text x="772" y="675" fill="#aab2c7" font-size="10" >PRS MERGED</text>
-  <text x="716" y="716" fill="#f1ecdf" font-size="27" font-weight="700">232</text>
+  <text x="716" y="716" fill="#f1ecdf" font-size="27" font-weight="700">242</text>
   <text x="772" y="715" fill="#aab2c7" font-size="10" >ISSUES CLOSED</text>
   </g>
   <g transform="translate(0 205)">
@@ -183,10 +183,10 @@
   <text x="30" y="606" fill="#f1ecdf" font-size="23" font-weight="700" letter-spacing="2">ROAD TO V1</text>
   <text x="930" y="604" fill="#79e6d7" font-size="11" text-anchor="end" letter-spacing="1">STORIES FINISHED  /  TOTAL</text>
   <path d="M30 622H930" stroke="#79e6d7" stroke-opacity=".45"/>
-  <path d="M65 637V2150" stroke="#79e6d7" stroke-opacity=".18" stroke-width="3" stroke-dasharray="3 8"/>
+  <path d="M65 637V2195" stroke="#79e6d7" stroke-opacity=".18" stroke-width="3" stroke-dasharray="3 8"/>
   <text x="30" y="938" fill="#ffc76e" font-size="10" letter-spacing="1">OUTCOMES</text>
-  <text x="30" y="1516" fill="#b8a0fc" font-size="10" letter-spacing="1">NEXT BOARD  ·  V1.1</text>
-  <text x="30" y="1914" fill="#8991a3" font-size="10" letter-spacing="1">LATER</text>
+  <text x="30" y="1561" fill="#b8a0fc" font-size="10" letter-spacing="1">NEXT BOARD  ·  V1.1</text>
+  <text x="30" y="1959" fill="#8991a3" font-size="10" letter-spacing="1">LATER</text>
   <g>
       <rect x="30" y="645" width="900" height="41" rx="6" fill="#0c1324" stroke="#ffc76e" stroke-opacity="0.32"/>
       <path d="M31 653v-7h21M929 653v-7h-21" fill="none" stroke="#ffc76e" stroke-opacity=".7" stroke-width="1.5"/>
@@ -290,7 +290,7 @@
       <circle cx="65" cy="1064" r="13" fill="none" stroke="#a69aba" stroke-width="4" stroke-dasharray="33 82" transform="rotate(-90 65 1064)"/>
       <circle cx="65" cy="1064" r="4" fill="#a69aba" opacity="0.8"/>
       <text x="96" y="1070" fill="#a69aba" font-size="17" font-weight="700">O3</text>
-      <text x="155" y="1070" fill="#f1ecdf" font-size="16" font-weight="600">AI on a budget</text>
+      <text x="155" y="1070" fill="#f1ecdf" font-size="16" font-weight="600">Thinking on a budget</text>
       <text x="636" y="1069" fill="#a69aba" font-size="10" text-anchor="middle" letter-spacing="1">FORMING</text>
       <path d="M710 1064h112" stroke="#2d3c54" stroke-width="8" stroke-linecap="round"/>
       <path d="M710 1064h44" stroke="#a69aba" stroke-width="6" stroke-linecap="round" opacity="0.9"/>
@@ -359,14 +359,14 @@
       <rect x="30" y="1313" width="900" height="41" rx="6" fill="#0c1324" stroke="#a69aba" stroke-opacity="0.64"/>
       <path d="M31 1321v-7h21M929 1321v-7h-21" fill="none" stroke="#a69aba" stroke-opacity=".7" stroke-width="1.5"/>
       <circle cx="65" cy="1334" r="13" fill="#060a17" stroke="#a69aba" stroke-opacity=".34" stroke-width="4"/>
-      <circle cx="65" cy="1334" r="13" fill="none" stroke="#a69aba" stroke-width="4" stroke-dasharray="69 82" transform="rotate(-90 65 1334)"/>
+      <circle cx="65" cy="1334" r="13" fill="none" stroke="#a69aba" stroke-width="4" stroke-dasharray="70 82" transform="rotate(-90 65 1334)"/>
       <circle cx="65" cy="1334" r="4" fill="#a69aba" opacity="0.8"/>
       <text x="96" y="1340" fill="#a69aba" font-size="17" font-weight="700">O21</text>
       <text x="155" y="1340" fill="#f1ecdf" font-size="16" font-weight="600">Check-ins by message</text>
       <text x="636" y="1339" fill="#a69aba" font-size="10" text-anchor="middle" letter-spacing="1">FORMING</text>
       <path d="M710 1334h112" stroke="#2d3c54" stroke-width="8" stroke-linecap="round"/>
-      <path d="M710 1334h94" stroke="#a69aba" stroke-width="6" stroke-linecap="round" opacity="0.9"/>
-      <text x="913" y="1340" fill="#a69aba" font-size="14" text-anchor="end" font-weight="700">11/13</text>
+      <path d="M710 1334h95" stroke="#a69aba" stroke-width="6" stroke-linecap="round" opacity="0.9"/>
+      <text x="913" y="1340" fill="#a69aba" font-size="14" text-anchor="end" font-weight="700">12/14</text>
     </g><g>
       <rect x="30" y="1358" width="900" height="41" rx="6" fill="#101729" stroke="#a69aba" stroke-opacity="0.64"/>
       <path d="M31 1366v-7h21M929 1366v-7h-21" fill="none" stroke="#a69aba" stroke-opacity=".7" stroke-width="1.5"/>
@@ -378,7 +378,7 @@
       <text x="636" y="1384" fill="#a69aba" font-size="10" text-anchor="middle" letter-spacing="1">FORMING</text>
       <path d="M710 1379h112" stroke="#2d3c54" stroke-width="8" stroke-linecap="round"/>
       <path d="M710 1379h106" stroke="#a69aba" stroke-width="6" stroke-linecap="round" opacity="0.9"/>
-      <text x="913" y="1385" fill="#a69aba" font-size="14" text-anchor="end" font-weight="700">64/67</text>
+      <text x="913" y="1385" fill="#a69aba" font-size="14" text-anchor="end" font-weight="700">67/70</text>
     </g><g>
       <rect x="30" y="1403" width="900" height="41" rx="6" fill="#0c1324" stroke="#ffc76e" stroke-opacity="0.32"/>
       <path d="M31 1411v-7h21M929 1411v-7h-21" fill="none" stroke="#ffc76e" stroke-opacity=".7" stroke-width="1.5"/>
@@ -404,164 +404,176 @@
       <path d="M710 1469h111" stroke="#ffc76e" stroke-width="6" stroke-linecap="round" opacity="0.9"/>
       <text x="913" y="1475" fill="#ffc76e" font-size="14" text-anchor="end" font-weight="700">5/5</text>
     </g><g>
-      <rect x="30" y="1531" width="900" height="41" rx="6" fill="#0c1324" stroke="#ffc76e" stroke-opacity="0.32"/>
-      <path d="M31 1539v-7h21M929 1539v-7h-21" fill="none" stroke="#ffc76e" stroke-opacity=".7" stroke-width="1.5"/>
-      <circle cx="65" cy="1552" r="13" fill="#060a17" stroke="#ffc76e" stroke-opacity=".34" stroke-width="4"/>
-      <circle cx="65" cy="1552" r="13" fill="none" stroke="#ffc76e" stroke-width="4" stroke-dasharray="82 82" transform="rotate(-90 65 1552)"/>
-      <circle cx="65" cy="1552" r="4" fill="#ffc76e" opacity="0.8"/>
-      <text x="96" y="1558" fill="#ffc76e" font-size="17" font-weight="700">O13</text>
-      <text x="155" y="1558" fill="#f1ecdf" font-size="16" font-weight="600">Quit That, further</text>
-      <text x="636" y="1557" fill="#ffc76e" font-size="10" text-anchor="middle" letter-spacing="1">COMPLETE</text>
-      <path d="M710 1552h112" stroke="#2d3c54" stroke-width="8" stroke-linecap="round"/>
-      <path d="M710 1552h111" stroke="#ffc76e" stroke-width="6" stroke-linecap="round" opacity="0.9"/>
-      <text x="913" y="1558" fill="#ffc76e" font-size="14" text-anchor="end" font-weight="700">7/7</text>
+      <rect x="30" y="1493" width="900" height="41" rx="6" fill="#0c1324" stroke="#ffc76e" stroke-opacity="0.32"/>
+      <path d="M31 1501v-7h21M929 1501v-7h-21" fill="none" stroke="#ffc76e" stroke-opacity=".7" stroke-width="1.5"/>
+      <circle cx="65" cy="1514" r="13" fill="#060a17" stroke="#ffc76e" stroke-opacity=".34" stroke-width="4"/>
+      <circle cx="65" cy="1514" r="13" fill="none" stroke="#ffc76e" stroke-width="4" stroke-dasharray="82 82" transform="rotate(-90 65 1514)"/>
+      <circle cx="65" cy="1514" r="4" fill="#ffc76e" opacity="0.8"/>
+      <text x="96" y="1520" fill="#ffc76e" font-size="17" font-weight="700">O26</text>
+      <text x="155" y="1520" fill="#f1ecdf" font-size="16" font-weight="600">An ADHD to-do list</text>
+      <text x="636" y="1519" fill="#ffc76e" font-size="10" text-anchor="middle" letter-spacing="1">COMPLETE</text>
+      <path d="M710 1514h112" stroke="#2d3c54" stroke-width="8" stroke-linecap="round"/>
+      <path d="M710 1514h111" stroke="#ffc76e" stroke-width="6" stroke-linecap="round" opacity="0.9"/>
+      <text x="913" y="1520" fill="#ffc76e" font-size="14" text-anchor="end" font-weight="700">1/1</text>
     </g><g>
       <rect x="30" y="1576" width="900" height="41" rx="6" fill="#101729" stroke="#ffc76e" stroke-opacity="0.32"/>
       <path d="M31 1584v-7h21M929 1584v-7h-21" fill="none" stroke="#ffc76e" stroke-opacity=".7" stroke-width="1.5"/>
       <circle cx="65" cy="1597" r="13" fill="#060a17" stroke="#ffc76e" stroke-opacity=".34" stroke-width="4"/>
       <circle cx="65" cy="1597" r="13" fill="none" stroke="#ffc76e" stroke-width="4" stroke-dasharray="82 82" transform="rotate(-90 65 1597)"/>
       <circle cx="65" cy="1597" r="4" fill="#ffc76e" opacity="0.8"/>
-      <text x="96" y="1603" fill="#ffc76e" font-size="17" font-weight="700">O14</text>
-      <text x="155" y="1603" fill="#f1ecdf" font-size="16" font-weight="600">The red light</text>
+      <text x="96" y="1603" fill="#ffc76e" font-size="17" font-weight="700">O13</text>
+      <text x="155" y="1603" fill="#f1ecdf" font-size="16" font-weight="600">Quit That, further</text>
       <text x="636" y="1602" fill="#ffc76e" font-size="10" text-anchor="middle" letter-spacing="1">COMPLETE</text>
       <path d="M710 1597h112" stroke="#2d3c54" stroke-width="8" stroke-linecap="round"/>
       <path d="M710 1597h111" stroke="#ffc76e" stroke-width="6" stroke-linecap="round" opacity="0.9"/>
-      <text x="913" y="1603" fill="#ffc76e" font-size="14" text-anchor="end" font-weight="700">6/6</text>
+      <text x="913" y="1603" fill="#ffc76e" font-size="14" text-anchor="end" font-weight="700">7/7</text>
     </g><g>
-      <rect x="30" y="1621" width="900" height="41" rx="6" fill="#0c1324" stroke="#a69aba" stroke-opacity="0.64"/>
-      <path d="M31 1629v-7h21M929 1629v-7h-21" fill="none" stroke="#a69aba" stroke-opacity=".7" stroke-width="1.5"/>
-      <circle cx="65" cy="1642" r="13" fill="#060a17" stroke="#a69aba" stroke-opacity=".34" stroke-width="4"/>
-      <circle cx="65" cy="1642" r="13" fill="none" stroke="#a69aba" stroke-width="4" stroke-dasharray="70 82" transform="rotate(-90 65 1642)"/>
-      <circle cx="65" cy="1642" r="4" fill="#a69aba" opacity="0.8"/>
-      <text x="96" y="1648" fill="#a69aba" font-size="17" font-weight="700">O15</text>
-      <text x="155" y="1648" fill="#f1ecdf" font-size="16" font-weight="600">The Echo joins the hub</text>
-      <text x="636" y="1647" fill="#a69aba" font-size="10" text-anchor="middle" letter-spacing="1">FORMING</text>
+      <rect x="30" y="1621" width="900" height="41" rx="6" fill="#0c1324" stroke="#ffc76e" stroke-opacity="0.32"/>
+      <path d="M31 1629v-7h21M929 1629v-7h-21" fill="none" stroke="#ffc76e" stroke-opacity=".7" stroke-width="1.5"/>
+      <circle cx="65" cy="1642" r="13" fill="#060a17" stroke="#ffc76e" stroke-opacity=".34" stroke-width="4"/>
+      <circle cx="65" cy="1642" r="13" fill="none" stroke="#ffc76e" stroke-width="4" stroke-dasharray="82 82" transform="rotate(-90 65 1642)"/>
+      <circle cx="65" cy="1642" r="4" fill="#ffc76e" opacity="0.8"/>
+      <text x="96" y="1648" fill="#ffc76e" font-size="17" font-weight="700">O14</text>
+      <text x="155" y="1648" fill="#f1ecdf" font-size="16" font-weight="600">The red light</text>
+      <text x="636" y="1647" fill="#ffc76e" font-size="10" text-anchor="middle" letter-spacing="1">COMPLETE</text>
       <path d="M710 1642h112" stroke="#2d3c54" stroke-width="8" stroke-linecap="round"/>
-      <path d="M710 1642h95" stroke="#a69aba" stroke-width="6" stroke-linecap="round" opacity="0.9"/>
-      <text x="913" y="1648" fill="#a69aba" font-size="14" text-anchor="end" font-weight="700">6/7</text>
+      <path d="M710 1642h111" stroke="#ffc76e" stroke-width="6" stroke-linecap="round" opacity="0.9"/>
+      <text x="913" y="1648" fill="#ffc76e" font-size="14" text-anchor="end" font-weight="700">6/6</text>
     </g><g>
-      <rect x="30" y="1666" width="900" height="41" rx="6" fill="#101729" stroke="#a69aba" stroke-opacity="0.32"/>
+      <rect x="30" y="1666" width="900" height="41" rx="6" fill="#101729" stroke="#a69aba" stroke-opacity="0.64"/>
       <path d="M31 1674v-7h21M929 1674v-7h-21" fill="none" stroke="#a69aba" stroke-opacity=".7" stroke-width="1.5"/>
       <circle cx="65" cy="1687" r="13" fill="#060a17" stroke="#a69aba" stroke-opacity=".34" stroke-width="4"/>
-      <circle cx="65" cy="1687" r="13" fill="none" stroke="#a69aba" stroke-width="4" stroke-dasharray="0 82" transform="rotate(-90 65 1687)"/>
+      <circle cx="65" cy="1687" r="13" fill="none" stroke="#a69aba" stroke-width="4" stroke-dasharray="70 82" transform="rotate(-90 65 1687)"/>
       <circle cx="65" cy="1687" r="4" fill="#a69aba" opacity="0.8"/>
-      <text x="96" y="1693" fill="#a69aba" font-size="17" font-weight="700">O20</text>
-      <text x="155" y="1693" fill="#f1ecdf" font-size="16" font-weight="600">The Workshop portal</text>
-      <text x="636" y="1692" fill="#a69aba" font-size="10" text-anchor="middle" letter-spacing="1">NEXT BOARD</text>
+      <text x="96" y="1693" fill="#a69aba" font-size="17" font-weight="700">O15</text>
+      <text x="155" y="1693" fill="#f1ecdf" font-size="16" font-weight="600">The Echo joins the hub</text>
+      <text x="636" y="1692" fill="#a69aba" font-size="10" text-anchor="middle" letter-spacing="1">FORMING</text>
       <path d="M710 1687h112" stroke="#2d3c54" stroke-width="8" stroke-linecap="round"/>
-      <path d="M710 1687h0" stroke="#a69aba" stroke-width="6" stroke-linecap="round" opacity="0.9"/>
-      <text x="913" y="1693" fill="#a69aba" font-size="14" text-anchor="end" font-weight="700">0/5</text>
+      <path d="M710 1687h95" stroke="#a69aba" stroke-width="6" stroke-linecap="round" opacity="0.9"/>
+      <text x="913" y="1693" fill="#a69aba" font-size="14" text-anchor="end" font-weight="700">6/7</text>
     </g><g>
-      <rect x="30" y="1711" width="900" height="41" rx="6" fill="#0c1324" stroke="#a69aba" stroke-opacity="0.32"/>
+      <rect x="30" y="1711" width="900" height="41" rx="6" fill="#0c1324" stroke="#a69aba" stroke-opacity="0.64"/>
       <path d="M31 1719v-7h21M929 1719v-7h-21" fill="none" stroke="#a69aba" stroke-opacity=".7" stroke-width="1.5"/>
       <circle cx="65" cy="1732" r="13" fill="#060a17" stroke="#a69aba" stroke-opacity=".34" stroke-width="4"/>
-      <circle cx="65" cy="1732" r="13" fill="none" stroke="#a69aba" stroke-width="4" stroke-dasharray="0 82" transform="rotate(-90 65 1732)"/>
+      <circle cx="65" cy="1732" r="13" fill="none" stroke="#a69aba" stroke-width="4" stroke-dasharray="23 82" transform="rotate(-90 65 1732)"/>
       <circle cx="65" cy="1732" r="4" fill="#a69aba" opacity="0.8"/>
-      <text x="96" y="1738" fill="#a69aba" font-size="17" font-weight="700">O25</text>
-      <text x="155" y="1738" fill="#f1ecdf" font-size="16" font-weight="600">A starter a friend can run</text>
-      <text x="636" y="1737" fill="#a69aba" font-size="10" text-anchor="middle" letter-spacing="1">NEXT BOARD</text>
+      <text x="96" y="1738" fill="#a69aba" font-size="17" font-weight="700">O20</text>
+      <text x="155" y="1738" fill="#f1ecdf" font-size="16" font-weight="600">The Workshop portal</text>
+      <text x="636" y="1737" fill="#a69aba" font-size="10" text-anchor="middle" letter-spacing="1">FORMING</text>
       <path d="M710 1732h112" stroke="#2d3c54" stroke-width="8" stroke-linecap="round"/>
-      <path d="M710 1732h0" stroke="#a69aba" stroke-width="6" stroke-linecap="round" opacity="0.9"/>
-      <text x="913" y="1738" fill="#a69aba" font-size="14" text-anchor="end" font-weight="700">0/7</text>
+      <path d="M710 1732h32" stroke="#a69aba" stroke-width="6" stroke-linecap="round" opacity="0.9"/>
+      <text x="913" y="1738" fill="#a69aba" font-size="14" text-anchor="end" font-weight="700">2/7</text>
     </g><g>
-      <rect x="30" y="1756" width="900" height="41" rx="6" fill="#101729" stroke="#a69aba" stroke-opacity="0.64"/>
+      <rect x="30" y="1756" width="900" height="41" rx="6" fill="#101729" stroke="#a69aba" stroke-opacity="0.32"/>
       <path d="M31 1764v-7h21M929 1764v-7h-21" fill="none" stroke="#a69aba" stroke-opacity=".7" stroke-width="1.5"/>
       <circle cx="65" cy="1777" r="13" fill="#060a17" stroke="#a69aba" stroke-opacity=".34" stroke-width="4"/>
-      <circle cx="65" cy="1777" r="13" fill="none" stroke="#a69aba" stroke-width="4" stroke-dasharray="47 82" transform="rotate(-90 65 1777)"/>
+      <circle cx="65" cy="1777" r="13" fill="none" stroke="#a69aba" stroke-width="4" stroke-dasharray="0 82" transform="rotate(-90 65 1777)"/>
       <circle cx="65" cy="1777" r="4" fill="#a69aba" opacity="0.8"/>
-      <text x="96" y="1783" fill="#a69aba" font-size="17" font-weight="700">O5</text>
-      <text x="155" y="1783" fill="#f1ecdf" font-size="16" font-weight="600">Silas the coach</text>
-      <text x="636" y="1782" fill="#a69aba" font-size="10" text-anchor="middle" letter-spacing="1">FORMING</text>
+      <text x="96" y="1783" fill="#a69aba" font-size="17" font-weight="700">O25</text>
+      <text x="155" y="1783" fill="#f1ecdf" font-size="16" font-weight="600">A starter a friend can run</text>
+      <text x="636" y="1782" fill="#a69aba" font-size="10" text-anchor="middle" letter-spacing="1">NEXT BOARD</text>
       <path d="M710 1777h112" stroke="#2d3c54" stroke-width="8" stroke-linecap="round"/>
-      <path d="M710 1777h63" stroke="#a69aba" stroke-width="6" stroke-linecap="round" opacity="0.9"/>
-      <text x="913" y="1783" fill="#a69aba" font-size="14" text-anchor="end" font-weight="700">4/7</text>
+      <path d="M710 1777h0" stroke="#a69aba" stroke-width="6" stroke-linecap="round" opacity="0.9"/>
+      <text x="913" y="1783" fill="#a69aba" font-size="14" text-anchor="end" font-weight="700">0/7</text>
     </g><g>
-      <rect x="30" y="1801" width="900" height="41" rx="6" fill="#0c1324" stroke="#ffc76e" stroke-opacity="0.32"/>
-      <path d="M31 1809v-7h21M929 1809v-7h-21" fill="none" stroke="#ffc76e" stroke-opacity=".7" stroke-width="1.5"/>
-      <circle cx="65" cy="1822" r="13" fill="#060a17" stroke="#ffc76e" stroke-opacity=".34" stroke-width="4"/>
-      <circle cx="65" cy="1822" r="13" fill="none" stroke="#ffc76e" stroke-width="4" stroke-dasharray="82 82" transform="rotate(-90 65 1822)"/>
-      <circle cx="65" cy="1822" r="4" fill="#ffc76e" opacity="0.8"/>
-      <text x="96" y="1828" fill="#ffc76e" font-size="17" font-weight="700">O17</text>
-      <text x="155" y="1828" fill="#f1ecdf" font-size="16" font-weight="600">Silas's senses</text>
-      <text x="636" y="1827" fill="#ffc76e" font-size="10" text-anchor="middle" letter-spacing="1">COMPLETE</text>
+      <rect x="30" y="1801" width="900" height="41" rx="6" fill="#0c1324" stroke="#a69aba" stroke-opacity="0.64"/>
+      <path d="M31 1809v-7h21M929 1809v-7h-21" fill="none" stroke="#a69aba" stroke-opacity=".7" stroke-width="1.5"/>
+      <circle cx="65" cy="1822" r="13" fill="#060a17" stroke="#a69aba" stroke-opacity=".34" stroke-width="4"/>
+      <circle cx="65" cy="1822" r="13" fill="none" stroke="#a69aba" stroke-width="4" stroke-dasharray="47 82" transform="rotate(-90 65 1822)"/>
+      <circle cx="65" cy="1822" r="4" fill="#a69aba" opacity="0.8"/>
+      <text x="96" y="1828" fill="#a69aba" font-size="17" font-weight="700">O5</text>
+      <text x="155" y="1828" fill="#f1ecdf" font-size="16" font-weight="600">Silas the coach</text>
+      <text x="636" y="1827" fill="#a69aba" font-size="10" text-anchor="middle" letter-spacing="1">FORMING</text>
       <path d="M710 1822h112" stroke="#2d3c54" stroke-width="8" stroke-linecap="round"/>
-      <path d="M710 1822h111" stroke="#ffc76e" stroke-width="6" stroke-linecap="round" opacity="0.9"/>
-      <text x="913" y="1828" fill="#ffc76e" font-size="14" text-anchor="end" font-weight="700">6/6</text>
+      <path d="M710 1822h63" stroke="#a69aba" stroke-width="6" stroke-linecap="round" opacity="0.9"/>
+      <text x="913" y="1828" fill="#a69aba" font-size="14" text-anchor="end" font-weight="700">4/7</text>
     </g><g>
-      <rect x="30" y="1846" width="900" height="41" rx="6" fill="#101729" stroke="#a69aba" stroke-opacity="0.64"/>
-      <path d="M31 1854v-7h21M929 1854v-7h-21" fill="none" stroke="#a69aba" stroke-opacity=".7" stroke-width="1.5"/>
-      <circle cx="65" cy="1867" r="13" fill="#060a17" stroke="#a69aba" stroke-opacity=".34" stroke-width="4"/>
-      <circle cx="65" cy="1867" r="13" fill="none" stroke="#a69aba" stroke-width="4" stroke-dasharray="6 82" transform="rotate(-90 65 1867)"/>
-      <circle cx="65" cy="1867" r="4" fill="#a69aba" opacity="0.8"/>
-      <text x="96" y="1873" fill="#a69aba" font-size="17" font-weight="700">O6</text>
-      <text x="155" y="1873" fill="#f1ecdf" font-size="16" font-weight="600">Silas remembers and learns</text>
-      <text x="636" y="1872" fill="#a69aba" font-size="10" text-anchor="middle" letter-spacing="1">FORMING</text>
+      <rect x="30" y="1846" width="900" height="41" rx="6" fill="#101729" stroke="#ffc76e" stroke-opacity="0.32"/>
+      <path d="M31 1854v-7h21M929 1854v-7h-21" fill="none" stroke="#ffc76e" stroke-opacity=".7" stroke-width="1.5"/>
+      <circle cx="65" cy="1867" r="13" fill="#060a17" stroke="#ffc76e" stroke-opacity=".34" stroke-width="4"/>
+      <circle cx="65" cy="1867" r="13" fill="none" stroke="#ffc76e" stroke-width="4" stroke-dasharray="82 82" transform="rotate(-90 65 1867)"/>
+      <circle cx="65" cy="1867" r="4" fill="#ffc76e" opacity="0.8"/>
+      <text x="96" y="1873" fill="#ffc76e" font-size="17" font-weight="700">O17</text>
+      <text x="155" y="1873" fill="#f1ecdf" font-size="16" font-weight="600">Silas's senses</text>
+      <text x="636" y="1872" fill="#ffc76e" font-size="10" text-anchor="middle" letter-spacing="1">COMPLETE</text>
       <path d="M710 1867h112" stroke="#2d3c54" stroke-width="8" stroke-linecap="round"/>
-      <path d="M710 1867h9" stroke="#a69aba" stroke-width="6" stroke-linecap="round" opacity="0.9"/>
-      <text x="913" y="1873" fill="#a69aba" font-size="14" text-anchor="end" font-weight="700">1/13</text>
+      <path d="M710 1867h111" stroke="#ffc76e" stroke-width="6" stroke-linecap="round" opacity="0.9"/>
+      <text x="913" y="1873" fill="#ffc76e" font-size="14" text-anchor="end" font-weight="700">6/6</text>
     </g><g>
-      <rect x="30" y="1929" width="900" height="41" rx="6" fill="#0c1324" stroke="#657086" stroke-opacity="0.32"/>
-      <path d="M31 1937v-7h21M929 1937v-7h-21" fill="none" stroke="#657086" stroke-opacity=".7" stroke-width="1.5"/>
-      <circle cx="65" cy="1950" r="13" fill="#060a17" stroke="#657086" stroke-opacity=".34" stroke-width="4"/>
-      <circle cx="65" cy="1950" r="13" fill="none" stroke="#657086" stroke-width="4" stroke-dasharray="7 82" transform="rotate(-90 65 1950)"/>
-      <circle cx="65" cy="1950" r="4" fill="#657086" opacity="0.4"/>
-      <text x="96" y="1956" fill="#657086" font-size="17" font-weight="700">O7</text>
-      <text x="155" y="1956" fill="#8991a3" font-size="16" font-weight="600">Mac and every screen</text>
-      <text x="636" y="1955" fill="#657086" font-size="10" text-anchor="middle" letter-spacing="1">LATER</text>
-      <path d="M710 1950h112" stroke="#2d3c54" stroke-width="8" stroke-linecap="round"/>
-      <path d="M710 1950h9" stroke="#657086" stroke-width="6" stroke-linecap="round" opacity="0.4"/>
-      <text x="913" y="1956" fill="#657086" font-size="14" text-anchor="end" font-weight="700">1/12</text>
+      <rect x="30" y="1891" width="900" height="41" rx="6" fill="#0c1324" stroke="#a69aba" stroke-opacity="0.64"/>
+      <path d="M31 1899v-7h21M929 1899v-7h-21" fill="none" stroke="#a69aba" stroke-opacity=".7" stroke-width="1.5"/>
+      <circle cx="65" cy="1912" r="13" fill="#060a17" stroke="#a69aba" stroke-opacity=".34" stroke-width="4"/>
+      <circle cx="65" cy="1912" r="13" fill="none" stroke="#a69aba" stroke-width="4" stroke-dasharray="6 82" transform="rotate(-90 65 1912)"/>
+      <circle cx="65" cy="1912" r="4" fill="#a69aba" opacity="0.8"/>
+      <text x="96" y="1918" fill="#a69aba" font-size="17" font-weight="700">O6</text>
+      <text x="155" y="1918" fill="#f1ecdf" font-size="16" font-weight="600">Silas remembers and learns</text>
+      <text x="636" y="1917" fill="#a69aba" font-size="10" text-anchor="middle" letter-spacing="1">FORMING</text>
+      <path d="M710 1912h112" stroke="#2d3c54" stroke-width="8" stroke-linecap="round"/>
+      <path d="M710 1912h9" stroke="#a69aba" stroke-width="6" stroke-linecap="round" opacity="0.9"/>
+      <text x="913" y="1918" fill="#a69aba" font-size="14" text-anchor="end" font-weight="700">1/13</text>
     </g><g>
       <rect x="30" y="1974" width="900" height="41" rx="6" fill="#101729" stroke="#657086" stroke-opacity="0.32"/>
       <path d="M31 1982v-7h21M929 1982v-7h-21" fill="none" stroke="#657086" stroke-opacity=".7" stroke-width="1.5"/>
       <circle cx="65" cy="1995" r="13" fill="#060a17" stroke="#657086" stroke-opacity=".34" stroke-width="4"/>
-      <circle cx="65" cy="1995" r="13" fill="none" stroke="#657086" stroke-width="4" stroke-dasharray="29 82" transform="rotate(-90 65 1995)"/>
+      <circle cx="65" cy="1995" r="13" fill="none" stroke="#657086" stroke-width="4" stroke-dasharray="7 82" transform="rotate(-90 65 1995)"/>
       <circle cx="65" cy="1995" r="4" fill="#657086" opacity="0.4"/>
-      <text x="96" y="2001" fill="#657086" font-size="17" font-weight="700">O8</text>
-      <text x="155" y="2001" fill="#8991a3" font-size="16" font-weight="600">Artistic themes</text>
+      <text x="96" y="2001" fill="#657086" font-size="17" font-weight="700">O7</text>
+      <text x="155" y="2001" fill="#8991a3" font-size="16" font-weight="600">Mac and every screen</text>
       <text x="636" y="2000" fill="#657086" font-size="10" text-anchor="middle" letter-spacing="1">LATER</text>
       <path d="M710 1995h112" stroke="#2d3c54" stroke-width="8" stroke-linecap="round"/>
-      <path d="M710 1995h39" stroke="#657086" stroke-width="6" stroke-linecap="round" opacity="0.4"/>
-      <text x="913" y="2001" fill="#657086" font-size="14" text-anchor="end" font-weight="700">6/17</text>
+      <path d="M710 1995h9" stroke="#657086" stroke-width="6" stroke-linecap="round" opacity="0.4"/>
+      <text x="913" y="2001" fill="#657086" font-size="14" text-anchor="end" font-weight="700">1/12</text>
     </g><g>
       <rect x="30" y="2019" width="900" height="41" rx="6" fill="#0c1324" stroke="#657086" stroke-opacity="0.32"/>
       <path d="M31 2027v-7h21M929 2027v-7h-21" fill="none" stroke="#657086" stroke-opacity=".7" stroke-width="1.5"/>
       <circle cx="65" cy="2040" r="13" fill="#060a17" stroke="#657086" stroke-opacity=".34" stroke-width="4"/>
-      <circle cx="65" cy="2040" r="13" fill="none" stroke="#657086" stroke-width="4" stroke-dasharray="0 82" transform="rotate(-90 65 2040)"/>
+      <circle cx="65" cy="2040" r="13" fill="none" stroke="#657086" stroke-width="4" stroke-dasharray="29 82" transform="rotate(-90 65 2040)"/>
       <circle cx="65" cy="2040" r="4" fill="#657086" opacity="0.4"/>
-      <text x="96" y="2046" fill="#657086" font-size="17" font-weight="700">O9</text>
-      <text x="155" y="2046" fill="#8991a3" font-size="16" font-weight="600">Always-on Telegram</text>
+      <text x="96" y="2046" fill="#657086" font-size="17" font-weight="700">O8</text>
+      <text x="155" y="2046" fill="#8991a3" font-size="16" font-weight="600">Artistic themes</text>
       <text x="636" y="2045" fill="#657086" font-size="10" text-anchor="middle" letter-spacing="1">LATER</text>
       <path d="M710 2040h112" stroke="#2d3c54" stroke-width="8" stroke-linecap="round"/>
-      <path d="M710 2040h0" stroke="#657086" stroke-width="6" stroke-linecap="round" opacity="0.4"/>
-      <text x="913" y="2046" fill="#657086" font-size="14" text-anchor="end" font-weight="700">0/5</text>
+      <path d="M710 2040h39" stroke="#657086" stroke-width="6" stroke-linecap="round" opacity="0.4"/>
+      <text x="913" y="2046" fill="#657086" font-size="14" text-anchor="end" font-weight="700">6/17</text>
     </g><g>
       <rect x="30" y="2064" width="900" height="41" rx="6" fill="#101729" stroke="#657086" stroke-opacity="0.32"/>
       <path d="M31 2072v-7h21M929 2072v-7h-21" fill="none" stroke="#657086" stroke-opacity=".7" stroke-width="1.5"/>
       <circle cx="65" cy="2085" r="13" fill="#060a17" stroke="#657086" stroke-opacity=".34" stroke-width="4"/>
       <circle cx="65" cy="2085" r="13" fill="none" stroke="#657086" stroke-width="4" stroke-dasharray="0 82" transform="rotate(-90 65 2085)"/>
       <circle cx="65" cy="2085" r="4" fill="#657086" opacity="0.4"/>
-      <text x="96" y="2091" fill="#657086" font-size="17" font-weight="700">O10</text>
-      <text x="155" y="2091" fill="#8991a3" font-size="16" font-weight="600">Money in the hub</text>
+      <text x="96" y="2091" fill="#657086" font-size="17" font-weight="700">O9</text>
+      <text x="155" y="2091" fill="#8991a3" font-size="16" font-weight="600">Always-on Telegram</text>
       <text x="636" y="2090" fill="#657086" font-size="10" text-anchor="middle" letter-spacing="1">LATER</text>
       <path d="M710 2085h112" stroke="#2d3c54" stroke-width="8" stroke-linecap="round"/>
       <path d="M710 2085h0" stroke="#657086" stroke-width="6" stroke-linecap="round" opacity="0.4"/>
-      <text x="913" y="2091" fill="#657086" font-size="14" text-anchor="end" font-weight="700">0/2</text>
+      <text x="913" y="2091" fill="#657086" font-size="14" text-anchor="end" font-weight="700">0/5</text>
     </g><g>
       <rect x="30" y="2109" width="900" height="41" rx="6" fill="#0c1324" stroke="#657086" stroke-opacity="0.32"/>
       <path d="M31 2117v-7h21M929 2117v-7h-21" fill="none" stroke="#657086" stroke-opacity=".7" stroke-width="1.5"/>
       <circle cx="65" cy="2130" r="13" fill="#060a17" stroke="#657086" stroke-opacity=".34" stroke-width="4"/>
       <circle cx="65" cy="2130" r="13" fill="none" stroke="#657086" stroke-width="4" stroke-dasharray="0 82" transform="rotate(-90 65 2130)"/>
       <circle cx="65" cy="2130" r="4" fill="#657086" opacity="0.4"/>
-      <text x="96" y="2136" fill="#657086" font-size="17" font-weight="700">O11</text>
-      <text x="155" y="2136" fill="#8991a3" font-size="16" font-weight="600">Ready for a second person</text>
-      <text x="636" y="2135" fill="#657086" font-size="10" text-anchor="middle" letter-spacing="1">PARKED</text>
+      <text x="96" y="2136" fill="#657086" font-size="17" font-weight="700">O10</text>
+      <text x="155" y="2136" fill="#8991a3" font-size="16" font-weight="600">Money in the hub</text>
+      <text x="636" y="2135" fill="#657086" font-size="10" text-anchor="middle" letter-spacing="1">LATER</text>
       <path d="M710 2130h112" stroke="#2d3c54" stroke-width="8" stroke-linecap="round"/>
       <path d="M710 2130h0" stroke="#657086" stroke-width="6" stroke-linecap="round" opacity="0.4"/>
-      <text x="913" y="2136" fill="#657086" font-size="14" text-anchor="end" font-weight="700">0/0</text>
+      <text x="913" y="2136" fill="#657086" font-size="14" text-anchor="end" font-weight="700">0/2</text>
+    </g><g>
+      <rect x="30" y="2154" width="900" height="41" rx="6" fill="#101729" stroke="#657086" stroke-opacity="0.32"/>
+      <path d="M31 2162v-7h21M929 2162v-7h-21" fill="none" stroke="#657086" stroke-opacity=".7" stroke-width="1.5"/>
+      <circle cx="65" cy="2175" r="13" fill="#060a17" stroke="#657086" stroke-opacity=".34" stroke-width="4"/>
+      <circle cx="65" cy="2175" r="13" fill="none" stroke="#657086" stroke-width="4" stroke-dasharray="0 82" transform="rotate(-90 65 2175)"/>
+      <circle cx="65" cy="2175" r="4" fill="#657086" opacity="0.4"/>
+      <text x="96" y="2181" fill="#657086" font-size="17" font-weight="700">O11</text>
+      <text x="155" y="2181" fill="#8991a3" font-size="16" font-weight="600">Ready for a second person</text>
+      <text x="636" y="2180" fill="#657086" font-size="10" text-anchor="middle" letter-spacing="1">PARKED</text>
+      <path d="M710 2175h112" stroke="#2d3c54" stroke-width="8" stroke-linecap="round"/>
+      <path d="M710 2175h0" stroke="#657086" stroke-width="6" stroke-linecap="round" opacity="0.4"/>
+      <text x="913" y="2181" fill="#657086" font-size="14" text-anchor="end" font-weight="700">0/0</text>
     </g>
-  <path d="M30 2178H930" stroke="#79e6d7" stroke-opacity=".4"/>
-  <text x="30" y="2202" fill="#aab2c7" font-size="10" letter-spacing="1">RING COUNTS  /  STORIES FINISHED OF TOTAL</text>
-  <text x="930" y="2202" fill="#79e6d7" font-size="11" text-anchor="end" letter-spacing="1">SILAS PORTALS</text>
+  <path d="M30 2223H930" stroke="#79e6d7" stroke-opacity=".4"/>
+  <text x="30" y="2247" fill="#aab2c7" font-size="10" letter-spacing="1">RING COUNTS  /  STORIES FINISHED OF TOTAL</text>
+  <text x="930" y="2247" fill="#79e6d7" font-size="11" text-anchor="end" letter-spacing="1">SILAS PORTALS</text>
   </g>
   </svg>

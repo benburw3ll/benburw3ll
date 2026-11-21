@@ -31,6 +31,7 @@ I built **Silas Portals** so he can help across my life. Portals let him connect
 <li>O22 · The desktop as a console</li>
 <li>O23 · Photos from the phone</li>
 <li>O24 · Meals as a list</li>
+<li>O26 · An ADHD to-do list</li>
 </ul>
 <p><b>The next board, v1.1</b></p>
 <ul>
@@ -51,7 +52,7 @@ I built **Silas Portals** so he can help across my life. Portals let him connect
 <li>O10 · Money in the hub (later)</li>
 <li>O11 · Ready for a second person (parked)</li>
 </ul>
-<p>242 of 255 v1 stories finished · 350 issues closed overall · 488 pull requests merged.</p>
+<p>247 of 260 v1 stories finished · 360 issues closed overall · 498 pull requests merged.</p>
 </details>
 <!-- outcomes:end -->
 
