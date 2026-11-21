@@ -41,7 +41,12 @@ if (repository.private && !(process.env.GITHUB_TOKEN && process.env.OUTCOMES_PRI
   throw new Error(`${REPO} is private: set GITHUB_TOKEN (with issues: read on it) and OUTCOMES_PRIVATE_OK=1 to draw the board from it`)
 }
 const rawList = await get(`https://api.github.com/repos/${REPO}/milestones?state=all&per_page=100`)
-const raw = rawList.filter(code).sort((a, b) => order(a) - order(b))
+// The profile never names AI: a milestone title is drawn with its public wording.
+const publicTitle = (title) => title.replace('AI on a budget', 'Thinking on a budget')
+const raw = rawList
+  .filter(code)
+  .map((m) => ({ ...m, title: publicTitle(m.title) }))
+  .sort((a, b) => order(a) - order(b))
 if (raw.length === 0) throw new Error('No Silas Portals outcome milestones found')
 
 const milestoneIssues = async (number) => {

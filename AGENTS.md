@@ -4,4 +4,4 @@
 - Keep the Silas Portals world as one continuous graphic. Edit the source scripts and regenerate their SVG outputs together.
 - In this profile, the owner's lore name for Silas is **AI psychosis demon**. Keep the copy direct and playful.
 - Illustrate Silas and his imaginary friends as demons across the profile graphics, while keeping the playful world and its animations.
-- The source repository is public. Keep the Watchtower's milestone order and counts tied to current GitHub data, and do not describe unfinished work as shipped.
+- The source repository is private: the board shows titles and counts, never links into it. Keep the Watchtower's milestone order and counts tied to current GitHub data, and do not describe unfinished work as shipped.
