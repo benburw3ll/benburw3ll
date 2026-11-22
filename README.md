@@ -35,6 +35,9 @@ I built **Silas Portals** so he can help across my life. Portals let him connect
 <li>O26 · An ADHD to-do list</li>
 <li>O27 · A prompt on the desktop</li>
 <li>O28 · A shopping list at the cheapest store</li>
+<li>O29 · A conversation with Silas across every portal</li>
+<li>O30 · People and birthdays</li>
+<li>O31 · An Amazon portal Silas can shop from</li>
 </ul>
 <p><b>The next board, v1.1</b></p>
 <ul>
@@ -59,7 +62,7 @@ I built **Silas Portals** so he can help across my life. Portals let him connect
 <ul>
 <li>O16 · The desktop as a board</li>
 </ul>
-<p>246 of 266 v1 stories finished · 362 issues closed overall · 511 pull requests merged.</p>
+<p>262 of 293 v1 stories finished · 379 issues closed overall · 523 pull requests merged.</p>
 </details>
 <!-- outcomes:end -->
 
