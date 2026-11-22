@@ -7,17 +7,18 @@ import { mkdirSync, readFileSync, writeFileSync } from 'node:fs'
 import { renderWatchtowerBoard, versionOf } from './watchtower-board.mjs'
 import { renderPublicWatchtower } from './public-watchtower.mjs'
 import { composeReadme } from './compose-readme.mjs'
+import { renderGithubStats } from './github-stats.mjs'
 
 const REPO = process.env.OUTCOMES_REPO ?? 'benburw3ll/silas-portals'
 const root = new URL('../', import.meta.url)
 const START = '<!-- outcomes:start -->'
 const END = '<!-- outcomes:end -->'
 const esc = (s) => String(s).replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('>', '&gt;').replaceAll('"', '&quot;')
-const headers = { Accept: 'application/vnd.github+json', 'User-Agent': 'silas-watchtower-profile' }
-if (process.env.GITHUB_TOKEN) headers.Authorization = `Bearer ${process.env.GITHUB_TOKEN}`
-const get = async (url) => {
+const get = async (url, token = process.env.GITHUB_TOKEN) => {
+  const headers = { Accept: 'application/vnd.github+json', 'User-Agent': 'silas-watchtower-profile' }
+  if (token) headers.Authorization = `Bearer ${token}`
   const r = await fetch(url, { headers })
-  if (r.status === 404 && !process.env.GITHUB_TOKEN) {
+  if (r.status === 404 && !token) {
     throw new Error(`GitHub API answered 404 for ${url}: a private source repository needs GITHUB_TOKEN (with issues: read on it) and OUTCOMES_PRIVATE_OK=1`)
   }
   if (!r.ok) throw new Error(`GitHub API answered ${r.status} for ${url}`)
@@ -25,16 +26,16 @@ const get = async (url) => {
 }
 const code = (m) => /^([NO])(\d+)\b/.exec(m.title)
 // Keep this in step with the Build order in Silas Portals' docs/ARCHITECTURE.md.
-const OUTCOME_ORDER = [
-  'O1', 'O2', 'O3', 'O4', 'O12', 'O16', 'O18', 'O19', 'O21', 'O22', 'O23', 'O24',
+const BUILD_ORDER = [
+  'O1', 'N1', 'N2', 'N3', 'N4', 'N5', 'N6',
+  'O2', 'O3', 'O4', 'O12', 'O18', 'O19', 'O21', 'O22', 'O23', 'O24', 'O26', 'O27', 'O28',
   'O13', 'O14', 'O15', 'O20', 'O25', 'O5', 'O17', 'O6',
-  'O7', 'O8', 'O9', 'O10', 'O11',
+  'O7', 'O8', 'O9', 'O10', 'O11', 'O16',
 ]
 const order = (m) => {
   const match = code(m)
-  if (match[1] === 'N') return Number(match[2])
-  const index = OUTCOME_ORDER.indexOf(`${match[1]}${match[2]}`)
-  return 1000 + (index < 0 ? OUTCOME_ORDER.length + Number(match[2]) : index)
+  const index = BUILD_ORDER.indexOf(`${match[1]}${match[2]}`)
+  return index < 0 ? BUILD_ORDER.length + Number(match[2]) : index
 }
 const repository = await get(`https://api.github.com/repos/${REPO}`)
 if (repository.private && !(process.env.GITHUB_TOKEN && process.env.OUTCOMES_PRIVATE_OK === '1')) {
@@ -76,6 +77,37 @@ for (const m of raw) {
   })
 }
 
+// The board's repo-scoped token cannot see the owner's other private repos.
+// Without a separate read-only profile token, keep the last complete snapshot.
+if (process.env.PROFILE_STATS_TOKEN) {
+  const statsGet = (url) => get(url, process.env.PROFILE_STATS_TOKEN)
+  const username = 'benburw3ll'
+  const search = (qualifiers, pageSize = 1, page = 1) =>
+    statsGet(`https://api.github.com/search/issues?q=${encodeURIComponent(`author:${username} ${qualifiers}`)}&per_page=${pageSize}&page=${page}`)
+  const searchCount = async (qualifiers) => (await search(qualifiers)).total_count
+  const repositoriesWithPrs = new Set()
+  for (let page = 1; ; page++) {
+    const results = await search('is:pr', 100, page)
+    if (results.total_count > 1000) throw new Error('PR repository count exceeds the GitHub search window')
+    for (const item of results.items) repositoriesWithPrs.add(item.repository_url)
+    if (results.items.length < 100) break
+  }
+  const sevenDaysAgo = new Date(Date.now() - 7 * 864e5).toISOString()
+  const githubStats = {
+    merged: await searchCount('is:pr is:merged'),
+    outside: await searchCount(`is:pr is:merged -repo:${REPO}`),
+    repositories: repositoriesWithPrs.size,
+    open: await searchCount('is:pr is:open'),
+    recent: await searchCount(`is:pr is:merged merged:>=${sevenDaysAgo}`),
+    issues: await searchCount('is:issue'),
+    issuesClosed: await searchCount('is:issue is:closed'),
+    pullRequests: await searchCount('is:pr'),
+    updated: new Date().toISOString().slice(0, 10),
+  }
+  mkdirSync(new URL('assets/', root), { recursive: true })
+  writeFileSync(new URL('assets/github-stats.svg', root), renderGithubStats(githubStats))
+}
+
 // Activity counts come from the search API, so they refresh with the board.
 const count = async (q) => (await get(`https://api.github.com/search/issues?q=${encodeURIComponent(`repo:${REPO} ${q}`)}&per_page=1`)).total_count
 const weekAgo = new Date(Date.now() - 7 * 864e5).toISOString()
@@ -104,7 +136,7 @@ const group = (version, label) => {
   const links = items.map((m) => `<li>${esc(m.title)}</li>`).join('\n')
   return `<p><b>${label}</b></p>\n<ul>\n${links}\n</ul>\n`
 }
-const block = `<details>\n<summary>Open the stories behind the rings</summary>\n\n${group('v1', 'The road to v1')}${group('v1.1', 'The next board, v1.1')}${group('later', 'Later')}<p>${done} of ${total} v1 stories finished · ${closedTotal} issues closed overall · ${merged} pull requests merged.</p>\n</details>`
+const block = `<details>\n<summary>Open the stories behind the rings</summary>\n\n${group('v1', 'The road to v1')}${group('v1.1', 'The next board, v1.1')}${group('later', 'Later')}${group('superseded', 'Superseded')}<p>${done} of ${total} v1 stories finished · ${closedTotal} issues closed overall · ${merged} pull requests merged.</p>\n</details>`
 const file = new URL('README.md', root)
 const readme = readFileSync(file, 'utf8')
 const start = readme.indexOf(START), end = readme.indexOf(END)
