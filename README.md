@@ -62,7 +62,7 @@ I built **Silas Portals** so he can help across my life. Portals let him connect
 <ul>
 <li>O16 · The desktop as a board</li>
 </ul>
-<p>262 of 293 v1 stories finished · 379 issues closed overall · 523 pull requests merged.</p>
+<p>275 of 314 v1 stories finished · 392 issues closed overall · 530 pull requests merged.</p>
 </details>
 <!-- outcomes:end -->
 
