@@ -39,6 +39,10 @@ I built **Silas Portals** so he can help across my life. Portals let him connect
 <li>O30 · People and birthdays</li>
 <li>O31 · An Amazon portal Silas can shop from</li>
 <li>O32 · To-do plans the day and the week</li>
+<li>O33 · People keeps a whole card for each person</li>
+<li>O34 · Silas fills the Amazon Fresh cart</li>
+<li>O35 · Silas brain check-up and surgery</li>
+<li>O36 · Deals beats a web search</li>
 </ul>
 <p><b>The next board, v1.1</b></p>
 <ul>
@@ -63,7 +67,7 @@ I built **Silas Portals** so he can help across my life. Portals let him connect
 <ul>
 <li>O16 · The desktop as a board</li>
 </ul>
-<p>294 of 326 v1 stories finished · 438 issues closed overall · 551 pull requests merged.</p>
+<p>335 of 358 v1 stories finished · 502 issues closed overall · 572 pull requests merged.</p>
 </details>
 <!-- outcomes:end -->
 
