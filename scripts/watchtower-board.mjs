@@ -2,6 +2,7 @@
 // milestone title: no suffix is v1 (the road to v1), "(v1.1)" the next board, "(later)" and
 // "(parked)" later. Only v1 outcomes are rings in the tower; the rest are listed below the road.
 export const versionOf = (title) => {
+  if (/^The Proving Ground\b/.test(title ?? '')) return 'findings'
   if (/^O16\b/.test(title ?? '')) return 'superseded'
   const m = /\((v1\.1|later|parked)\)\s*$/i.exec(title ?? '')
   return !m ? 'v1' : m[1].toLowerCase() === 'v1.1' ? 'v1.1' : 'later'
@@ -100,11 +101,9 @@ const statPlate = (x, width, color, fill) => `<path d="M${x+12} 602H${x+width-12
 
 export function renderWatchtowerBoard(milestones, { merged, mergedWeek, closedTotal, closedWeek }) {
   const outcomes = milestones.map((milestone) => {
-    const match = /^([NO])(\d+)\b/.exec(milestone.title)
-    if (!match) throw new Error(`Unrecognized outcome milestone: ${milestone.title}`)
-    const code = `${match[1]}${match[2]}`
+    const code = milestone.code
     const version = versionOf(milestone.title)
-    const title = milestone.title.replace(/^[NO]\d+\s*·\s*/, '').replace(/\s*\((v1\.1|later|parked)\)/i, '')
+    const title = code === 'PG' ? 'Silas on the real model' : milestone.title.replace(/^[NO]\d+\s*·\s*/, '').replace(/\s*\((v1\.1|later|parked)\)/i, '')
     const complete = milestone.closed_issues
     const total = milestone.open_issues + complete
     const state = version === 'superseded'
@@ -115,12 +114,14 @@ export function renderWatchtowerBoard(milestones, { merged, mergedWeek, closedTo
         ? 'later'
         : milestone.state === 'closed'
           ? 'done'
+          : /^In (daily )?use\b/i.test(milestone.roadmapStatus)
+            ? 'in-use'
           : total > 0 && complete === total
             ? 'awaiting-use'
           : complete > 0
             ? 'building'
             : 'planned'
-    return { code, title, complete, total, state, version, lastCompletedAt: milestone.last_completed_at }
+    return { code, title, complete, total, state, version, group: milestone.group, lastCompletedAt: milestone.last_completed_at }
   })
   const v1 = outcomes.filter((item) => item.version === 'v1')
   const v1Done = v1.reduce((sum, item) => sum + item.complete, 0)
@@ -129,13 +130,11 @@ export function renderWatchtowerBoard(milestones, { merged, mergedWeek, closedTo
     .sort((a, b) => (b.lastCompletedAt ?? '').localeCompare(a.lastCompletedAt ?? ''))
     .slice(0, 3).reverse()
   if (recentDone.length !== 3) throw new Error('The Watchtower needs three finished v1 outcome rings')
-  const available = v1.filter((item) => item.state !== 'done')
-  const next = outcomes.filter((item) => item.version === 'v1.1')
-  // The source sorts these by the Roadmap's build order, including new milestones.
-  const upcoming = [...available, ...next]
+  // Findings, Everyday and Advanced follow the Roadmap's live order.
+  const upcoming = outcomes.filter((item) => ['Findings', 'Everyday', 'Advanced', 'Unplaced'].includes(item.group) && item.state !== 'done')
   const primary = upcoming[0] ?? outcomes.at(-2)
   const secondary = upcoming.find((item) => item.code !== primary.code) ?? outcomes.at(-1)
-  const future = [...upcoming, ...outcomes.filter((item) => item.version === 'later')]
+  const future = [...upcoming, ...outcomes.filter((item) => item.group === 'Later')]
     .filter((item) => item.state !== 'done' && item.code !== primary.code && item.code !== secondary.code)
   const leftGhost = future[0] ?? outcomes.at(-2)
   const rightGhost = future[1] ?? outcomes.at(-1)
@@ -199,19 +198,21 @@ export function renderWatchtowerBoard(milestones, { merged, mergedWeek, closedTo
   ${ring(125,456,34,'#b8a0fc','ghost',leftGhost)}${ring(835,456,34,'#b8a0fc','ghost',rightGhost)}
   ${text(38,101,'LATEST FINISHED OUTCOMES',11,b,'letter-spacing="1"')}${text(922,101,'CURRENT FOCUS',11,a,'text-anchor="end" letter-spacing="1"')}`
 
-  // Rows: the v1 lane, the v1 outcomes, then the next board and later, each group under its label.
+  // Rows use the Roadmap's live lanes, followed by closed milestones.
   const ordered = outcomes
-  const v1Count = v1.length
-  const nextCount = next.length
-  const laterCount = outcomes.filter((item) => item.version === 'later').length
-  const breaks = [1, 7, v1Count, v1Count + nextCount, v1Count + nextCount + laterCount]
+  const breaks = ordered.flatMap((item, i) => i > 0 && item.group !== ordered[i - 1].group ? [i] : [])
   const gapOf = (i) => breaks.filter((at) => at <= i).length * 38
+  const groupLabels = { Findings: 'FINDINGS  ·  REAL MODEL', Everyday: 'EVERYDAY', Advanced: 'ADVANCED', Later: 'LATER AND PARKED', Done: 'DONE', Superseded: 'SUPERSEDED', Unplaced: 'NOT YET ON THE ROADMAP' }
+  const groupHeadings = ordered.map((item, i) => i === 0 || item.group !== ordered[i - 1].group
+    ? text(30, 645 + i * 45 + gapOf(i) - 13, groupLabels[item.group], 10, item.group === 'Everyday' ? a : item.group === 'Done' ? b : dim, 'letter-spacing="1"')
+    : '').join('')
   const row = (item, i) => {
     const { code, title, complete, total, state } = item
     const y = 645 + i * 45 + gapOf(i)
     const current = code === primary.code || code === secondary.code
-    const color = state === 'done' ? b : state === 'building' && current ? a : state === 'awaiting-use' ? '#b8a0fc' : state === 'parked' || state === 'later' || state === 'superseded' ? '#657086' : '#a69aba'
-    const status = state === 'done' ? 'COMPLETE' : state === 'awaiting-use' ? 'AWAITING USE' : state === 'building' && current ? 'BUILDING' : state === 'building' ? 'FORMING' : state === 'superseded' ? 'SUPERSEDED' : state === 'parked' ? 'PARKED' : state === 'later' ? 'LATER' : item.version === 'v1.1' ? 'NEXT BOARD' : 'PLANNED'
+    const color = state === 'done' ? b : state === 'in-use' ? a : state === 'building' && current ? a : state === 'awaiting-use' ? '#b8a0fc' : state === 'parked' || state === 'later' || state === 'superseded' ? '#657086' : '#a69aba'
+    const status = state === 'done' ? 'COMPLETE' : state === 'in-use' ? 'IN USE' : state === 'awaiting-use' ? 'AWAITING USE' : state === 'building' && current ? 'BUILDING' : state === 'building' ? 'FORMING' : state === 'superseded' ? 'SUPERSEDED' : state === 'parked' ? 'PARKED' : state === 'later' ? 'LATER' : item.version === 'v1.1' ? 'NEXT BOARD' : 'PLANNED'
+    const titleSize = title.length > 42 ? 12 : title.length > 34 ? 14 : 16
     const fraction = total ? complete / total : 0
     const arc = Math.round(82 * fraction)
     const bar = Math.round(111 * fraction)
@@ -222,7 +223,7 @@ export function renderWatchtowerBoard(milestones, { merged, mergedWeek, closedTo
       <circle cx="65" cy="${y+21}" r="13" fill="none" stroke="${color}" stroke-width="4" stroke-dasharray="${arc} 82" transform="rotate(-90 65 ${y+21})"/>
       <circle cx="65" cy="${y+21}" r="4" fill="${color}" opacity="${state === 'parked' || state === 'later' ? .4 : .8}"/>
       ${text(96,y+27,code,17,color,'font-weight="700"')}
-      ${text(155,y+27,title,16,state === 'parked' || state === 'later' || state === 'superseded' ? '#8991a3' : ink,'font-weight="600"')}
+      ${text(155,y+27,title,titleSize,state === 'parked' || state === 'later' || state === 'superseded' ? '#8991a3' : ink,'font-weight="600"')}
       ${text(636,y+26,status,10,color,'text-anchor="middle" letter-spacing="1"')}
       <path d="M710 ${y+21}h112" stroke="#2d3c54" stroke-width="8" stroke-linecap="round"/>
       <path d="M710 ${y+21}h${bar}" stroke="${color}" stroke-width="6" stroke-linecap="round" opacity="${state === 'parked' || state === 'later' ? .4 : .9}"/>${status === 'BUILDING' ? `<path d="M710 ${y+21}h${bar}" stroke="${color}" stroke-width="16" stroke-linecap="round" filter="url(#smallGlow)" opacity="0" class="progress-bar-halo"/>` : ''}
@@ -289,16 +290,11 @@ export function renderWatchtowerBoard(milestones, { merged, mergedWeek, closedTo
   </g>
   <g transform="translate(0 ${signalsHeight})">
   <path d="M25 565H935" stroke="${a}" stroke-opacity=".4"/>
-  ${text(30,606,'ROAD TO V1',23,ink,'font-weight="700" letter-spacing="2"')}
+  ${text(30,606,'CURRENT ROADMAP',23,ink,'font-weight="700" letter-spacing="2"')}
   ${text(930,604,'STORIES FINISHED  /  TOTAL',11,a,'text-anchor="end" letter-spacing="1"')}
   <path d="M30 622H930" stroke="${a}" stroke-opacity=".45"/>
   <path d="M65 637V${roadHeight-76}" stroke="${a}" stroke-opacity=".18" stroke-width="3" stroke-dasharray="3 8"/>
-  ${text(30,631,'FOUNDATION',10,b,'letter-spacing="1"')}
-  ${text(30,645+45+gapOf(1)-13,'NEXT UP LANE',10,a,'letter-spacing="1"')}
-  ${text(30,645+7*45+gapOf(7)-13,'OUTCOMES',10,b,'letter-spacing="1"')}
-  ${nextCount ? text(30,645+v1Count*45+gapOf(v1Count)-13,'NEXT BOARD  ·  V1.1',10,'#b8a0fc','letter-spacing="1"') : ''}
-  ${laterCount ? text(30,645+(v1Count+nextCount)*45+gapOf(v1Count+nextCount)-13,'LATER',10,'#8991a3','letter-spacing="1"') : ''}
-  ${text(30,645+(v1Count+nextCount+laterCount)*45+gapOf(v1Count+nextCount+laterCount)-13,'SUPERSEDED',10,'#8991a3','letter-spacing="1"')}
+  ${groupHeadings}
   ${rows}
   <path d="M30 ${roadHeight-48}H930" stroke="${a}" stroke-opacity=".4"/>
   ${text(30,roadHeight-24,'RING COUNTS  /  STORIES FINISHED OF TOTAL',10,dim,'letter-spacing="1"')}
