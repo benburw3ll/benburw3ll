@@ -22,6 +22,7 @@ I built **Silas Portals** so he can help across my life. Portals let him connect
 <li>O38 · A board for every repo in the GitHub portal · 8/8</li>
 <li>O22 · The desktop as a console · 71/73</li>
 <li>O40 · The desktop grows and the tiles fall · 7/7</li>
+<li>O41 · A calm console and Meal's days · 12/12</li>
 <li>O27 · A prompt on the desktop · 17/18</li>
 <li>O19 · Red Light: a rule per bulb · 18/19</li>
 <li>O28 · A shopping list at the cheapest store · 4/5</li>
@@ -81,7 +82,7 @@ I built **Silas Portals** so he can help across my life. Portals let him connect
 <ul>
 <li>O39 · Lights: routines, signals and the Red Light tab · 4/9</li>
 </ul>
-<p>364 of 390 v1 stories finished · 559 issues closed overall · 596 pull requests merged.</p>
+<p>376 of 402 v1 stories finished · 572 issues closed overall · 599 pull requests merged.</p>
 </details>
 <!-- outcomes:end -->
 
