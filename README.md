@@ -24,6 +24,7 @@ I built **Silas Portals** so he can help across my life. Portals let him connect
 <li>O40 · The desktop grows and the tiles fall · 7/7</li>
 <li>O41 · A calm console and Meal's days · 12/12</li>
 <li>O27 · A prompt on the desktop · 17/18</li>
+<li>O42 · To-do, easier to organise · 5/5</li>
 <li>O19 · Red Light: a rule per bulb · 18/19</li>
 <li>O28 · A shopping list at the cheapest store · 4/5</li>
 <li>O35 · Silas brain check-up and surgery · 13/14</li>
@@ -35,7 +36,7 @@ I built **Silas Portals** so he can help across my life. Portals let him connect
 <li>O31 · An Amazon portal Silas can shop from · 25/25</li>
 <li>O36 · Deals beats a web search · 0/10</li>
 <li>O5 · Silas the coach (v1.1) · 4/6</li>
-<li>O6 · Silas remembers and learns (v1.1) · 1/12</li>
+<li>O6 · Silas remembers and learns (v1.1) · 7/12</li>
 <li>O20 · The Workshop portal (v1.1) · 2/6</li>
 <li>O25 · A starter a friend can run (v1.1) · 0/7</li>
 <li>O15 · The Echo joins the hub (v1.1) · 6/7</li>
@@ -82,7 +83,7 @@ I built **Silas Portals** so he can help across my life. Portals let him connect
 <ul>
 <li>O39 · Lights: routines, signals and the Red Light tab · 4/9</li>
 </ul>
-<p>376 of 402 v1 stories finished · 572 issues closed overall · 599 pull requests merged.</p>
+<p>381 of 407 v1 stories finished · 586 issues closed overall · 606 pull requests merged.</p>
 </details>
 <!-- outcomes:end -->
 
